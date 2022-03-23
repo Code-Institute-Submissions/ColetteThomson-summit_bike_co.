@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'allauth.account',
     # handling of logging in via social media
     'allauth.socialaccount',
+    # home app
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,10 @@ ROOT_URLCONF = 'summit_bike_co.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
