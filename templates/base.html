@@ -78,9 +78,9 @@
                             {% if request.user.is_authenticated %}
                                 <!-- if superuser, display options to manage shop 'stock' (using CRUD) -->
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Stock Management</a>
+                                    <a href="" class="dropdown-item">Stock Management</a>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <!-- otherwise display options to 'register' or 'login' -->
