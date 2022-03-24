@@ -1,13 +1,15 @@
 html {
+    /* allows h100 classes in vertical centering to work */
     height: 100%;
 }
 
 body {
-    background: url('/media/') no-repeat center center fixed;
+    background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    /* view height - top header - footer */
+    height: calc(100vh - 164px - 56px);
+    color: rgb(66, 66, 66);
+    font-family: 'Roboto', sans-serif;
 }
 
 /* from Bulma */
@@ -20,17 +22,19 @@ body {
 }
 
 .logo {
-    text-transform: uppercase;
+    font-family: 'Yatra One', cursive;
 }
 
 .link-logo {
     width: fit-content;
 }
 
+/* buttons */
 .view-range-button {
     background: black;
     color: white;
     min-width: 260px;
+    
 }
 
 .btn-black {
@@ -38,9 +42,9 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.view-range-button:hover,
+.view-range-button:active,
+.view-range-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -48,6 +52,7 @@ body {
     color: white;
 }
 
+/*  button text */
 .header-text {
     color: #000 !important;
 }
@@ -56,6 +61,16 @@ body {
     border: 1px solid black !important;
 }
 
+/* -------------------------------------------- Home Page */
+
+.sale-text {
+    color: white;
+    text-align: right;
+}
+
+.align-text {
+    float: right;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -65,7 +80,7 @@ body {
   }
 }
 
-/* fixed top navbar only on medium and up */
+/* fixed top navbar only on medium and larger screens */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;

@@ -17,12 +17,17 @@
     {% block corecss %}
         <!-- link to bootstrap css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Yatra+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+        <!-- fontawesome icons -->
+        <script src="https://kit.fontawesome.com/37f1862f9d.js" crossorigin="anonymous"></script>
         <!-- load jquery, popper, bootstrap -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -37,10 +42,11 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <!-- top navigation bar -->
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="link-nav main-logo-link">
-                    <h2 class="logo logo-text my-0"><strong>Summit Bike Co.</strong></h2>
+                <a href="{% url 'home' %}" class="link-nav link-logo">
+                    <h2 class="logo my-0">Summit Bike Co.</h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -60,7 +66,7 @@
                     </div>
                 </form>
             </div>
-
+        
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <!-- links for user account and shopping bag -->
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -90,7 +96,7 @@
                     </li>
                     <!-- shopping bag link -->
                     <li class="list-inline-item">
-                        <!-- using total variable: if something in shopping bag change font colour -->
+                        <!-- using total variable: if item in shopping bag change font colour -->
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav" href="">
                             <div class="text-center">
                                 <!-- font awesome shopping bag icon -->
@@ -127,5 +133,35 @@
     {% block postloadjs %}
     {% endblock %}
 
+    <!-- Footer -->
+    <footer class="footer py-1 bg-light footer-position">
+        <p class="m-0 text-center text-dark text-size">
+            <!-- Copyright -->
+            <span>© 2022 copyright:</span>
+            <!-- logo and brand -->
+            <span>Summit Bike Co.
+                <a class="navbar-brand" href="">
+                </a></span>
+        </p>
+        <p class="m-0 text-center text-dark text-size social-networks">follow us: 
+            <a href="https://facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in a new tab)">
+                <i class="fab fa-facebook-square ms-4"></i></a>
+
+            <a href="https://twitter.com" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)">
+                <i class="fab fa-twitter-square ms-4"></i></a>
+
+            <a href="https://instagram.com" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in a new tab)">
+                <i class="fab fa-instagram-square ms-4"></i></a>
+
+            <a href="https://youtube.com" target="_blank" rel="noopener"
+                aria-label="Visit our YouTube page (opens in a new tab)">
+                <i class="fab fa-youtube-square ms-4"></i></a>
+
+        </p>
+    </footer>
+    
   </body>
 </html>
