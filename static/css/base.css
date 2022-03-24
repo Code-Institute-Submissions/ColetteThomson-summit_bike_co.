@@ -54,11 +54,13 @@ body {
 
 /*  button text */
 .header-text {
-    color: #000 !important;
+    /*color: #000 !important;*/
+    color: rgb(66, 66, 66);
 }
 
 .border-black {
     border: 1px solid black !important;
+    
 }
 
 /* -------------------------------------------- Home Page */
@@ -71,6 +73,16 @@ body {
 .align-text {
     float: right;
 }
+
+/*  delivery banner */
+.banner {
+    background: black;
+}
+
+.banner > h4 {
+    font-size: 16px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -68,7 +68,7 @@
             </div>
         
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <!-- links for user account and shopping bag -->
+                <!-- link for user account -->
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <!-- parent menu containing font awesome user icon and 'my account' text -->
@@ -78,7 +78,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <!-- dropdown menu -->
+                        <!-- dropdown menu for 'my account' -->
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             <!-- if user authenticated, display options for their 'profile' and 'logout' -->
                             {% if request.user.is_authenticated %}
@@ -94,7 +94,7 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                     </li>
-                    <!-- shopping bag link -->
+                    <!-- link for shopping bag -->
                     <li class="list-inline-item">
                         <!-- using total variable: if item in shopping bag change font colour -->
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav" href="">
@@ -116,6 +116,21 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- use includes to isolate from base.html -->
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col banner text-white">
+                <h4 class="logo-font my-1">Free delivery or Pick Up in Store</h4>                
+            </div>            
         </div>
     </header>
 
