@@ -1,0 +1,3 @@
+[{"pk": 1, "model": "products.classification", "fields": {"name": "full_susp_mb", "friendly_name": "Full Suspension Mountain Bikes"}}, 
+{"pk": 2, "model": "products.classification", "fields": {"name": "hardtail_mb", "friendly_name": "Hardtail Mountain Bikes"}}]
+    
