@@ -2,6 +2,25 @@ from django.contrib import admin
 from .models import Product, Classification
 
 
-admin.site.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'classification',
+        'bike_model',
+        'price_now',
+        'rating',
+        'sku',
+        'image',
+    )
 
-admin.site.register(Classification)
+    ordering = ('classification',)
+
+
+class ClassificationAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Classification, ClassificationAdmin)
