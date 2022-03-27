@@ -50,8 +50,8 @@
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <!-- submit searches as url parameters -->
-                <form method="GET" action="">
+                <!-- submit searches as url parameters using GET-->
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <!-- 'q' is search query to be submitted to above action url -->
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
@@ -129,7 +129,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col banner text-white">
-                <h4 class="logo-font my-1">Free delivery on all orders!</h4>                
+                <h4 class="logo my-1">Free delivery on all orders!</h4>                
             </div>            
         </div>
     </header>
