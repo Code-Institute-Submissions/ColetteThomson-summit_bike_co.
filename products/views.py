@@ -9,7 +9,8 @@ def all_bikes(request):
     """ shows all bikes, including sorting and search queries """
     # to return all products from model Product
     products = Product.objects.all()
-    query = None # take out after testing to see if search works
+    # take out after testing to see if search works
+    query = None
 
     # if user has entered search criteria
     if request.GET:
@@ -30,7 +31,7 @@ def all_bikes(request):
     # use 'context' to return data to template
     context = {
         'products': products,
-        'search_term' : query,
+        'search_term': query,
     }
 
     return render(request, 'products/products.html', context)
