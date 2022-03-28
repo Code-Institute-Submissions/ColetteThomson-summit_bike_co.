@@ -11,9 +11,30 @@ def all_bikes(request):
     products = Product.objects.all()
     # take out after testing to see if search works
     query = None
+    sort = None
+    direction = None
 
     # if user has entered search criteria
     if request.GET:
+        # if get parameters contain 'sort'
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            # set 'sort' from 'none' to sortkey
+            sort = sortkey
+            if sortkey == 'bike_model':
+                # use variable 'sortkey' to preserve original field 'bike_model'
+                sortkey = 'lower_bike_model'
+                # use annotate for case-insensitive sorting
+                products = products.annotate(lower_bike_model=Lower('bike_model'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                # check if direction is 'descending, if so add '-'
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            # sort the product using order_by method
+            products = products.order_by(sortkey)
+
         if 'q' in request.GET:
             query = request.GET['q']
             # if user has not entered search criteria
@@ -27,11 +48,15 @@ def all_bikes(request):
             queries = Q(bike_model__icontains=query) | Q(type__icontains=query)
             # queries are filtered
             products = products.filter(queries)
+    
+    # return results to template
+    current_sorting = f'{sort}_{direction}'
 
     # use 'context' to return data to template
     context = {
         'products': products,
         'search_term': query,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)

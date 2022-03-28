@@ -51,8 +51,8 @@
                                     <div class="row">
                                         <div class="col">
                                             <!-- displays sale price and old price -->
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price_now }}</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price_was }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">Now: £{{ product.price_now }}</p>
+                                            <p class="lead mb-0 text-left">Was:   £{{ product.price_was }}</p>
                                             <!-- if statement: product rating (rated out of 5)-->
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
