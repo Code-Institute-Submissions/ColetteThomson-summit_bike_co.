@@ -5,7 +5,7 @@
                 All Mountain Bikes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="link-all-bikes">
-                <!-- filtering by 'classification' name (from Classification model) -->
+                <!-- sorting by field name (from Product model) -->
                 <a href="{% url 'products' %}?sort=price_now&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
