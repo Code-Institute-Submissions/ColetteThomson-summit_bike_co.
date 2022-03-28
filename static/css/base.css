@@ -3,14 +3,19 @@ html {
     height: 100%;
 }
 
-.background-home {
-    background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
-    background-size: cover;
-    /* view height - top header - footer */
-    height: calc(100vh - 164px - 56px);
-    color: rgb(66, 66, 66);
+.body {
+    /* color: rgb(66, 66, 66); */
+    color: black;
     font-family: 'Roboto', sans-serif;
 }
+    /* .background-home {
+        background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
+        background-size: cover;
+        /* view height - top header - footer 
+        height: calc(100vh - 164px - 56px);
+        color: rgb(66, 66, 66);
+        font-family: 'Roboto', sans-serif;
+    } */
 
 /* from Bulma */
 .icon {
@@ -70,14 +75,15 @@ html {
     background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
     background-size: cover;
     /* view height - top header - footer */
-    height: calc(100vh - 164px - 56px);
-    color: rgb(66, 66, 66);
-    font-family: 'Roboto', sans-serif;
+    height: calc(100vh - 164px);
+    padding: 0;
+    margin: 0;
 }
 
 .sale-text {
     color: white;
     text-align: right;
+    margin-top: 90px;
 }
 
 .align-text {
@@ -87,10 +93,13 @@ html {
 /*  delivery banner */
 .banner {
     background: black;
+    border-color: black;
 }
 
 .banner > h4 {
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(36, 243, 36);
 }
 
 /* -------------------------------- Backgrounds */
@@ -105,6 +114,11 @@ html {
     z-index: -1;
 }
 
+/* -------------------------------- Products app */
+
+.prod-container-margin {
+    margin-left: 10px;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -126,7 +140,7 @@ html {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 108px;
     }
 }
 

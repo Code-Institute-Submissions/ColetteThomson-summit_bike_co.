@@ -16,8 +16,8 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <!-- page heading -->
-                <h2 class="logo">Mountain Bikes</h2>
-                <hr class="w-50 mb-1">
+                <h2 class="logo">All Mountain Bikes</h2>
+                
             </div>
         </div>
         <div class="row">
@@ -27,7 +27,7 @@
                 <div class="row">
                     <!-- for loop: to iterate through products variable -->
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
                             <!-- individual product cards -->
                             <div class="card h-100 border-0">
                                 <!-- image at top of product card -->
@@ -51,8 +51,8 @@
                                     <div class="row">
                                         <div class="col">
                                             <!-- displays sale price and old price -->
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price_now }}</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price_was }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price_now }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price_was }}</p>
                                             <!-- if statement: product rating (rated out of 5)-->
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
@@ -72,13 +72,13 @@
                                 <hr>
                             </div>
                         {% endif %}
-                        <!-- render on small,medium screens - hide on all other screens -->                        
+                        <!-- render on small,medium screens - hide on all other screens                       
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <!-- horizontal rule under each set of 2 products -->
+                                 horizontal rule under each set of 2 products 
                                 <hr>
                             </div>
-                        {% endif %}
+                        {% endif %} -->
                         <!-- render on large screens - hide on all other screens --> 
                         {% if forloop.counter|divisibleby:3 %}
                             <div class="col-12 d-none d-lg-block d-xl-none mb-5">
