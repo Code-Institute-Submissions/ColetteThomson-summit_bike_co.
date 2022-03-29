@@ -33,12 +33,12 @@
                                 <!-- image at top of product card -->
                                 {% if product.image %}
                                 <a href="{% url 'bike_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
+                                    <img class="card-img-bottom img-fluid" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
                                 </a>
                                 {% else %}
                                 <!-- default image if no product image available -->
                                 <a href="{% url 'bike_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.bike_model }}">
+                                    <img class="card-img-bottom img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.bike_model }}">
                                 </a>
                                 {% endif %}
                                 <!-- body of product card -->
