@@ -37,27 +37,35 @@
     </a>
     <!-- display menu as a dropdown -->
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        <!-- if user authenticated, display options for their 'profile' and 'logout' -->
         {% if request.user.is_authenticated %}
+            <!-- if superuser, display options to manage shop 'stock' (using CRUD) -->
             {% if request.user.is_superuser %}
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Stock Management</a>
             {% endif %}
             <a href="" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
+            <!-- else display options to 'register' or 'login' -->
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
 </li>
-<!-- button to access the 'shopping bag' -->
+<!-- link for shopping bag -->
 <li class="list-inline-item">
+    <!-- using total variable: if item in shopping bag change font colour -->
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}header-text{% endif %} link-nav d-block d-lg-none" href="">
         <div class="text-center">
+            <!-- font awesome shopping bag icon -->
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">
+                <!-- if grand total variable exists.. -->
                 {% if grand_total %}
+                    <!-- ..then display total formatted to 2 decimal places -->
                     £{{ grand_total|floatformat:2 }}
                 {% else %}
+                    <!-- else if no total show £0.00 -->
                     £0.00
                 {% endif %}
             </p>

@@ -45,7 +45,9 @@
         <!-- top navigation bar -->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <!-- link to home page -->
                 <a href="{% url 'home' %}" class="link-nav link-logo">
+                    <!-- logo -->
                     <h2 class="logo my-0">Summit Bike Co.</h2>
                 </a>
             </div>
@@ -89,7 +91,7 @@
                                 <a href="" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                                <!-- otherwise display options to 'register' or 'login' -->
+                                <!-- else display options to 'register' or 'login' -->
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
@@ -107,7 +109,7 @@
                                         <!-- ..then display total formatted to 2 decimal places -->
                                         £{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        <!-- if no total show £0.00 -->
+                                        <!-- else if no total show £0.00 -->
                                         £0.00
                                     {% endif %}
                                 </p>
