@@ -44,9 +44,8 @@
                                 <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                                 <option value="bike_model_asc" {% if current_sorting == 'bike_model_asc' %}selected{% endif %}>Bike Model (A-Z)</option>
                                 <option value="bike_model_desc" {% if current_sorting == 'bike_model_desc' %}selected{% endif %}>Bike Model (Z-A)</option>
-                                <option value="classification_asc" {% if current_sorting == 'classification_asc' %}selected{% endif %}>Type (A-Z)</option>
                                 <!-- underscore before 'desc/asc' allows split to determine individual components for sort and direction GET parameters in url -->
-                                <option value="classification_desc" {% if current_sorting == 'classification_desc' %}selected{% endif %}>Type (Z-A)</option>
+                                <option value="classification_asc" {% if current_sorting == 'classification_asc' %}selected{% endif %}>Type</option>
                             </select>
                         </div>
                     </div>
@@ -79,7 +78,7 @@
                                 </a>
                                 {% endif %}
                                 <!-- body of product card -->
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0 pl-0 pr-0">
                                     <p class="mb-0">{{ product.bike_model }}</p>
                                     <p class="mb-0">Type: {{ product.type }}</p>
                                 </div>
@@ -88,9 +87,8 @@
                                     <div class="row">
                                         <div class="col">
                                             <!-- displays sale price and old price -->
-                                            <p class="lead mb-0 text-left font-weight-bold">Now: £{{ product.price_now }}</p>
-                                            <p class="lead mb-0 text-left">Was:   £{{ product.price_was }}</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            <p class="lead mb-0 font-weight-bold">Now: £{{ product.price_now }}</p>
+                                            <p class="lead mb-0">Was: £{{ product.price_was }}</p>
                                             <!-- if product has a classification -->
                                             {% if product.classification %}
                                             <p class="small mt-1 mb-0">
@@ -129,7 +127,7 @@
                         {% endif %} -->
                         <!-- render on large screens - hide on all other screens --> 
                         {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <div class="product col-12 d-none d-lg-block d-xl-none mb-5">
                                 <!-- horizontal rule under each set of 3 products -->
                                 <hr>
                             </div>
@@ -159,7 +157,7 @@
     {{ block.super }}
     <!-- to handle click function for top of page button -->
     <script type="text/javascript">
-        $('.btt-link').click(function(e) {
+        $('.arrow-link').click(function(e) {
           window.scrollTo(0,0)
         })
     </script>

@@ -116,8 +116,9 @@ html {
 
 /* -------------------------------- P R O D U C T S  app */
 
-.prod-container-margin {
+.product {
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 a.classification-badge > span.badge:hover {
