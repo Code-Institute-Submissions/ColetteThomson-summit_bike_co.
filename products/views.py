@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 # Q needed to generate search query if query isn't blank
 from django.db.models import Q
-from .models import Product
+from .models import Product, Classification
 
 
 def all_bikes(request):
@@ -11,6 +11,7 @@ def all_bikes(request):
     products = Product.objects.all()
     # take out after testing to see if search works
     query = None
+    classifications = None
     sort = None
     direction = None
 
@@ -27,6 +28,10 @@ def all_bikes(request):
                 # use annotate for case-insensitive sorting
                 products = products.annotate(lower_bike_model=Lower('bike_model'))
 
+            if sortkey == 'classification':
+                # to allow drilling into related model (__)
+                sortkey = 'classification__name'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 # check if direction is 'descending, if so add '-'
@@ -34,6 +39,11 @@ def all_bikes(request):
                     sortkey = f'-{sortkey}'
             # sort the product using order_by method
             products = products.order_by(sortkey)
+
+        if 'classification' in request.GET:
+            classifications = request.GET['classification'].split(',')
+            products = products.filter(classification__name__in=classifications)
+            classifications = Classification.objects.filter(name__in=classifications)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -48,7 +58,7 @@ def all_bikes(request):
             queries = Q(bike_model__icontains=query) | Q(type__icontains=query)
             # queries are filtered
             products = products.filter(queries)
-    
+
     # return results to template
     current_sorting = f'{sort}_{direction}'
 
@@ -56,6 +66,7 @@ def all_bikes(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_classifications': classifications,
         'current_sorting': current_sorting,
     }
 

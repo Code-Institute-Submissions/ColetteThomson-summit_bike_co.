@@ -17,13 +17,49 @@
             <div class="col text-center mt-3">
                 <!-- page heading -->
                 <h2 class="logo">All Mountain Bikes</h2>
-                
+                <!-- if multiple classifications are selected -->
+                {% for c in current_classifications %}
+                    <!-- render out with programmatic name as href -->
+                    <a class="classification-badge text-decoration-none" href="{% url 'products' %}?classification={{ c.name }}">
+                        <!-- render friendly_name to user -->
+                        <span class="p-2 mt-2 badge badge-white gen-text rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
             </div>
         </div>
         <div class="row">
             <!-- container for all products on page -->
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row mt-1 mb-2">
+                    <!-- sort select box at page top for mobile; at last column for medium, larger screens -->
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <!-- sorting template variable value: if no sorting currently selected then value is none -->
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <!-- sorting template variable value: if 'price ascending' then this will be shown in sort box -->
+                                <option value="price_now_asc" {% if current_sorting == 'price_now_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_now_desc" {% if current_sorting == 'price_now_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="bike_model_asc" {% if current_sorting == 'bike_model_asc' %}selected{% endif %}>Bike Model (A-Z)</option>
+                                <option value="bike_model_desc" {% if current_sorting == 'bike_model_desc' %}selected{% endif %}>Bike Model (Z-A)</option>
+                                <option value="classification_asc" {% if current_sorting == 'classification_asc' %}selected{% endif %}>Type (A-Z)</option>
+                                <option value="classification_desc" {% if current_sorting == 'classification_desc' %}selected{% endif %}>Type (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            <!-- return user to products page if entered a 'search' or 'sorting' -->
+                            {% if search_term or current_classifications or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'products' %}">All Bikes Home</a> | </span>
+                            {% endif %}
+                            <!-- 'length' (counts number of products), render to user number of search results-->
+                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     <!-- for loop: to iterate through products variable -->
                     {% for product in products %}
@@ -53,6 +89,17 @@
                                             <!-- displays sale price and old price -->
                                             <p class="lead mb-0 text-left font-weight-bold">Now: £{{ product.price_now }}</p>
                                             <p class="lead mb-0 text-left">Was:   £{{ product.price_was }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            <!-- if product has a classification -->
+                                            {% if product.classification %}
+                                            <p class="small mt-1 mb-0">
+                                                <!-- render out with programmatic name as href -->
+                                                <a class="text-muted" href="{% url 'products' %}?classification={{ product.classification.name }}">
+                                                    <!-- render friendly_name to user -->
+                                                    <i class="fas fa-tag mr-1"></i>{{ product.classification.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                             <!-- if statement: product rating (rated out of 5)-->
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>

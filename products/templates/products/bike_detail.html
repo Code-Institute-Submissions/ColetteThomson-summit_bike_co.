@@ -35,6 +35,16 @@
                     <p class="mb-0">{{ product.bike_model }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price_now }}</p>
                     <p class="lead mb-0 text-left">£{{ product.price_was }}</p>
+                    <!-- if product has a classification -->
+                    {% if product.classification %}
+                    <p class="small mt-1 mb-0">
+                        <!-- render out with programmatic name as href -->
+                        <a class="text-muted" href="{% url 'products' %}?classification={{ product.classification.name }}">
+                            <!-- render friendly_name to user -->
+                            <i class="fas fa-tag mr-1"></i>{{ product.classification.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}

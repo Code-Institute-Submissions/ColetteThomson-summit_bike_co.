@@ -58,7 +58,7 @@ html {
 }
 
 /*  button text */
-.header-text {
+.gen-text {
     /*color: #000 !important;*/
     color: rgb(66, 66, 66);
 }
@@ -118,6 +118,12 @@ html {
 
 .prod-container-margin {
     margin-left: 10px;
+}
+
+a.classification-badge > span.badge:hover {
+    /* same colour as bootstrap dark class */
+    background: #212529 !important;
+    color: #fff !important;
 }
 
 /* -------------------------------- Media Queries */
