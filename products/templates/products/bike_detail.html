@@ -11,10 +11,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="background-other"></div>
+
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-12 col-md-6 col-lg-4 product-position">
                 <div class="image-container my-5">
                     {% if product.image %}
                         <!-- link to product image in a new window -->
@@ -32,12 +32,13 @@
             <!-- individual product details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.bike_model }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price_now }}</p>
-                    <p class="lead mb-0 text-left">£{{ product.price_was }}</p>
+                    <p class="mb-0 model-font">{{ product.bike_model }}</p>
+                    <p class="mb-0 text-left"><strong>Price now:  £{{ product.price_now }}</strong></p>
+                    <p class="mb-0 text-left">Price was:  £{{ product.price_was }}</p>
+                    
                     <!-- if product has a classification -->
                     {% if product.classification %}
-                    <p class="small mt-1 mb-0">
+                    <p class="small mt-3 mb-0">
                         <!-- render out with programmatic name as href -->
                         <a class="text-muted" href="{% url 'products' %}?classification={{ product.classification.name }}">
                             <!-- render friendly_name to user -->
@@ -45,21 +46,51 @@
                         </a>
                     </p>
                     {% endif %}
+                    <!-- product rating -->
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
-                    <p class="mt-3">{{ product.type }}</p>
-                    <p class="mt-3">{{ product.brand }}</p>
-                    <p class="mt-3">{{ product.frame_in_inches }}</p>
-                    <p class="mt-3">{{ product.discipline }}</p>
-                    <p class="mt-3">{{ product.material }}</p>
-                    <p class="mt-3">{{ product.wheel_size }}</p>
-                    <p class="mt-3">{{ product.rear_derailleur }}</p>
-                    <p class="mt-3">{{ product.colour }}</p>
-                    <p class="mt-3">{{ product.gender }}</p>
-                </div>
+                    <!-- bike specifications -->
+                    <table class="table-position">
+                        <tr>
+                            <td class="label-position"><strong>TYPE:</strong></td>
+                            <td>{{ product.type }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>BRAND</strong></td>
+                            <td>{{ product.brand }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>FRAME IN INCHES:</strong></td>
+                            <td>{{ product.frame_in_inches }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>DISCIPLINE:</strong></td>
+                            <td>{{ product.discipline }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>MATERIAL:</strong></td>
+                            <td>{{ product.material }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>WHEEL SIZE:</strong></td>
+                            <td>{{ product.wheel_size }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>REAR DERAILLEUR:</strong></td>
+                            <td>{{ product.rear_derailleur }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>COLOUR:</strong></td>
+                            <td>{{ product.colour }}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>GENDER:</strong></td>
+                            <td>{{ product.gender }}</td>
+                        </tr>
+                    </table>
             </div>
         </div>
     </div>

@@ -6,7 +6,8 @@ html {
 .body {
     /* color: rgb(66, 66, 66); */
     color: black;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
     /* .background-home {
         background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
@@ -28,6 +29,7 @@ html {
 
 .logo {
     font-family: 'Yatra One', cursive;
+    color: rgb(45, 91, 218);
 }
 
 .link-logo {
@@ -60,7 +62,7 @@ html {
 /*  button text */
 .gen-text {
     /*color: #000 !important;*/
-    color: rgb(66, 66, 66);
+    color: rgb(51, 51, 51);
 }
 
 .border-black {
@@ -114,13 +116,11 @@ html {
     z-index: -1;
 }
 
-/* -------------------------------- P R O D U C T S  app */
+/* ----------------------------------------- P R O D U C T S  app */
 
-.product {
-    margin-left: 10px;
-    margin-right: 10px;
-}
+/* ----------------------- products (all bikes) page */
 
+/* bike classification (type) */
 a.classification-badge > span.badge:hover {
     /* same colour as bootstrap dark class */
     background: #212529 !important;
@@ -138,6 +138,42 @@ a.classification-badge > span.badge:hover {
 
 .arrow-link {
     cursor: pointer;
+}
+
+
+/* to render on large screens */
+.product {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* ----------------------- bike_detail page */
+
+/*  position of individual bike container */
+.product-position {
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.classif-position {
+    margin-top: 20px;
+}
+
+/* bike model */
+.model-font {
+    color: rgb(45, 91, 218);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* individual product detail table */
+.label-position {
+    min-width: 150px;
+    line-height: 35px;
+}
+
+.table-position {
+    margin-top: 20px;
 }
 
 /* -------------------------------- Media Queries */
