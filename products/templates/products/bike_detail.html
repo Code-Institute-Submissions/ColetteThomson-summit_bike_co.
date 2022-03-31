@@ -29,13 +29,23 @@
                     {% endif %}
                 </div>
             </div>
-            <!-- individual product details -->
+            <!-- individual product details-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
+                    <!-- product name -->
                     <p class="mb-0 model-font">{{ product.bike_model }}</p>
-                    <p class="mb-0 text-left"><strong>Price now:  £{{ product.price_now }}</strong></p>
-                    <p class="mb-0 text-left">Price was:  £{{ product.price_was }}</p>
-                    
+                    <!-- product pricing -->
+                    <table>
+                        <tr>
+                            <td class="label-position"><strong>Price now:</td>
+                            <td class="price-font"><strong>£{{ product.price_now }}</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="label-position"><strong>Price was:</td>
+                            <td>£{{ product.price_was }}</td>
+                        </tr>
+                    </table>
+                                        
                     <!-- if product has a classification -->
                     {% if product.classification %}
                     <p class="small mt-3 mb-0">
@@ -94,5 +104,5 @@
             </div>
         </div>
     </div>
-    
+</div>    
 {% endblock %}
