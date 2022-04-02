@@ -1,5 +1,8 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
+
 
 def bag_contents(request):
     """ to return a dictionary using a context processor and make
@@ -9,7 +12,24 @@ def bag_contents(request):
     # need when start adding items to bag (both initialised to zero)
     total = 0
     product_count = 0
-    # check if bag total is less than free delivery threshold (from settings.py)
+    # obtain existing session, or initialising to empty dictionary if none
+    bag = request.session.get('bag', {})
+
+    for item_id, quantity in bag.items():
+        # get product and its id
+        product = get_object_or_404(Product, pk=item_id)
+        # add quantity * price to total
+        total += quantity * product.price_now
+        # increment product count by quantity
+        product_count += quantity
+        # add dictionary to bag items, to gain access to other product info
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
+
+    # check if bag total is less than free delivery threshold (settings.py)
     if total < settings.FREE_DELIVERY_THRESHOLD:
         # total multiplied by standard delivery percentage (from settings.py)
         # use 'decimal' to prevent rounding errors
