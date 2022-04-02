@@ -70,7 +70,7 @@ html {
     
 }
 
-/* -------------------------------------------- Home Page */
+/* -------------------------------------------- H O M E  app */
 
 /* image background */
 .background-home {
@@ -175,6 +175,13 @@ a.classification-badge > span.badge:hover {
 .price-font {
     font-weight: 700;
     font-size: 25px;
+}
+
+/*  keep shopping button */
+.keep-shopping-btn {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
 }
 
 
