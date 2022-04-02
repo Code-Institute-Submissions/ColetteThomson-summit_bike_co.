@@ -24,17 +24,91 @@
     <div class="row">
         <!-- table showing contents of shopping bag -->
         <div class="col">
-            <!-- if something in bag, render table -->
+            <!-- if something in bag, render product info table -->
             {% if bag_items %}
-                <div class="table-responsive rounded">
-                    {{ bag_items }}
-                </div>
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="gen-text">
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <!-- blank column to allow product info to span 2 columns -->
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <!-- iterate through each item in shopping bag -->
+                    {% for item in bag_items %}
+                        <tr>
+                            <!-- column 1: product image -->
+                            <td class="p-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </td>
+                            <!-- column 2: product name and sku -->
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.product.bike_model }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </td>
+                            <!-- column 3: product price -->
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price_now }}</p>
+                            </td>
+                            <!-- column 4: product quantity selected -->
+                            <td class="py-3 w-25">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </td>
+                            <!-- column 5: bag subtotal -->
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price_now }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <!-- list bag total, delivery charges and grand total -->
+                            <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                            <!-- show user summary of costs -->
+                            {% if free_delivery_delta > 0 %}
+                                <!-- show amount needed to get free delivery -->
+                                <p class="mb-1 text-danger">
+                                    You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                                </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <!-- keep shopping button -->
+                            <a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 btn-lg">
+                                <span class="icon">
+                                    <!-- font awesome icon: left chevron -->
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <!-- secure checkout button -->
+                            <a href="" class="btn btn-black rounded-0 btn-lg">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <!-- font awesome icon: closed lock -->
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>    
+
             {% else %}
                 <!-- if nothing in bag, show message to user -->
                 <p class="lead mb-5">Your bag is empty.</p>
-                <!-- button for users to return to home page -->
+                <!-- button for users to return to products page -->
                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                     <span class="icon">
+                        <!-- font awesome icon: left chevron -->
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span class="text-uppercase">Keep Shopping</span>
