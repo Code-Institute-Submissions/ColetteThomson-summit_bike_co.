@@ -15,19 +15,37 @@ def bag_contents(request):
     # obtain existing session, or initialising to empty dictionary if none
     bag = request.session.get('bag', {})
 
-    for item_id, quantity in bag.items():
-        # get product and its id
-        product = get_object_or_404(Product, pk=item_id)
-        # add quantity * price to total
-        total += quantity * product.price_now
-        # increment product count by quantity
-        product_count += quantity
-        # add dictionary to bag items, to gain access to other product info
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-        })
+    for item_id, item_data in bag.items():
+        # if item has no sizes (is an integer and therefore a quantity only)
+        if isinstance(item_data, int):
+            # get product and its id
+            product = get_object_or_404(Product, pk=item_id)
+            # add quantity * price to total
+            total += item_data * product.price_now
+            # increment product count by quantity
+            product_count += item_data
+            # add dictionary to bag items, to gain access to other product info
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+            })
+        # if item has sizes, handle as dictionary
+        else:
+            # get product and its id
+            product = get_object_or_404(Product, pk=item_id)
+            # iterate through inner dictionery of items by size
+            for size, quantity in item_data['items_by_size'].items():
+                # increment product count and total
+                total += quantity * product.price_now
+                product_count += quantity
+                # items in bag dictionary, including size
+                bag_items.append({
+                    'item_id': item_id,
+                    'quantity': item_data,
+                    'product': product,
+                    'size': size,
+                })
 
     # check if bag total is less than free delivery threshold (settings.py)
     if total < settings.FREE_DELIVERY_THRESHOLD:
