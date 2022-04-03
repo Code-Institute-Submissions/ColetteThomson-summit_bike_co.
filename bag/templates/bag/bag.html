@@ -57,10 +57,52 @@
                             <td class="py-3">
                                 <p class="my-0">£{{ item.product.price_now }}</p>
                             </td>
-                            <!-- column 4: product quantity selected -->
+                            <!-- column 4: allow users ability to change item quantity from shopping bag -->
                             <td class="py-3 w-25">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <form class="form update-form" method="POST" action="">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <!-- input group with quantity selection (by user) -->
+                                        <div class="input-group">
+                                            <!-- bootstrap class -->
+                                            <div class="input-group-prepend">
+                                                <!-- decrease quantity selector button with product.id and increment qty (needed for JS) -->
+                                                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <!-- font awesome minus small icon -->
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <!-- shows min and max quantities linked to product id -->
+                                            <input class="form-control form-control-sm qty_input" type="number" name="quantity"
+                                                value="{{ item.quantity }}" min="1" max="50"
+                                                data-item_id="{{ item.item_id }}"
+                                                id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <!-- increase quantity selector button with product.id and increment qty (needed for JS) -->
+                                                <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <!-- font awesome plus small icon -->
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div> 
+                                            {% if item.product.sizes %}
+                                                <!-- submit size of item user wants to update/remove in hidden input field -->
+                                                <input type="hidden" name="product_size" value="{{ item.size }}">
+                                            {% endif %}   
+                                        </div>
+                                </form>
+                                <!-- anchor element: to update quantity (and submit form) -->
+                                <a class="update-link text-info"><small>Update</small></a>
+                                <!-- anchor element: to remove a specific item (if multiple sizes of this item in the bag) -->
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                                    data-size="{{ item.size }}"><small>Remove</small></a>
                             </td>
+
                             <!-- column 5: bag subtotal -->
                             <td class="py-3">
                                 <p class="my-0">£{{ item.product.price_now }}</p>
@@ -120,5 +162,42 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+<!-- javascript (includes) for quantity_input_script.html -->
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // on click event of update-link
+    $('.update-link').click(function(e) {
+        // use previous to find most recent update form in the DOM
+        var form = $(this).prev('.update-form');
+        // call form.submit method
+        form.submit();
+    })
+
+    // on click event of remove-item
+    $('.remove-item').click(function(e) {
+        // store csrf token as a string
+        var csrfToken = "{{ csrf_token }}";
+        // need itemId (obtained by splitting id of update link) and size of item to be removed
+        var itemId = $(this).attr('id').split('remove_')[1];
+        // use data method to get size from 'size' attribute
+        var size = $(this).data('size');
+        var url = `/bag/remove/${itemId}`;
+        // 'data' is object used to send this data to the server
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        // post data to a url
+        $.post(url, data)
+            // await response from server
+            .done(function() {
+                // reload page to reflect updated bag
+                location.reload();
+            });
+    })
+</script>
 
 {% endblock %}

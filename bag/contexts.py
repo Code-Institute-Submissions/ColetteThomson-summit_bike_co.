@@ -42,7 +42,8 @@ def bag_contents(request):
                 # items in bag dictionary, including size
                 bag_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    # use 'quantity' from inner for loop
+                    'quantity': quantity,
                     'product': product,
                     'size': size,
                 })

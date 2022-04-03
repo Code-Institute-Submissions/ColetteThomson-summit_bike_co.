@@ -184,6 +184,24 @@ a.classification-badge > span.badge:hover {
     border: 1px solid black;
 }
 
+/* ----------------------------------------- B A G  app */
+
+/* ----------------------- bag page */
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* shopping bag page update and remove links */
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 
 /* -------------------------------- Media Queries */
 
