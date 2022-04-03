@@ -1,0 +1,67 @@
+<script type="text/javascript">
+    // disable +/- outside 1-50 range
+    function handleEnableDisable(itemId) {
+        // use itemId to get current value of input
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        // disable minus button if quantity less than 2
+        var minusDisabled = currentValue < 2;
+        // disable plus button if quantity more than 50
+        var plusDisabled = currentValue > 49;
+        // use prop method to set disabled attribute to true or false
+        // depending if current value is less than 2
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        // or greater than 50
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+
+    // if -/+ quantity buttons are used
+    var allQtyInputs = $('.qty_input');
+    // iterate through all quantity inputs on page (using item_id)
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        // for each quantity input, call enable/disable function when page loads
+        handleEnableDisable(itemId);
+    }
+
+    // use 'change' if up/down arrows within quantity box are used to change quantity
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        // for each quantity up/down arrow input, call enable/disable function
+        handleEnableDisable(itemId);
+    });
+
+    // on click event of increment quantity
+    $('.increment-qty').click(function(e) {
+        // prevent default button action
+        e.preventDefault();
+        // find closest 'input-group' class ('closest' searches up Dom tree)
+        // then drill down ('find') closest element with the class 'qty_input'
+        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        // cache current value
+        var currentValue = parseInt($(closestInput).val());
+        // set input box's new value to currentValue + 1
+        $(closestInput).val(currentValue + 1);
+        // get item id using data method (pulls from data-item_id in 'bike_detail')
+        var itemId = $(this).data('item_id');
+        // pass into handleEnableDisable function
+        handleEnableDisable(itemId);
+    });  
+
+    // on click event of decrement quantity
+    $('.decrement-qty').click(function(e) {
+        // prevent default button action
+        e.preventDefault();
+        // find closest 'input-group' class ('closest' searches up Dom tree)
+        // then drill down ('find') closest element with the class 'qty_input'
+        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        // cache current value
+        var currentValue = parseInt($(closestInput).val());
+        // set input box's new value to currentValue - 1
+        $(closestInput).val(currentValue - 1);
+        // get item id using data method (pulls from data-item_id in 'bike_detail')
+        var itemId = $(this).data('item_id');
+        // pass into handleEnableDisable function
+        handleEnableDisable(itemId);
+    });
+
+</script>
