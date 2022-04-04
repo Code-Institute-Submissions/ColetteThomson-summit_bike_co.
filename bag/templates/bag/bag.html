@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
     <!-- to push header below main nav bar and site header -->
     <div class="container header-container">
@@ -59,7 +60,7 @@
                             </td>
                             <!-- column 4: allow users ability to change item quantity from shopping bag -->
                             <td class="py-3 w-25">
-                                <form class="form update-form" method="POST" action="">
+                                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <!-- input group with quantity selection (by user) -->
@@ -100,7 +101,7 @@
                                 <a class="update-link text-info"><small>Update</small></a>
                                 <!-- anchor element: to remove a specific item (if multiple sizes of this item in the bag) -->
                                 <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                                    data-size="{{ item.size }}"><small>Remove</small></a>
+                                    data-product_size="{{ item.size }}"><small>Remove</small></a>
                             </td>
 
                             <!-- column 5: bag subtotal -->

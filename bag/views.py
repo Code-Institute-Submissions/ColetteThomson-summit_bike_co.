@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 
 def view_bag(request):
@@ -58,3 +58,68 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     # redirect user back to their original page
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """ edit quantity of specified product to specified amount """
+    # obtain quantity required (convert to integer from string)
+    quantity = int(request.POST.get('quantity'))
+    # set size
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
+
+    # get bag variable if it exists or create one if not
+    bag = request.session.get('bag', {})
+
+    # check if product with sizes is being added
+    if size:
+        if quantity > 0:
+            # drill into 'items-by-size' dictionary and update item's quantity
+            bag[item_id]['items_by_size'][size] = quantity
+        else:
+            # remove item if quantity submitted is zero
+            del[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+    else:
+        # if there's no size remove item
+        if quantity > 0:
+            bag[item_id] = quantity
+        else:
+            bag.pop(item_id)
+
+    # overwrite session with updated variable
+    request.session['bag'] = bag
+    # redirect back to the view bag url
+    return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """Remove item from shopping bag and allow users to remove
+    items directly without setting quantity to zero"""
+
+    try:
+        size = None
+        if 'product_size' in request.POST:
+            size = request.POST['product_size']
+        # get bag variable if it exists or create one if not
+        bag = request.session.get('bag', {})
+
+        if size:
+            # remove only specific size requested from dictionary
+            del bag[item_id]['items_by_size'][size]
+            # if size is only item in dictionary, delete item id as dictionary is now empty
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+        else:
+            # if there's no size, remove (pop) from bag
+            bag.pop(item_id)
+
+        # overwrite session with updated variable
+        request.session['bag'] = bag
+        # imply item was successfully removed
+        return HttpResponse(status=200)
+    # return error to template
+    except Exception as e:
+        return HttpResponse(status=500)
