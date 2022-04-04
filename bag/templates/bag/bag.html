@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load bag_tools %}
 
 {% block page_header %}
     <!-- to push header below main nav bar and site header -->
@@ -106,7 +106,8 @@
 
                             <!-- column 5: bag subtotal -->
                             <td class="py-3">
-                                <p class="my-0">£{{ item.product.price_now }}</p>
+                                <!-- pipe 'price_now' (1st argument) 'quantity' (2nd argument) -->
+                                <p class="my-0">£{{ item.product.price_now | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                     {% endfor %}
@@ -187,10 +188,10 @@
         // need itemId (obtained by splitting id of update link) and size of item to be removed
         var itemId = $(this).attr('id').split('remove_')[1];
         // use data method to get size from 'size' attribute
-        var size = $(this).data('size');
-        var url = `/bag/remove/${itemId}`;
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}/`;
         // 'data' is object used to send this data to the server
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
         // post data to a url
         $.post(url, data)
             // await response from server
