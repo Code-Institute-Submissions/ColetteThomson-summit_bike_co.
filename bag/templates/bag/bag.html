@@ -106,8 +106,8 @@
 
                             <!-- column 5: bag subtotal -->
                             <td class="py-3">
-                                <!-- pipe 'price_now' (1st argument) 'quantity' (2nd argument) -->
-                                <p class="my-0">£{{ item.product.price_now | calc_subtotal:item.quantity }}</p>
+                                <!-- pipe 'price_now' (1st argument) 'quantity' (2nd argument) - from bag_tools.py -->
+                                <p class="my-0">£{{ item.product.price_now | calc_subtotal:item.quantity }}</p> 
                             </td>
                         </tr>
                     {% endfor %}
