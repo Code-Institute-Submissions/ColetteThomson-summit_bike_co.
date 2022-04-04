@@ -85,6 +85,8 @@ TEMPLATES = [
         },
     },
 ]
+# ensure messages (toasts) are stored in the session (needed for Gitpod)
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`

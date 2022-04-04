@@ -1,0 +1,19 @@
+<!-- 'data-autohide' and 'data-dismiss needed to prevent autohide' 
+and instead allow user to dismiss the message themselves -->
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-info"></div>
+    <div class="w-100 toast-capper bg-info"></div>
+    <!-- toast header for success toast -->
+    <div class="toast-header bg-white text-dark">
+        <strong class="mr-auto">Alert!</strong>
+        <!-- close button -->
+        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <!-- toast body -->
+    <div class="toast-body bg-white">
+        <!-- message template variable (to be included in base template) -->
+        {{ message }}        
+    </div>
+</div>

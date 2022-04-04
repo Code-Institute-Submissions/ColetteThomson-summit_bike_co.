@@ -153,7 +153,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-    <!-- block.super to ensure this code is appended to anything else already in the block, rather than replacing it -->
+    <!-- block.super to ensure this code is appended to anything else 
+        already in the block (i.e. base.html), rather than replacing it -->
     {{ block.super }}
     <!-- to handle click function for top of page button -->
     <script type="text/javascript">
