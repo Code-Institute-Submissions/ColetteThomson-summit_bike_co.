@@ -104,7 +104,7 @@
                                     data-product_size="{{ item.size }}"><small>Remove</small></a>
                             </td>
 
-                            <!-- column 5: bag subtotal -->
+                            <!-- column 5: calculate bag subtotal -->
                             <td class="py-3">
                                 <!-- pipe 'price_now' (1st argument) 'quantity' (2nd argument) - from bag_tools.py -->
                                 <p class="my-0">£{{ item.product.price_now | calc_subtotal:item.quantity }}</p> 
