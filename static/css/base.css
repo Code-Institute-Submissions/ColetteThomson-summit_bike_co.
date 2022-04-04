@@ -36,29 +36,6 @@ html {
     width: fit-content;
 }
 
-/* buttons */
-.view-range-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-    
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.view-range-button:hover,
-.view-range-button:active,
-.view-range-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
 /*  button text */
 .gen-text {
     /*color: #000 !important;*/
@@ -68,6 +45,23 @@ html {
 .border-black {
     border: 1px solid black !important;
     
+}
+
+/* -------------------------------------------- user messages (bootstrap toasts) */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* -------------------------------------------- H O M E  app */
@@ -102,6 +96,29 @@ html {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     color: rgb(36, 243, 36);
+}
+
+/* 'view our range' button */
+.view-range-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+    
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.view-range-button:hover,
+.view-range-button:active,
+.view-range-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
 }
 
 /* -------------------------------- Backgrounds */

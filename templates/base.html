@@ -141,13 +141,17 @@
     <div class="message-container">
         {% for message in messages %}
             {% with message.level as level %}
+                <!-- django level 40 is an error -->
                 {% if level == 40 %}
                     {% include 'includes/toasts/toast_error.html' %}
+                <!-- django level 30 is a warning -->
                 {% elif level == 30 %}
                     {% include 'includes/toasts/toast_warning.html' %}
+                <!-- django level 25 is a success -->
                 {% elif level == 25 %}
                     {% include 'includes/toasts/toast_success.html' %}
                 {% else %}
+                    <!-- default to using the info toast for all other messages -->
                     {% include 'includes/toasts/toast_info.html' %}
                 {% endif %}
             {% endwith %}
