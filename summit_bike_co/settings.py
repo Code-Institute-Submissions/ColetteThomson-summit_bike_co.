@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'bag',
     # checkout app
     'checkout',
+
+    # other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +68,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'summit_bike_co.urls'
+
+# crispy forms with bootstrap version
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -84,6 +90,10 @@ TEMPLATES = [
                 # contexts dictionary to be used across all apps
                 'bag.contexts.bag_contents',
             ],
+            # enables crispy_forms usage in all templates by default
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
         },
     },
 ]
