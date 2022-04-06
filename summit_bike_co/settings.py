@@ -195,3 +195,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # used to calculate delivery costs
 FREE_DELIVERY_THRESHOLD = 1500
 STANDARD_DELIVERY_PERCENTAGE = 10
+# stripe fields
+STRIPE_CURRENCY = 'gbp'
+# get '.._keys' from environment, and assign an empty default value 
+# (to avoid reveal of secret-key and subsequent possible misuse - and
+# so must keep it out of version control)
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
