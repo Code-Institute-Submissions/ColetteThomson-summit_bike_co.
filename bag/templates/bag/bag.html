@@ -169,8 +169,10 @@
 
 <!-- javascript (includes) for quantity_input_script.html -->
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    <!-- block.super to ensure this code is appended to anything else 
+        already in the block (i.e. base.html), rather than replacing it -->
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
     // on click event of update-link
