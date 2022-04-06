@@ -87,6 +87,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # media context processor (needed for media_url)
+                'django.template.context_processors.media',
                 # contexts dictionary to be used across all apps
                 'bag.contexts.bag_contents',
             ],
@@ -94,6 +96,7 @@ TEMPLATES = [
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
