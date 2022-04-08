@@ -57,7 +57,7 @@ card.addEventListener('change', function (event) {
     }
 });
 
-/* Handle form submit (adapted from js stripe documentation)*/
+/* Handle form submit (adapted from js stripe docs)*/
 
 /*  obtain form element */
 var form = document.getElementById('payment-form');
