@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
@@ -8,6 +9,33 @@ from products.models import Product
 from bag.contexts import bag_contents
 
 import stripe
+import json
+
+
+@require_POST
+def cache_checkout_data(request):
+    """ determine if user has selected the 'save info box' (checkout page) """
+    try:
+        # before calling confirm card payment method (stripe js)
+        # first part of split (client) will be payment intent id (pid)
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        # set up stripe with secret key
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        # to modify payment intent and add metadata
+        stripe.PaymentIntent.modify(pid, metadata={
+            # add json dump of user's shopping bag to use ...
+            'bag': json.dumps(request.session.get('bag', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        # post to the 'handle form submit' view (stripe_elements.js)
+        return HttpResponse(status=200)
+    except Exception as e:
+        # display error message to user if payment unsuccessful
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        # return bad request
+        return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
