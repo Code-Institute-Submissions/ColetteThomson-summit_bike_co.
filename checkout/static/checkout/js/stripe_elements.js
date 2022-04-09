@@ -73,61 +73,84 @@ form.addEventListener('submit', function(ev) {
     $('#payment-form').fadeToggle(100);
     /* trigger overlay (over payment form) */
     $('#loading-overlay').fadeToggle(100);
-    /* send card information securely to stripe */
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-            /* add payment info into webhook (from Stripe) */
-            billing_details: {
-                name: $.trim(form.full_name.value), // trim off excess whitespace
+    
+    /* check if save info box selected */
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    /* obtain from form input */
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    /* create object to pass info to 'handle form submit' view */
+    var postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+    /* create variable for url */
+    var url = '/checkout/cache_checkout_data/';
+
+    /* post above data to 'cache_checkout_data' view 
+    /* await response that payment intent was updated, before
+    /* calling confirmed payment method (using '.done')  */
+    $.post(url, postData).done(function () {
+        /* send card information securely to stripe */
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                /* add payment info into webhook (from Stripe) */
+                billing_details: {
+                    name: $.trim(form.full_name.value), // trim off excess whitespace
+                    phone: $.trim(form.phone_number.value),
+                    email: $.trim(form.email.value),
+                    address:{
+                        line1: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
+                        city: $.trim(form.town_or_city.value),
+                        country: $.trim(form.country.value),
+                        state: $.trim(form.county.value),
+                    }
+                }
+            },
+            shipping: {
+                name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
-                email: $.trim(form.email.value),
-                address:{
+                address: {
                     line1: $.trim(form.street_address1.value),
                     line2: $.trim(form.street_address2.value),
                     city: $.trim(form.town_or_city.value),
                     country: $.trim(form.country.value),
+                    postal_code: $.trim(form.postcode.value),
                     state: $.trim(form.county.value),
                 }
+            },
+        /* execute this function on the result */
+        }).then(function(result) {
+            /* if there is an error, display message (card-error div in checkout.html) */
+            if (result.error) {
+                var errorDiv = document.getElementById('card-errors');
+                /* alert icon from font awesome */
+                var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                /* if there's an error, re-enable card element and submit button
+                to allow user to fix this */
+                $(errorDiv).html(html);
+                /* fade payment-form */
+                $('#payment-form').fadeToggle(100);
+                /* trigger overlay (over payment form) */
+                $('#loading-overlay').fadeToggle(100);
+                card.update({ 'disabled': false});
+                $('#submit-button').attr('disabled', false);
+            } else {
+                /* if payment intent is successful, submit the form */
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
             }
-        },
-        shipping: {
-            name: $.trim(form.full_name.value),
-            phone: $.trim(form.phone_number.value),
-            address: {
-                line1: $.trim(form.street_address1.value),
-                line2: $.trim(form.street_address2.value),
-                city: $.trim(form.town_or_city.value),
-                country: $.trim(form.country.value),
-                postal_code: $.trim(form.postcode.value),
-                state: $.trim(form.county.value),
-            }
-        },
-    /* execute this function on the result */
-    }).then(function(result) {
-        /* if there is an error, display message (card-error div in checkout.html) */
-        if (result.error) {
-            var errorDiv = document.getElementById('card-errors');
-            /* alert icon from font awesome */
-            var html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-                </span>
-                <span>${result.error.message}</span>`;
-            /* if there's an error, re-enable card element and submit button
-            to allow user to fix this */
-            $(errorDiv).html(html);
-            /* fade payment-form */
-            $('#payment-form').fadeToggle(100);
-            /* trigger overlay (over payment form) */
-            $('#loading-overlay').fadeToggle(100);
-            card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false);
-        } else {
-            /* if payment intent is successful, submit the form */
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
-            }
-        }
-    });
+        });
+    }).fail(function () {
+        /* triggered if view sends back 400 response. reloads page and show
+         user error message from the view */
+        location.reload();
+    })
 });
