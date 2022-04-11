@@ -42,6 +42,8 @@ def checkout(request):
     """ checkout function, to prevent users from manually
         accessing the url """
 
+    print(f'${settings.STRIPE_PUBLIC_KEY} - ${settings.STRIPE_SECRET_KEY} - ${settings.STRIPE_WH_SECRET}')
+
     # stripe keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -67,7 +69,14 @@ def checkout(request):
         order_form = OrderForm(form_data)
         # if form is valid, save the order
         if order_form.is_valid():
-            order = order_form.save()
+            # 'commit=false' to prevent 1st save happening
+            order = order_form.save(commit=False)
+            # first part of split (client) will be payment intent id (pid)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            # dump original bag to a json string
+            order.original_bag = json.dumps(bag)
+            order.save()
             # iterate through bag items to create each line item
             for item_id, item_data in bag.items():
                 try:
@@ -144,7 +153,7 @@ def checkout(request):
     # display message if public key not set in environment
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+            Please set it in your environment')
 
     # create the checkout template
     template = 'checkout/checkout.html'

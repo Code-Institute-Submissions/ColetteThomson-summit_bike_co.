@@ -21,7 +21,8 @@ class OrderAdmin(admin.ModelAdmin):
     # fields to be calculated by model methods
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
-                       'grand_total',)
+                       'grand_total', 'original_bag',
+                       'stripe_pid')
 
     # allow specific ordering of fields in admin panel
     # (needed if readonly_fields are used)
@@ -29,7 +30,8 @@ class OrderAdmin(admin.ModelAdmin):
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'delivery_cost',
-              'order_total', 'grand_total',)
+              'order_total', 'grand_total', 'original_bag',
+              'stripe_pid')
 
     # list key items in admin panel
     list_display = ('order_number', 'date', 'full_name',

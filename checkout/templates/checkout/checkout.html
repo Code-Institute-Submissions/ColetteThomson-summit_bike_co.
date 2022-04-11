@@ -122,9 +122,10 @@
                         <legend class="fieldset-label small gen-text px-2 w-auto">Payment</legend>
                         <!-- stripe card element -->
                         <div class="mb-3" id="card-element"></div>
-
                         <!-- Used to display card errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <!-- pass client secret to view to get the payment intent id -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
                     <!-- checkout form bag link and submit button -->

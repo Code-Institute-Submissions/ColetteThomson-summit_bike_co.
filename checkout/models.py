@@ -32,6 +32,12 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
 
+    """ if user purchases the same item/s, but on different occasions:
+        to prevent only the 1st order being found (with 2nd never added) """
+    original_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False,
+                                  default='')
+
     # prepended with '_' (indicates a private method), only used in class Order
     def _generate_order_number(self):
         """ generate a random, unique order number using UUID """
