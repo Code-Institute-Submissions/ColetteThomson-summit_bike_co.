@@ -44,15 +44,12 @@ INSTALLED_APPS = [
     'allauth.account',
     # handling of logging in via social media
     'allauth.socialaccount',
-    # home app
+    # site apps
     'home',
-    # products app
     'products',
-    # shopping bag app
     'bag',
-    # checkout app
     'checkout',
-
+    'profiles',
     # other
     'crispy_forms',
 ]
