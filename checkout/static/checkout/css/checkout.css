@@ -55,6 +55,18 @@
     z-index: 9999;
 }
 
+/* default: all select elements and their children (dropdowns) */
+select,
+select option {
+    color: #000000;
+}
+
+/* if invalid due to nothing selected */
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* payment processing loading spinner */
 .loading-spinner {
 	display: flex;
