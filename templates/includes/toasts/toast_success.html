@@ -21,7 +21,7 @@ and instead allow user to dismiss the message themselves -->
             </div>
         </div>
         <!-- if statement: grand total -->
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <!-- header showing number of items in bag -->
             <p class="logo-font bg-white gen-text py-1">Your Bag ({{ product_count }})</p>
             <!-- wrapper for bag notification user message -->
