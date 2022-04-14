@@ -2,6 +2,7 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.models import UserProfile
 
 import json
 import time
@@ -48,6 +49,26 @@ class StripeWH_Handler:
             # replace any empty strings with none (null value)
             if value == "":
                 shipping_details.address[field] = None
+
+        # update profile information if save_info was selected
+        # 'none' to allow anonymous users to check out
+        profile = None
+        username = intent.metadata.username
+        # if not anonymous, will then be a authenticated user
+        if username != 'AnonymousUser':
+            # get user profile, using their username
+            profile = UserProfile.objects.get(user__username=username)
+            # if save_info box selected, update profile with shipping details
+            if save_info:
+                profile.default_phone_number = shipping_details.phone
+                profile.default_country = shipping_details.address.country
+                profile.default_postcode = shipping_details.address.postal_code
+                profile.default_town_or_city = shipping_details.address.city
+                profile.default_street_address1 = shipping_details.address.line1
+                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_county = shipping_details.address.state
+                # save updated user's profile
+                profile.save()
 
         # if order doesn't exist
         order_exists = False
@@ -97,6 +118,7 @@ class StripeWH_Handler:
                 # create order using payment intent info
                 order = Order.objects.create(
                     full_name=shipping_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
