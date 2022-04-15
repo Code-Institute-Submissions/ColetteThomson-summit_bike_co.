@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 
+# need all three to send confirmation emails
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
+
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
@@ -19,6 +24,29 @@ class StripeWH_Handler:
     # setup method called when instance of class StripeWH_Handler is created
     def __init__(self, request):
         self.request = request
+
+    # use '_send...' as will only be used within this class
+    def _send_confirmation_email(self, order):
+        """ send the user a confirmation email """
+        # store user's email
+        cust_email = order.email
+        # render .txt files to strings
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            # context
+            {'order': order})
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            # context and contact_email (from settings.py)
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+        # send mail function with expected content
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            # list of email addresses
+            [cust_email]
+        )
 
     # take event (sent by stripe)
     def handle_event(self, event):
@@ -107,6 +135,8 @@ class StripeWH_Handler:
 
         # if order exists
         if order_exists:
+            # send confirmation email for completed order
+            self._send_confirmation_email(order)
             # return 200 httpresponse to stripe with verified order message
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: \
@@ -154,6 +184,7 @@ class StripeWH_Handler:
                             order_line_item.save()
             # if error, delete created order
             except Exception as e:
+                # if order created by webhook handler
                 if order:
                     order.delete()
                 # return 500 server response error to stripe causing
@@ -161,6 +192,8 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+        # send confirmation email for completed order
+        self._send_confirmation_email(order)
         # if webhook successful return httpresponse success message to stripe
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: \
