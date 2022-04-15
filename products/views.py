@@ -3,7 +3,9 @@ from django.contrib import messages
 # Q needed to generate search query if query isn't blank
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Product, Classification
+from .forms import ProductForm
 
 
 def all_bikes(request):
@@ -84,3 +86,14 @@ def bike_detail(request, product_id):
     }
 
     return render(request, 'products/bike_detail.html', context)
+
+
+def add_product(request):
+    """ add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
