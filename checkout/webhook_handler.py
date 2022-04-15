@@ -113,11 +113,13 @@ class StripeWH_Handler:
                     Verified order already in database',
                 status=200)
         else:
+            # 'none' for anonymous users
             order = None
             try:
                 # create order using payment intent info
                 order = Order.objects.create(
                     full_name=shipping_details.name,
+                    # if user is authenticated use their profile
                     user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
