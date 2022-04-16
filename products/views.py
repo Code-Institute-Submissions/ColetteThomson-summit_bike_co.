@@ -72,7 +72,7 @@ def all_bikes(request):
         'current_classifications': classifications,
         'current_sorting': current_sorting,
     }
-
+    # render statement
     return render(request, 'products/products.html', context)
 
 
@@ -84,7 +84,7 @@ def bike_detail(request, product_id):
     context = {
         'product': product,
     }
-
+    # render statement
     return render(request, 'products/bike_detail.html', context)
 
 
@@ -109,9 +109,47 @@ def add_product(request):
         # display empty form
         form = ProductForm()
 
+    # which template to use and the context
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
+    # render statement
+    return render(request, template, context)
 
+
+def edit_product(request, product_id):
+    """ edit an existing product """
+    # pre-fill form with existing product info
+    product = get_object_or_404(Product, pk=product_id)
+    # post handler
+    if request.method == 'POST':
+        # create instance of ProductForm from request.post
+        # use request.files to capture product image (if submitted)
+        # specific instance to be updated is product above
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        # check form is valid, if so then save
+        if form.is_valid():
+            form.save()
+            # display success message
+            messages.success(request, 'Successfully updated product!')
+            # redirect to bike_detail using product id
+            return redirect(reverse('bike_detail', args=[product.id]))
+        else:
+            # if form not valid, display message to user
+            messages.error(request, 'Failed to update product. Please \
+                        ensure the form is valid.')
+    else:
+        # instantiate form using the product
+        form = ProductForm(instance=product)
+        # display info message to user
+        messages.info(request, f'You are editing {product.bike_model}')
+
+    # which template to use and the context
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+    # render statement
     return render(request, template, context)
