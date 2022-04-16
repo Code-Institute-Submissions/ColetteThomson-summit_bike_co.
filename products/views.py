@@ -90,7 +90,25 @@ def bike_detail(request, product_id):
 
 def add_product(request):
     """ add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        # create instance of ProductForm from request.post
+        # use request.files to capture product image (if submitted)
+        form = ProductForm(request.POST, request.FILES)
+        # check form is valid, if so then save
+        if form.is_valid():
+            form.save()
+            # display success message
+            messages.success(request, 'Successfully added product!')
+            # redirect to the same view
+            return redirect(reverse('add_product'))
+        else:
+            # if form not valid, display message to user
+            messages.error(request, 'Failed to add product. \
+                           Please ensure the form is valid.')
+    else:
+        # display empty form
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,

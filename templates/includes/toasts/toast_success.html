@@ -29,8 +29,13 @@ and instead allow user to dismiss the message themselves -->
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            <!-- product image -->
-                            <img class="w-100" src="{{ item.product.image.url }}">
+                            <!-- if product has an image -->
+                            {% if item.product.image %}
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.bike_model }}">
+                            {% else %}
+                            <!-- if no product image, display 'noimage' image -->
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.bike_model }}">
+                            {% endif %}
                         </div>
                         <div class="col-9">
                             <!-- product name, size, and quantity -->
