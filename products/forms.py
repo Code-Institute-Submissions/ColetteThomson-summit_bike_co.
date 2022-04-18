@@ -1,4 +1,7 @@
 from django import forms
+# used for 'change image' select box on add or edit of products
+from .widgets import CustomClearableFileInput
+
 from .models import Product, Classification
 
 
@@ -9,6 +12,9 @@ class ProductForm(forms.ModelForm):
         model = Product
         # dunder field to include all fields in Product
         fields = '__all__'
+    # use widget for image field
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         # overwrite __init__ method to make changes to fields
@@ -16,7 +22,8 @@ class ProductForm(forms.ModelForm):
         classifications = Classification.objects.all()
         # create list of tuples (list comprehension) of friendly_names
         # associated with their classification's ids
-        friendly_names = [(c.id, c.get_friendly_name()) for c in classifications]
+        friendly_names = [(c.id, c.get_friendly_name()) for c in
+                          classifications]
 
         # update classification field with friendly_name
         # (instead of using the id) - and shown in select box of form
