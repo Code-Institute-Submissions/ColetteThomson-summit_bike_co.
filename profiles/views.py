@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+# to prevent product access via typed urls
+from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -7,6 +9,8 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 
+# check if user is logged in, if not redirect to login page
+@login_required
 def profile(request):
     """ display user's profile """
     profile = get_object_or_404(UserProfile, user=request.user)

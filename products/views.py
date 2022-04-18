@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+# to prevent product access via typed urls
+from django.contrib.auth.decorators import login_required
 # Q needed to generate search query if query isn't blank
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -88,8 +90,17 @@ def bike_detail(request, product_id):
     return render(request, 'products/bike_detail.html', context)
 
 
+# check if user is logged in, if not redirect to login page
+@login_required
 def add_product(request):
     """ add a product to the store """
+    # if user is not a superuser
+    if not request.user.is_superuser:
+        # display error message
+        messages.error(request, 'Sorry, only store owners can do that.')
+        # redirect back to home page
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         # create instance of ProductForm from request.post
         # use request.files to capture product image (if submitted)
@@ -118,8 +129,17 @@ def add_product(request):
     return render(request, template, context)
 
 
+# check if user is logged in, if not redirect to login page
+@login_required
 def edit_product(request, product_id):
     """ edit an existing product """
+    # if user is not a superuser
+    if not request.user.is_superuser:
+        # display error message
+        messages.error(request, 'Sorry, only store owners can do that.')
+        # redirect back to home page
+        return redirect(reverse('home'))
+
     # pre-fill form with existing product info
     product = get_object_or_404(Product, pk=product_id)
     # post handler
@@ -155,8 +175,17 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+# check if user is logged in, if not redirect to login page
+@login_required
 def delete_product(request, product_id):
     """ delete a product """
+    # if user is not a superuser
+    if not request.user.is_superuser:
+        # display error message
+        messages.error(request, 'Sorry, only store owners can do that.')
+        # redirect back to home page
+        return redirect(reverse('home'))
+
     # call product using product id
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
