@@ -1,4 +1,4 @@
-# used for 'change image' select box on add or edit of products
+# used for image field on add and edit product functionality
 from django.forms.widgets import ClearableFileInput
 # used for translation
 from django.utils.translation import gettext_lazy as _

@@ -29,8 +29,16 @@
                 enctype="multipart/form-data">
                     <!-- cross site forgery protenction -->
                     {% csrf_token %}
-                    <!-- use crispy forms -->
-                    {{ form | crispy }}
+                    {% for field in form %}
+                        <!-- if field name is not image -->
+                        {% if field.name != 'image' %}
+                            <!-- render field as a crispy forms field (i.e. with a label) -->
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            <!-- render field using custom image widget -->
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
                     <div class="text-right">
                         <!-- cancel button, to return to home page -->
                         <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
@@ -41,4 +49,17 @@
             </div>            
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        /* listen to change event on new image input */
+        $('#new-image').change(function() {
+            /* when it changes, get file that was added */
+            var file = $('#new-image')[0].files[0];
+            /* set filename paragraph in widgets template to the file's name */
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}

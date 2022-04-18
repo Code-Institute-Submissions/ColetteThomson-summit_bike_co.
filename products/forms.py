@@ -1,5 +1,5 @@
 from django import forms
-# used for 'change image' select box on add or edit of products
+# used for image field on add and edit product functionality
 from .widgets import CustomClearableFileInput
 
 from .models import Product, Classification
