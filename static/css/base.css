@@ -122,7 +122,8 @@ html {
 
 /* image background */
 .background-home {
-    background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
+    /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
+    background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat center center fixed;
     background-size: cover;
     /* view height - top header - footer */
     height: calc(100vh - 164px);

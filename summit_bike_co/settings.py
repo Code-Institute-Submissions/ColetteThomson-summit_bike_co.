@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = 'True'
+DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "summit-bike-co.herokuapp.com"]
 
@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     # cloudinary for static and media file storage
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     # creates callback urls when connecting via social media accs
     'django.contrib.sites',
