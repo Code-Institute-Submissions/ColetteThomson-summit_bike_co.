@@ -1,0 +1,46 @@
+<!-- include 'no. 3' of grid for shopping bag sections - for mobile views only
+     (taken from 'bag.html') -->
+
+<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+    <!-- cross site request forgery protection -->
+    {% csrf_token %}
+    <div class="form-group">
+        <!-- input group with quantity selection (by user) -->
+        <div class="input-group">
+            <!-- bootstrap class -->
+            <div class="input-group-prepend">
+                <!-- decrease quantity selector button with product.id and increment qty (needed for JS) -->
+                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    <span>
+                        <!-- font awesome minus small icon -->
+                        <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            <!-- shows min and max quantities linked to product id -->
+            <input class="form-control form-control-sm qty_input" type="number" name="quantity"
+                value="{{ item.quantity }}" min="1" max="50"
+                data-item_id="{{ item.item_id }}"
+                id="id_qty_{{ item.item_id }}">
+            <div class="input-group-append">
+                <!-- increase quantity selector button with product.id and increment qty (needed for JS) -->
+                <button class="increment-qty btn btn-sm btn-black rounded-0"
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    <span>
+                        <!-- font awesome plus small icon -->
+                        <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                </button>
+            </div> 
+            {% if item.product.sizes %}
+                <!-- submit size of item user wants to update/remove in hidden input field -->
+                <input type="hidden" name="product_size" value="{{ item.size }}">
+            {% endif %}   
+        </div>
+</form>
+<!-- anchor element: to update quantity (and submit form) -->
+<a class="update-link text-info"><small>Update</small></a>
+<!-- anchor element: to remove a specific item (if multiple sizes of this item in the bag) -->
+<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+    data-product_size="{{ item.size }}"><small>Remove</small></a>

@@ -1,0 +1,19 @@
+<!-- include 'no. 5' of grid for shopping bag sections - for mobile views only 
+     (taken from 'bag.html') -->
+
+<!-- keep shopping button -->
+<a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 btn-lg">
+    <span class="icon">
+        <!-- font awesome icon: left chevron -->
+        <i class="fas fa-chevron-left"></i>
+    </span>
+    <span class="text-uppercase">Keep Shopping</span>
+</a>
+<!-- secure checkout button -->
+<a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+    <span class="text-uppercase">Secure Checkout</span>
+    <span class="icon">
+        <!-- font awesome icon: closed lock -->
+        <i class="fas fa-lock"></i>
+    </span>
+</a>

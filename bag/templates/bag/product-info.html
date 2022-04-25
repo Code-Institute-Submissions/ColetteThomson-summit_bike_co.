@@ -1,0 +1,8 @@
+<!-- include 'no. 2' of grid for shopping bag sections - for mobile views only
+     (taken from 'bag.html') -->
+
+     <!-- product name and sku -->
+<p class="my-0"><strong>{{ item.product.bike_model }}</strong></p>
+<!-- renders size chosen by user (from bike_detail) -->
+<p class="my-0"><strong>Size: </strong>{% if item.product.sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+<p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>

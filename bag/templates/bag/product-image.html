@@ -1,0 +1,10 @@
+<!-- include 'no. 1' of grid for shopping bag sections - for mobile views only
+     (taken from 'bag.html') -->
+
+<!-- if product has an image -->
+{% if item.product.image %}
+<img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.bike_model }}">
+{% else %}
+<!-- if no product image, display 'noimage' image -->
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.bike_model }}">
+{% endif %}
