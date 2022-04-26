@@ -117,6 +117,16 @@ html {
     overflow-y: auto;
 }
 
+/* footer 
+.f-style {
+    display: block;
+} */
+
+/* shopping bag width */
+.bag-width {
+    width: 100%;
+}
+
 
 /* -------------------------------------------- H O M E  app */
 
