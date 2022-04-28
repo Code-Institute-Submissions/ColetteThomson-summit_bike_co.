@@ -15,7 +15,7 @@ def add_to_bag(request, item_id):
     """ add product quantity to shopping bag """
 
     # get product from model Product
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     # obtain quantity required (convert to integer from string)
     quantity = int(request.POST.get('quantity'))
     # redirect to user's current location, after item is added to bag
@@ -44,8 +44,7 @@ def add_to_bag(request, item_id):
                 # increment quantity for chosen size
                 bag[item_id]['items_by_size'][size] += quantity
                 # confirmation message to user (toasts)
-                messages.success(request,
-                                 f'Updated size {size.upper()} {product.bike_model} quantity to {bag[item_id]["items_by_size"][size]}')
+                messages.success(request, f'Updated size {size.upper()} {product.bike_model} quantity to {bag[item_id]["items_by_size"][size]}')
             else:
                 # set item to chosen quantity as is a new size for that item
                 bag[item_id]['items_by_size'][size] = quantity
@@ -106,7 +105,7 @@ def adjust_bag(request, item_id):
 
         else:
             # remove item if quantity submitted is zero
-            del[item_id]['items_by_size'][size]
+            del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
             # confirmation message to user (toasts)
