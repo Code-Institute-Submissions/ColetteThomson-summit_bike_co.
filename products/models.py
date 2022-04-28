@@ -27,7 +27,6 @@ class Product(models.Model):
     brand = models.CharField(max_length=100, null=True)
     type = models.CharField(max_length=100)
     sizes = models.BooleanField(default=False, null=True, blank=True)
-    frame_in_inches = models.CharField(max_length=30, null=True)
     discipline = models.CharField(max_length=100, null=True)
     material = models.CharField(max_length=100, null=True)
     wheel_size = models.CharField(max_length=30, null=True)

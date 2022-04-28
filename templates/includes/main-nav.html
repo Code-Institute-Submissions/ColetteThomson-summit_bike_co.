@@ -6,6 +6,7 @@
                 Home
             </a>
         </li>
+        <!-- dropdown menu for 'All Mountain Bikes' -->
         <li class="nav-item dropdown">
             <a class="font-weight-bold link-nav gen-text mr-5" href="#" id="link-all-bikes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Mountain Bikes
@@ -15,26 +16,31 @@
                 <a href="{% url 'products' %}?sort=price_now&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
+                <a href="{% url 'products' %}?sort=type&direction=asc" class="dropdown-item">By Type</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Bikes</a>
             </div>
         </li>
 
+        <!-- dropdown menu for 'Buying Guides' -->
         <li class="nav-item dropdown">
             <a class="font-weight-bold link-nav gen-text mr-5" href="#" id="link-all-full-suspension" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Full Suspension Mountain Bikes
+                Buying Guides
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="link-all-full-suspension">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Discipline</a>
-                <a href="" class="dropdown-item ">By Material</a>
-                <a href="" class="dropdown-item">All Full Suspension Bikes</a>
+                <a href="{% url 'products' %}?sort=price_now&direction=asc" class="dropdown-item" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
+                <a href="{% url 'products' %}?sort=discipline&direction=asc" class="dropdown-item ">By Discipline</a>
+                <a href="{% url 'products' %}?sort=type&direction=asc" class="dropdown-item">All Full Suspension Bikes</a>
             </div>
         </li>
 
+        <!-- dropdown menu for 'Contact Us' -->
+
+        <!-- <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a> -->
+
         <li class="nav-item dropdown">
             <a class="font-weight-bold link-nav gen-text mr-5" href="#" id="link-all-hardtail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Hardtail Mountain Bikes
+                Contact Us
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="link-all-hardtail">
                 <a href="" class="dropdown-item">By Price</a>

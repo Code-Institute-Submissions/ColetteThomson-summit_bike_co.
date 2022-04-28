@@ -60,7 +60,7 @@ def all_bikes(request):
                 return redirect(reverse('products'))
 
             # search query is contained in 'bike_model' or 'type' fields
-            queries = Q(bike_model__icontains=query) | Q(type__icontains=query)
+            queries = Q(bike_model__icontains=query) | Q(type__icontains=query) | Q(material__icontains=query) | Q(discipline__icontains=query)
             # queries are filtered
             products = products.filter(queries)
 

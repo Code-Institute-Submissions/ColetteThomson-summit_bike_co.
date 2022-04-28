@@ -30,25 +30,7 @@
         <div class="row">
             <!-- container for all products on page -->
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2">
-                    <!-- sort select box at page top for mobile; at last column for medium, larger screens -->
-                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <!-- sorting template variable value: if no sorting currently selected then value is none -->
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <!-- sorting template variable value: if 'price ascending' then this will be shown in sort box -->
-                                <option value="price_now_asc" {% if current_sorting == 'price_now_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_now_desc" {% if current_sorting == 'price_now_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                                <option value="bike_model_asc" {% if current_sorting == 'bike_model_asc' %}selected{% endif %}>Bike Model (A-Z)</option>
-                                <option value="bike_model_desc" {% if current_sorting == 'bike_model_desc' %}selected{% endif %}>Bike Model (Z-A)</option>
-                                <!-- underscore before 'desc/asc' allows split to determine individual components for sort and direction GET parameters in url -->
-                                <option value="classification_asc" {% if current_sorting == 'classification_asc' %}selected{% endif %}>Type</option>
-                            </select>
-                        </div>
-                    </div>
+                
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             <!-- return user to products page if entered a 'search' or 'sorting' -->
