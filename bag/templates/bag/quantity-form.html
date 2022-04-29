@@ -36,8 +36,9 @@
             {% if item.product.sizes %}
                 <!-- submit size of item user wants to update/remove in hidden input field -->
                 <input type="hidden" name="product_size" value="{{ item.size }}">
-            {% endif %}   
+            {% endif %}
         </div>
+    </div>
 </form>
 <!-- anchor element: to update quantity (and submit form) -->
 <a class="update-link text-info"><small>Update</small></a>
