@@ -135,15 +135,10 @@
             </div>
         </div>
     </div>
-    <!-- arrow button for users to navigate to top of page 
-    <div class="btt-button shadow-sm rounded-0 border border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up gen-text mx-auto my-auto"></i>
-        </a>	
-    </div> -->
-
+    
+    <!-- arrow button for users to navigate to top of page -->
     <div class="btt-button rounded-0">
-        <input type="reset" value="Top" onclick="pageTop()">
+        <input type="submit" value="Top" onclick="pageTop()">
     </div>
 {% endblock %}
 
@@ -151,7 +146,7 @@
     <!-- block.super to ensure this code is appended to anything else 
         already in the block (i.e. base.html), rather than replacing it -->
     {{ block.super }}
-
+    <!-- button: scroll to top of page -->
     <script>
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
@@ -161,12 +156,5 @@
             window.location.href = window.location.href;
         }
     </script>
-    <!-- to handle click function for top of page button 
-    <script>
-        $('.btt-link').click(function(e) {
-            window.scrollTo(0, 0);
-        })
-    </script> -->
-
     
 {% endblock %}
