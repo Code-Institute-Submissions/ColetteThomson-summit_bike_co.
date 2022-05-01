@@ -148,6 +148,12 @@ html {
     margin: 0;
 }
 
+/* logo (home link) on mobiles and tablets */
+.mobile-logo {
+    font-size: 27px;
+    margin-right: 10px;
+}
+
 .sale-text {
     color: white;
     text-align: right;
@@ -203,6 +209,11 @@ html {
 /* ----------------------------------------- P R O D U C T S  app */
 
 /* ----------------------- products (all bikes) page */
+
+/* main heading for tablet screen only
+.heading {
+    margin-top: 10px;
+}*/
 
 /* bike classification (type) */
 a.classification-badge > span.badge:hover {
@@ -419,5 +430,29 @@ input[name='q']::placeholder {
     /* quantity buttons */
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+}
+
+
+
+/* ----------------------------------------------- T A B L E T S */
+
+@media screen and (max-width: 769px) {
+
+    /* ----------------------- products page  */
+    /* main heading for tablet screen only */
+    .heading {
+        margin-top: -40px;
+    }
+}
+
+/* ----------------------------------------------- M O B I L E S */
+
+@media screen and (max-width: 426px) {
+
+    /* ----------------------- products page  */
+    /* main heading for mobile screen only */
+    .heading {
+        margin-top: 0px;
     }
 }
