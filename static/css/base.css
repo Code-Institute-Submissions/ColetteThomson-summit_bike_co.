@@ -332,6 +332,14 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
+/* ----------------------------------------- BUYING_GUIDES  app */
+
+/* ----------------------- what_is_a_mtb page */
+.bg-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -450,6 +458,7 @@ input[name='q']::placeholder {
     /* main heading for tablet screen only */
     .heading {
         margin-top: -40px;
+        
     }
 }
 
