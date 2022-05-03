@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <!-- to push header below main nav bar and site header -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="">
+    <div class="container h-100">
+        <div class="row h-100">
+            <!-- buying guide -->
+            <div class="col mt-5">
+                
+                <h2 class="logo heading">Mountain Bike Sizing Guide</h2>
+                    
+                <h3>What Size Mountain Bike do I need?</h3>
+                    <p class="gen-text bg-text">
+                        The below chart should shows you the correct size of mountain bike based on your
+                        height. Measure your height accurately and check the manufacturer's measurements too.
+                        You can also visit us in store to speak to an experienced member of staff.
+                        All Summit Bike Co mountain bikes are available in XS (extra small), S (small),
+                        M (medium), L (large), or XL (extra large). 
+                    </p>
+
+                <!-- table showing mountain bike sizes -->
+                <div class="col-md-12">
+                    <table >
+                        <tr> 
+                            <th class="table-heading">Height (centimetres)</th> 
+                            <th>Suggested Frame Size</th>
+                        </tr>
+                        <tr>
+                            <td>148cm - 158cm</td>
+                            <td>13" - 14" (XS)</td>
+                        </tr>
+                        <tr>
+                            <td>158cm - 168cm</td>
+                            <td>15" - 16" (S)</td>
+                        </tr>
+                        <tr>
+                            <td>168cm - 178cm</td>
+                            <td>17" - 18" (M)</td>
+                        </tr>
+                        <tr>
+                            <td>178cm - 185cm</td>
+                            <td>19" - 20" (L)</td>
+                        </tr>
+                        <tr>
+                            <td>185cm - 193cm</td>
+                            <td>21" - 22" (XL)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                    <p class="gen-text bg-text">
+                        Women's mountain bikes tend to be shorter in length and have narrower handlebars.
+                        They also have specific saddles and often have their own colour scheme too.
+                        Like other mountain bikes, these designs are measured in the same way (from the
+                        centre of the bottom bracket to the top of the seat tube) but there's no reason
+                        why you shouldn't try a male or unisex mountain bike. 
+                    </p>
+
+                <h3>How are mountain bikes measured?</h3>
+                    <p class="gen-text bg-text">
+                        Mountain bikes are measured from the centre of the bottom bracket (BB) to the top
+                        of the seat tube. To give a rider more stand over height, mountain bikes top tubes
+                        often slope down and join the seat tube lower than road bikes. So it's worth taking
+                        your inside leg measurement and comparing it to the manufacturers model. Always
+                        check the manufacturer's measurements or visit a store to speak to an experienced
+                        member of staff.
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
