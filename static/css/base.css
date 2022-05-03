@@ -164,13 +164,20 @@ html {
     float: right;
 }
 
-/*  delivery banner */
+/*  contact us banner */
 .banner {
     background: black;
     border-color: black;
 }
 
 .banner > h4 {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(36, 243, 36);
+}
+
+/* free delivery text */
+.delivery > h4 {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     color: rgb(36, 243, 36);
