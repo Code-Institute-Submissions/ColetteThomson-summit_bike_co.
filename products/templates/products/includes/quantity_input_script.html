@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
     // disable +/- outside 1-50 range
     function handleEnableDisable(itemId) {
         // use itemId to get current value of input
@@ -17,10 +17,10 @@
     // if -/+ quantity buttons are used
     var allQtyInputs = $('.qty_input');
     // iterate through all quantity inputs on page (using item_id)
-    for(var i = 0; i < allQtyInputs.length; i++){
-        var itemId = $(allQtyInputs[i]).data('item_id');
-        // for each quantity input, call enable/disable function when page loads
-        handleEnableDisable(itemId);
+        for(var i = 0; i < allQtyInputs.length; i++){
+            var itemId = $(allQtyInputs[i]).data('item_id');
+            // for each quantity input, call enable/disable function when page loads
+            handleEnableDisable(itemId);
     }
 
     // use 'change' if up/down arrows within quantity box are used to change quantity

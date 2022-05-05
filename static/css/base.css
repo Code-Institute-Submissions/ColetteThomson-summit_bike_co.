@@ -28,7 +28,8 @@ html {
 }
 
 .logo {
-    font-family: 'Yatra One', cursive;
+    /*font-family: 'Yatra One', cursive;*/
+    font-family: 'Montserrat', sans-serif;
     color: rgb(45, 91, 218);
 }
 
