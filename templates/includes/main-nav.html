@@ -32,10 +32,7 @@
             </div>
         </li>
 
-        <!-- dropdown menu for 'Contact Us' -->
-
-        <!-- <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a> -->
-
+        <!-- dropdown menu for 'About Us' -->
         <li class="nav-item dropdown">
             <a class="font-weight-bold link-nav gen-text mr-5" href="#" id="link-all-hardtail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About Us
@@ -44,6 +41,15 @@
                 <a href="{% url 'who_we_are' %}" class="dropdown-item">Who We Are</a>
                 <a href="{% url 'cycle_to_work' %}" class="dropdown-item ">Cycle to Work Scheme</a>
                 <a href="{% url 'terms_conditions' %}" class="dropdown-item ">Terms and Conditions</a>
+            </div>
+        </li>
+        <!-- dropdown for 'Contact Us' -->
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold link-nav gen-text mr-5" href="#" id="link-all-hardtail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contact Us
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="link-all-hardtail">
+                <a href="{% url 'contact_us' %}" class="dropdown-item">Contact Details</a>
             </div>
         </li>
     </ul>

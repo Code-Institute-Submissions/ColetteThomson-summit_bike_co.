@@ -14,3 +14,8 @@ def cycle_to_work(request):
 def terms_conditions(request):
     """ return 'terms and conditions' page """
     return render(request, 'info/terms_conditions.html')
+
+
+def contact_us(request):
+    """ return 'contact_us' page """
+    return render(request, 'info/contact_us.html')
