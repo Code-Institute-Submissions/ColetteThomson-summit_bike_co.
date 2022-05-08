@@ -5,13 +5,13 @@
     <!-- to push header below main nav bar and site header -->
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col mx-0 px-0"></div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-
+<div class="container-fluid background-other">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 product-position">
@@ -42,7 +42,7 @@
                         </tr>
                         <tr>
                             <td class="label-position"><strong>Price was:</td>
-                            <td>£{{ product.price_was }}</td>
+                            <td class="gen-text">£{{ product.price_was }}</td>
                         </tr>
                     </table>
                                         
@@ -50,7 +50,7 @@
                     {% if product.classification %}
                     <p class="small mt-3 mb-0">
                         <!-- render out with programmatic name as href -->
-                        <a class="text-muted" href="{% url 'products' %}?classification={{ product.classification.name }}">
+                        <a class="sort-text" href="{% url 'products' %}?classification={{ product.classification.name }}">
                             <!-- render friendly_name to user -->
                             <i class="fas fa-tag mr-1"></i>{{ product.classification.friendly_name }}
                         </a>
@@ -58,9 +58,9 @@
                     {% endif %}
                     <!-- product rating -->
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="sort-text"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
-                        <small class="text-muted">No Rating</small>
+                        <small class="sort-text">No Rating</small>
                     {% endif %}
                     <!-- if statement: superuser -->
                     {% if request.user.is_superuser %}
@@ -75,35 +75,35 @@
                     <table class="table-position">
                         <tr>
                             <td class="label-position"><strong>TYPE:</strong></td>
-                            <td>{{ product.type }}</td>
+                            <td class="gen-text">{{ product.type }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>BRAND:</strong></td>
-                            <td>{{ product.brand }}</td>
+                            <td class="gen-text">{{ product.brand }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>DISCIPLINE:</strong></td>
-                            <td>{{ product.discipline }}</td>
+                            <td class="gen-text">{{ product.discipline }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>MATERIAL:</strong></td>
-                            <td>{{ product.material }}</td>
+                            <td class="gen-text">{{ product.material }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>WHEEL SIZE:</strong></td>
-                            <td>{{ product.wheel_size }}</td>
+                            <td class="gen-text">{{ product.wheel_size }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>REAR DERAILLEUR:</strong></td>
-                            <td>{{ product.rear_derailleur }}</td>
+                            <td class="gen-text">{{ product.rear_derailleur }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>COLOUR:</strong></td>
-                            <td>{{ product.colour }}</td>
+                            <td class="gen-text">{{ product.colour }}</td>
                         </tr>
                         <tr>
                             <td class="label-position"><strong>GENDER:</strong></td>
-                            <td>{{ product.gender }}</td>
+                            <td class="gen-text">{{ product.gender }}</td>
                         </tr>
                     </table>
                     <!-- send info (post) to server about product to be added to bag -->
@@ -116,7 +116,7 @@
                             {% if s %}
                             <div class="col-12">
                                 <!-- user to select bike size required -->
-                                <p><strong>SIZE:</strong></p>
+                                <p class="gen-text"><strong>SIZE:</strong></p>
                                 <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
                                     <option value="xs">XS</option>
                                     <option value="s">S</option>
@@ -130,7 +130,7 @@
 
                             <div class="col-12">
                                 <!-- user to add quantity required -->
-                                <p class="mt-3"><strong>QUANTITY:</strong></p>
+                                <p class="mt-3 gen-text"><strong>QUANTITY:</strong></p>
                                 <div class="form-group w-50">
                                     <!-- input group with quantity selection (by user) -->
                                     <div class="input-group">
@@ -184,7 +184,8 @@
             </div>
         </div>
     </div>
-</div>    
+</div> 
+</div>   
 {% endblock %}
 
 <!-- javascript (includes) for quantity_input_script.html -->

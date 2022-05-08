@@ -5,7 +5,7 @@ html {
 
 .body {
     /* color: rgb(66, 66, 66); */
-    color: black;
+    color: white;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
@@ -37,10 +37,10 @@ html {
     width: fit-content;
 }
 
-/*  button text */
+/*  body text and buttons */
 .gen-text {
     /*color: #000 !important;*/
-    color: rgb(51, 51, 51);
+    color: white;
 }
 
 .border-black {
@@ -110,18 +110,42 @@ html {
     border-bottom-color: #343a40 !important;
 }
 
-/* message for shopping bag summary */
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    /* vertical overflow to become scrollbar when height is greater than 100px */
-    overflow-y: auto;
+/* --------------------------------------------- H E A D E R */
+.header-text {
+    color: black;
+}
+
+
+/* --------------------------------------------- F O O T E R */
+/* footer color */
+.background {
+    background-color: rgb(226, 224, 224);
+    margin: 0;
+}
+
+.footer-text {
+    color: black;
+    margin-left: 20px;
+}
+
+/* social media links */
+.social-media {
+    margin-left: 20px;
+    padding-right: 20px;
+}
+
+.sm-size {
+    font-size: 18px;
 }
 
 /* mailchimp (in footer) */
 #mc_embed_signup {
     padding: 0;
     
+}
+
+.mchimp-logo{
+    background: rgb(226, 224, 224);
 }
 /* #mc_embed_signup {
     background:#fff;
@@ -130,10 +154,9 @@ html {
     width:600px;
 } */
 
-/* shopping bag width */
-.bag-width {
-    width: 100%;
-}
+
+
+
 
 
 /* -------------------------------------------- H O M E  app */
@@ -169,6 +192,9 @@ html {
 .banner {
     background: black;
     border-color: black;
+    
+    padding: 0;
+    margin: 0;
 }
 
 .banner > h4 {
@@ -206,12 +232,12 @@ html {
     color: white;
 }
 
-/* -------------------------------- Backgrounds */
+/* --------------------- Background for all screens (except Home) */
 
 .background-other {
-    background: url('/media/mountain_range_1024by891.jpg') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
+    margin: 0;
+    padding: 0;
+    background: rgb(45, 91, 218);
 }
 
 /* ----------------------------------------- P R O D U C T S  app */
@@ -251,6 +277,13 @@ input[name='q']::placeholder {
 }
 
 /* ----------------------- bike_detail page */
+/* image background */
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
 
 /*  position of individual bike container */
 .product-position {
@@ -264,15 +297,21 @@ input[name='q']::placeholder {
 
 /* bike model */
 .model-font {
-    color: rgb(45, 91, 218);
+    color: white;
     font-size: 20px;
     font-weight: 700;
+}
+
+/* 'classification' and 'rating' text */
+.sort-text {
+    color: yellow;
 }
 
 /* individual product detail table */
 .label-position {
     min-width: 150px;
     line-height: 30px;
+    color: white;
 }
 
 .table-position {
@@ -282,6 +321,7 @@ input[name='q']::placeholder {
 .price-font {
     font-weight: 700;
     font-size: 25px;
+    color: white;
 }
 
 /* product form: image span 'button' */
@@ -323,8 +363,18 @@ input[name='q']::placeholder {
 /* ----------------------------------------- B A G  app */
 
 /* ----------------------- bag page */
+/* message for shopping bag summary */
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    /* vertical overflow to become scrollbar when height is greater than 100px */
+    overflow-y: auto;
+}
 
-
+/* shopping bag width */
+.bag-width {
+    width: 100%;
+}
 
 /* shopping bag page update and remove links */
 .btt-link,
@@ -442,7 +492,12 @@ input[name='q']::placeholder {
         top: 0;
         right: 0;
         left: 0;
+        padding-right: 0;
         z-index: 1030;
+    }
+
+    .navbar {
+        padding-right: 0;
     }
 
     .header-container {
@@ -454,6 +509,8 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     body {
