@@ -9,7 +9,6 @@ from django.db.models.functions import Lower
 from .models import Product, Classification
 from .forms import ProductForm
 
-
 def all_bikes(request):
     """ shows all bikes, including sorting and search queries """
     # to return all products from model Product
@@ -193,3 +192,13 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     # redirect back to products page
     return redirect(reverse('products'))
+
+
+def contact_us(request):
+    """ return 'contact_us' page """
+    return render(request, 'info/contact_us.html')
+
+
+def what_is_a_mtb(request):
+    """ return 'what is a mountain bike?' page """
+    return render(request, 'buying_guides/what_is_a_mtb.html')
