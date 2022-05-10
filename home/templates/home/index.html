@@ -13,29 +13,29 @@
 {% block content %}
 <div class="background-home">
     <div class="container h-100">
-        <div class="row h-100">
-            <!-- use 12 columns on medium, larger screens -->
-            <div class="col-7 col-md-12 sale-text">
-                
-                <h1>
-                    Summer Sale now on!
-                </h1>
+        <div class="row">
+            <div class="col-12 sale-text">
+                <!-- summer sale section -->
+                <h1>Summer Sale now on!</h1>
+
+                <!-- view our range button -->
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'products' %}" class="view-range-button btn btn-lg rounded-0 text-uppercase py-3">view our range</a>
+                        <a href="{% url 'products' %}" class="view-range-button btn btn-lg rounded-0 text-uppercase">view our range</a>
                     </h4>
                 </div>
         <div class="row h-100"> 
-            <div class="col-7 col-md-12">
-                <h4 class="my-1 advice">Need Advice?</h4>
-                <p class="text">See our <a class="home-link" href="{% url 'what_is_a_mtb' %}">buying guides</a>
+            <div class="col-12 overlay">
+                <!-- need advice section -->
+                <h4 class="advice">Need Advice?</h4>
+                <p class="text text-m">See our <a class="home-link" href="{% url 'what_is_a_mtb' %}">buying guides</a>
                 </p>
                 <p class="text">or <a class="home-link" href="{% url 'contact_us' %}">contact us</a>
                 </p>
                 <p class="text">to speak to one of</p>
                 <p class="text">our experienced staff</p>
             </div>   
-            </div>
+        </div>
         </div>
         
     </div>

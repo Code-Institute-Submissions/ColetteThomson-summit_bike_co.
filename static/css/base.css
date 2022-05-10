@@ -194,13 +194,13 @@ html {
     /* view height - top header - footer */
     height: calc(100vh - 164px);
     padding: 0;
-    margin-top: 4px;
+    margin-top: 3px;
 }
 
 .sale-text {
     color: white;
     text-align: right;
-    margin-top: 90px;
+    margin-top: 200px;
 }
 
 .align-text {
@@ -239,6 +239,7 @@ html {
     color: yellow;
 }
 
+/* need advice section */
 .advice {
     color: yellow;
     font-size: 26px;
@@ -560,6 +561,19 @@ input[name='q']::placeholder {
     .container {
       max-width: 80%;
     }
+
+    /* image background */
+    .background-home {
+        /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652194984/summit-bike-co/home_1200by800_comp_ssdw3w.jpg') no-repeat center center fixed;
+        background-size: cover;
+        /* view height - top header - footer 
+        height: calc(100vh - 164px);*/
+        padding: 0;
+        margin-top: 4px;
+    }
+
+
 }
 
 /* ------------------------------------------- L A P T O P S */
@@ -607,13 +621,6 @@ input[name='q']::placeholder {
 
 @media screen and (max-width: 769px) {
 
-    /* ----------------------- products page  */
-    /* main heading for tablet screen only */
-    .heading {
-        margin-top: -40px;
-        
-    }
-
     /* .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -622,7 +629,7 @@ input[name='q']::placeholder {
         padding-right: 0;
         z-index: 1030;
     } */
-
+    
     .navbar {
         padding-right: 0;
     }
@@ -641,11 +648,83 @@ input[name='q']::placeholder {
         margin-right: 10px;
     }
 
+    /* ----------------------- home page */
+
+    /* image background */
+    .background-home {
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat center center fixed;
+        background-size: cover;
+        /* view height - top header - footer 
+        height: calc(100vh - 164px);*/
+        padding: 0;
+        margin-top: 4px;
+    }
+    
+    .sale-text {
+        margin-top: 90px;
+    }
+
+    /* ----------------------- products page  */
+    /* main heading for tablet screen only */
+    .heading {
+        margin-top: -40px;
+    }
+
 }
 
 /* ----------------------------------------------- M O B I L E S */
 
 @media screen and (max-width: 426px) {
+    /* ----------------------------- home page */
+        /* image background */
+    .background-home {
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652189620/summit-bike-co/home_426by513_u5tjws.jpg') no-repeat center center fixed;
+        background-size: cover;
+        /* view height - top header */
+        height: calc(100vh - 164px);
+        padding: 0;
+        margin-top: 3px;
+    }
+
+    /* summer sale section */
+    .sale-text {
+        margin-top: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    /* 'view our range' button */
+    .view-range-button {
+        padding: 0;
+    }
+
+    /* need advice section */
+    .advice {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .text-m {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 22px;
+        color: white;
+        font-weight: 500;
+        line-height: 14px;
+    }
+
+    .text {
+        text-align: center;
+        line-height: 14px;
+    }
+
+    .overlay {
+        background-color: rgba(139, 69, 19, 0.521);
+        /*background-color: rgba(0, 0, 255, 0.24);*/
+        max-height: 200px;
+        max-width: 270px;
+        margin: auto;
+    }
 
     /* ----------------------- products page  */
     /* main heading for mobile screen only */
