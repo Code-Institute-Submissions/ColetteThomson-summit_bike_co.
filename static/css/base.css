@@ -136,12 +136,37 @@ html {
 
 .sm-size {
     font-size: 18px;
+    margin-bottom: 5px;
 }
 
-/* mailchimp (in footer) */
+.priv-pol {
+    margin-top: 25px;
+}
+
+/* ------------------- mailchimp (newsletter subscription)*/
+/* spacing */
+.paragraph {
+    margin-bottom: 0;
+}
+
+.spacing {
+    margin-left: 9px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.email {
+    margin-left: 10px;
+}
+
+.footer-heading {
+    font-size: 25px;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
 #mc_embed_signup {
     padding: 0;
-    
 }
 
 .mchimp-logo{
@@ -291,7 +316,7 @@ a.classification-badge > span.badge:hover {
     right: 10px;
 }
 
-/* search boces placeholder */
+/* search boxes placeholder */
 input[name='q']::placeholder {
     color: #aab7c4;
 }
@@ -529,6 +554,7 @@ input[name='q']::placeholder {
 
 /* -------------------------------- M E D I A   Q U E R I E S */
 
+/* -------------------------------------------- X - L A R G E */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -611,7 +637,7 @@ input[name='q']::placeholder {
     .mobile-logo {
         font-family: 'Montserrat', sans-serif;
         color: rgb(40, 40, 232);
-        font-size: 27px;
+        font-size: 20px;
         margin-right: 10px;
     }
 
@@ -631,6 +657,12 @@ input[name='q']::placeholder {
     .mobile-logo {
         font-family: 'Montserrat', sans-serif;
         color: rgb(40, 40, 232);
-        font-size: 27px;
-        margin-right: 10px;
+        font-size: 18px;
+        margin: auto;
+    }
+
+    .menu {
+        margin: auto;
+        
+    }
 }
