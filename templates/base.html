@@ -48,15 +48,15 @@
   <body>
     <header class="container-fluid fixed-top mx-0 px-0">
         <!-- top navigation bar -->
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex pl-2">
+        <div id="topnav" class="row bg-white py-lg-1 d-none d-lg-flex pl-2">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <!-- link to home page -->
                 <a href="{% url 'home' %}" class="link-nav link-logo">
                     <!-- logo -->
-                    <h2 class="logo mobile-logo my-0"><strong>Summit Bike Co.</strong></h2>
+                    <h2 class="logo my-0"><strong>Summit Bike Co.</strong></h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-1">
                 <!-- search functionality -->
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
@@ -74,7 +74,7 @@
                 </form>
             </div>
         
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-1">
                 <!-- link: user account -->
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -134,12 +134,11 @@
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
+
         </div>
         <!-- delivery banner -->
-        <div class="row text-center banner">
-            
-                <h4 class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
-                        
+        <div class="row banner">
+            <h4 class="my-0 banner">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
         </div>
     </header>
 

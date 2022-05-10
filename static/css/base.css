@@ -191,8 +191,9 @@ html {
     /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
     background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat center center fixed;
     background-size: cover;
-    /* view height - top header - footer */
-    height: calc(100vh - 164px);
+    /* view height - top header - footer 
+    height: calc(100vh - 164px); */
+    height: 100vh;
     padding: 0;
     margin-top: 3px;
 }
@@ -211,7 +212,8 @@ html {
 .banner {
     background: black;
     border-color: black;
-    padding: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
     margin: 0;
     width: 100%;
 }
@@ -643,9 +645,12 @@ input[name='q']::placeholder {
     /* logo (home link) on mobiles and tablets */
     .mobile-logo {
         font-family: 'Montserrat', sans-serif;
-        color: rgb(40, 40, 232);
-        font-size: 20px;
+        font-size: 24px;
         margin-right: 10px;
+    }
+
+    .link-mobile {
+        color: rgb(40, 40, 232);
     }
 
     /* ----------------------- home page */
@@ -657,7 +662,7 @@ input[name='q']::placeholder {
         /* view height - top header - footer 
         height: calc(100vh - 164px);*/
         padding: 0;
-        margin-top: 4px;
+        margin-top: 5px;
     }
     
     .sale-text {
@@ -735,7 +740,6 @@ input[name='q']::placeholder {
     /* logo (home link) on mobiles and tablets */
     .mobile-logo {
         font-family: 'Montserrat', sans-serif;
-        color: rgb(40, 40, 232);
         font-size: 18px;
         margin: auto;
     }
