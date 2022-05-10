@@ -5,7 +5,7 @@ html {
 
 .body {
     /* color: rgb(66, 66, 66); */
-    color: rgb(45, 91, 218);
+    color: black;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
@@ -30,7 +30,7 @@ html {
 .logo {
     /*font-family: 'Yatra One', cursive;*/
     font-family: 'Montserrat', sans-serif;
-    color: purple;
+    color: rgb(40, 40, 232);
 }
 
 .link-logo {
@@ -172,12 +172,6 @@ html {
     margin-top: 4px;
 }
 
-/* logo (home link) on mobiles and tablets */
-.mobile-logo {
-    font-size: 27px;
-    margin-right: 10px;
-}
-
 .sale-text {
     color: white;
     text-align: right;
@@ -192,29 +186,56 @@ html {
 .banner {
     background: black;
     border-color: black;
-    
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .banner > h4 {
     font-size: 18px;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     color: yellow;
 }
 
-/* free delivery text */
-.delivery > h4 {
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    color: rgb(36, 243, 36);
-}
-
 /* 'view our range' button */
 .view-range-button {
-    background: black;
-    color: white;
+    background: yellow;
+    color: black;
     min-width: 260px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.view-range-button:hover,
+.view-range-button:active,
+.view-range-button:focus {
+    background: black;
+    color: yellow;
+}
+
+.advice {
+    color: yellow;
+    font-size: 26px;
+    padding-bottom: 8px;
+}
+
+.text {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+/* 'need advice' links */
+.home-link {
+    color: rgb(96, 197, 244);
+}
+
+.home-link:hover,
+.home-link:active,
+.home-link:focus {
+    color: white;
 }
 
 .btn-black {
@@ -227,9 +248,6 @@ html {
     color: white;
 }
 
-.view-range-button:hover,
-.view-range-button:active,
-.view-range-button:focus,
 .btn-qty:hover,
 .btn-qty:active,
 .btn-qty:focus
@@ -290,7 +308,7 @@ input[name='q']::placeholder {
 .bike-heading {
     margin-top: 50px;
     margin-left: 24px;
-    color: purple;
+    color: rgb(40, 40, 232);
 }
 
 /*  position of individual bike container */
@@ -305,7 +323,7 @@ input[name='q']::placeholder {
 
 /* bike model */
 .model-font {
-    color: rgb(45, 91, 218);
+    color: rgb(40, 40, 232);
     font-size: 20px;
     font-weight: 700;
 }
@@ -336,12 +354,12 @@ input[name='q']::placeholder {
 
 .sub-heading {
     margin-left: 40px;
-    color: purple;
+    color: rgb(40, 40, 232);
     font-weight: 600;
 }
 
 .sub-heading-1 {
-    color: purple;
+    color: rgb(40, 40, 232);
     font-weight: 600;
 }
 
@@ -453,17 +471,9 @@ input[name='q']::placeholder {
 
 
 
-/* -------------------------------- M E D I A   Q U E R I E S */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
-/* allauth form formatting */
-
+/* ------------ allauth form formatting */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -505,7 +515,7 @@ input[name='q']::placeholder {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/* button hover */
+    /* button hover */
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
@@ -517,30 +527,19 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* fixed top navbar only on medium and larger screens */
-@media (min-width: 768px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        padding-right: 0;
-        z-index: 1030;
-    }
+/* -------------------------------- M E D I A   Q U E R I E S */
 
-    .navbar {
-        padding-right: 0;
-    }
-
-    .header-container {
-        padding-top: 108px;
-        padding-right: 0;
-        margin-right: 0;
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
     }
 }
 
-/* top padding when navbar is collapsed on mobile */
+/* ------------------------------------------- L A P T O P S */
+
 @media (max-width: 991px) {
+    /* top padding when navbar is collapsed on mobile */
     .header-container {
         padding-top: 116px;
         margin-left: 0;
@@ -550,7 +549,15 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
-    
+
+    .link-nav {
+        padding: 0.15rem;
+    }
+
+    .link-nav i.fa-lg {
+        font-size: 1rem;
+    }
+
     /* ----------------------- bike_detail page */
     /* keep shopping button */
     .btn.keep-shopping-btn.rounded-0,
@@ -570,8 +577,6 @@ input[name='q']::placeholder {
     }
 }
 
-
-
 /* ----------------------------------------------- T A B L E T S */
 
 @media screen and (max-width: 769px) {
@@ -582,6 +587,34 @@ input[name='q']::placeholder {
         margin-top: -40px;
         
     }
+
+    /* .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding-right: 0;
+        z-index: 1030;
+    } */
+
+    .navbar {
+        padding-right: 0;
+    }
+
+    .header-container {
+        padding-top: 108px;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    /* logo (home link) on mobiles and tablets */
+    .mobile-logo {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(40, 40, 232);
+        font-size: 27px;
+        margin-right: 10px;
+    }
+
 }
 
 /* ----------------------------------------------- M O B I L E S */
@@ -593,4 +626,11 @@ input[name='q']::placeholder {
     .heading {
         margin-top: 0px;
     }
+
+    /* logo (home link) on mobiles and tablets */
+    .mobile-logo {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(40, 40, 232);
+        font-size: 27px;
+        margin-right: 10px;
 }
