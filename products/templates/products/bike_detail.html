@@ -23,12 +23,12 @@
                     {% if product.image %}
                         <!-- link to product image in a new window -->
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-bottom img-fluid" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
+                            <img class="card-img-bottom img-fluid detail-image" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
                         </a>
                         {% else %}
                         <!-- default image if no product image available -->
                         <a href="">
-                            <img class="card-img-bottom img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.bike_model }}">
+                            <img class="card-img-bottom img-fluid noimage" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.bike_model }}">
                         </a>
                     {% endif %}
                 </div>
@@ -40,11 +40,11 @@
                     <!-- product pricing -->
                     <table>
                         <tr>
-                            <td class="label-position"><strong>Price now:</td>
+                            <td class="label-position mob-price"><strong>Price now:</td>
                             <td class="price-font"><strong>£{{ product.price_now }}</strong></td>
                         </tr>
                         <tr>
-                            <td class="label-position"><strong>Price was:</td>
+                            <td class="label-position mob-price"><strong>Price was:</td>
                             <td class="gen-text">£{{ product.price_was }}</td>
                         </tr>
                     </table>
@@ -76,10 +76,10 @@
                     {% endif %}
                 </div>
             </div>
-            <!-- bike specifications -->
+            <!-- product description -->
             <div class="row w-100">
                 <div class="col-12">
-                    <p class="sub-heading">DESCRIPTION:</p>
+                    <h4 class="sub-heading mob-heading">Description:  </h4>
                     <p class="description">
                         A <strong>{{ product.type }}</strong>, {{ product.discipline }} mountain bike in {{ product.colour }} 
                         manufactured by {{ product.brand }}. With a durable {{ product.material }} frame, a wheel size of 
@@ -88,7 +88,7 @@
                         appropriate balance of speed, comfort and ease of handling for {{ product.discipline }} bikes.
                     </p>
                     <p class="description">
-                        <strong>Need Help?</strong> If you're stuck with all that terminology, please check out our 
+                        <strong>Need Help?</strong> If you're stuck with all the terminology, please check out our 
                         <a href="{% url 'what_is_a_mtb' %}">buying guides</a>
                         for more information or 
                         <a href="{% url 'contact_us' %}">contact us</a>
@@ -119,8 +119,8 @@
 
                             <div class="col-12 col-md-4 pr-0">
                                 <!-- user to add quantity required -->
-                                <p class="sub-heading-1">QUANTITY:</p>
-                                <div class="form-group w-60">
+                                <p class="qty-position qty">QUANTITY:</p>
+                                <div class="form-group w-40 qty-position">
                                     <!-- input group with quantity selection (by user) -->
                                     <div class="input-group">
                                         <!-- bootstrap class -->
@@ -155,14 +155,14 @@
                         <!-- if product has 'sizes': adjust margins and spacing -->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <!-- keep shopping button (links user to products page) -->
-                            <a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 mt-2 shop-bag-btn">
+                            <a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 mt-2 shop-bag-btn mob-shop-btn">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                                 <!-- submit button for input form (shopping) -->
-                                <input type="submit" class="btn btn-black add-to-bag-btn rounded-0 text-uppercase mt-2"
+                                <input type="submit" class="btn btn-black add-to-bag-btn rounded-0 text-uppercase mt-2 mob-shop-btn"
                                     value="Add to Bag">
                             
                             <!-- hidden field using request.path attribute to submit 'redirect-url', containing current url' -->

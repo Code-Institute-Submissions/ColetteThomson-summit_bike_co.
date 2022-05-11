@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col text-center mt-5">
                 <!-- page heading -->
-                <h2 class="logo heading">All Mountain Bikes</h2>
+                <h2 class="logo prod-heading">All Mountain Bikes</h2>
                 <!-- if multiple classifications are selected -->
                 {% for c in current_classifications %}
                     <!-- render out with programmatic name as href -->
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="row">
-            <!-- container for all products on page -->
+            <!-- container for products listing -->
             <div class="product-container col-10 offset-1">
                 
                     <div class="col-12 col-md-6 order-md-first">
@@ -47,11 +47,11 @@
                     {% for product in products %}
                         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
                             <!-- individual product cards -->
-                            <div class="card h-100 border-0">
+                            <div class="card h-100 border-0 w-90">
                                 <!-- image at top of product card -->
                                 {% if product.image %}
                                 <a href="{% url 'bike_detail' product.id %}">
-                                    <img class="card-img-bottom img-fluid" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
+                                    <img class="card-img-bottom img-fluid mobile-img" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
                                 </a>
                                 {% else %}
                                 <!-- default image if no product image available -->
@@ -61,13 +61,13 @@
                                 {% endif %}
                                 <!-- body of product card -->
                                 <div class="card-body pb-0 pl-0 pr-0">
-                                    <p class="mb-0">{{ product.bike_model }}</p>
-                                    <p class="mb-0">Type: {{ product.type }}</p>
+                                    <p class="mb-0 prod-mobile"><strong>{{ product.bike_model }}</strong></p>
+                                    <p class="mb-0 prod-mobile">Type: {{ product.type }}</p>
                                 </div>
                                 <!-- footer of product card -->
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col pr-0">
                                             <!-- displays sale price and old price -->
                                             <p class="lead mb-0 font-weight-bold">Now: £{{ product.price_now }}</p>
                                             <p class="lead mb-0">Was: £{{ product.price_was }}</p>
