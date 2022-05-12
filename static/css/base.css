@@ -123,9 +123,19 @@ h4 {
 
 
 /* --------------------------------------------- F O O T E R */
-/* footer color */
+/* footer divider */
+.division {
+    background: black;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0;
+    width: 100% !important;
+}
+
+
+
 .background {
-    background-color: rgb(226, 224, 224);
     margin: 0;
 }
 
@@ -205,6 +215,7 @@ h4 {
 }
 
 .sale-text {
+    font-size: 26px;
     color: white;
     text-align: right;
     margin-top: 200px;
@@ -308,6 +319,9 @@ h4 {
 .heading {
     margin-top: 10px;
 }*/
+.prod-heading {
+    margin-top: 160px;
+}
 
 .prod-listing {
     color: rgb(40, 40, 232);
@@ -645,7 +659,7 @@ input[name='q']::placeholder {
 
 @media screen and (max-width: 769px) {
 
-    /* .fixed-top-desktop-only {
+    /*.fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
@@ -697,6 +711,10 @@ input[name='q']::placeholder {
         margin-top: -40px;
     }
 
+    .prod-heading {
+        margin-top: 20px;
+    }
+
     /* ------------------------------- bike_detail page */
     /* heading */
     .bike-heading {
@@ -729,10 +747,24 @@ input[name='q']::placeholder {
         padding-right: 0;
     }
 
+    /* footer divider */
+    .division {
+        background: black;
+        border-color: black;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin: 0;
+        width: 100% !important;
+        z-index: 10;
+    }
+
+    .footer-background {
+        background-color: rgb(238, 236, 236);
+    }
     /* ----------------------------- home page */
         /* image background */
     .background-home {
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652189620/summit-bike-co/home_426by513_u5tjws.jpg') no-repeat center center fixed;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat center center fixed;
         background-size: cover;
         /* view height - top header */
         height: calc(100vh - 164px);
@@ -783,7 +815,8 @@ input[name='q']::placeholder {
     /* ----------------------------- products page  */
     /* main heading for mobile screen only */
     .prod-heading {
-        margin-top: 0px;
+        margin-top: 40px;
+        font-size: 28px;
     }
 
     /* positioning for 'model' and 'type' */
@@ -838,6 +871,11 @@ input[name='q']::placeholder {
         font-weight: 600;
         color: rgb(40, 40, 232);
         padding-left: 10px;
+    }
+
+    /*  newsletter subscription (mailchimp) */
+    .mob-subscribe {
+        margin-left: 8px;
     }
 
     /* keep shopping button */
