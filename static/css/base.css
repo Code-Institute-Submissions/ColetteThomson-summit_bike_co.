@@ -721,7 +721,7 @@ input[name='q']::placeholder {
     .background-home {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat;
         background-size: cover;
-        background-position-y: 60px;
+        background-position-y: 0px;
         height: 100vh;
         padding: 0;
         margin-top: 5px;
@@ -729,7 +729,7 @@ input[name='q']::placeholder {
     
     /* summer sale text */
     .sale-text {
-        margin-top: 90px;
+        margin-top: 60px;
     }
 
     /* ----------------------------------------- P R O D U C T S  app */
@@ -850,27 +850,42 @@ input[name='q']::placeholder {
     }
 
     /* summer sale section */
-    .sale-text {
-        margin-top: 30px;
-        font-size: 10px;
+    .sale-text-1 {
+        margin-top: 50px;
+        font-size: 24px;
         text-align: center;
+        background-color: rgba(139, 69, 19, 0.521);
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     
+    /* overlay for 'summer sale' text (mobile only) */
+    .overlay {
+        background-color: rgba(139, 69, 19, 0.521);
+        /*background-color: rgba(0, 0, 255, 0.24);*/
+        max-height: 20px;
+        max-width: 220px;
+        margin: auto;
+    }
+
     /* 'view our range' button */
-    .view-range-button {
+    .view-range-button-m {
         padding: 0;
+        font-size: 20px;
+        min-width: 190px;
     }
 
     /* need advice section */
-    .advice {
+    .advice-m {
         text-align: center;
         margin-bottom: 5px;
+        font-size: 20px;
     }
 
     .text-m {
         text-align: center;
         padding-top: 10px;
-        font-size: 22px;
+        font-size: 18px;
         color: white;
         font-weight: 500;
         line-height: 14px;
@@ -878,15 +893,16 @@ input[name='q']::placeholder {
 
     .text {
         text-align: center;
-        line-height: 14px;
+        line-height: 12px;
+        font-size: 18px;
     }
 
-    /* overlay for mobile page only */
-    .overlay {
+    /* overlay for 'need advice' section (mobile only) */
+    .overlay-1 {
         background-color: rgba(139, 69, 19, 0.521);
         /*background-color: rgba(0, 0, 255, 0.24);*/
         max-height: 200px;
-        max-width: 270px;
+        max-width: 220px;
         margin: auto;
     }
 
@@ -912,7 +928,7 @@ input[name='q']::placeholder {
         padding-right: 0;
     }
 
-    /* ------------------------------- bike_detail page */
+    /* ----------------------- bike_detail page */
     /* heading */
     .bike-heading {
         margin-top: 40px;
