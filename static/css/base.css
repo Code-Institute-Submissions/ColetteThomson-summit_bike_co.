@@ -622,6 +622,11 @@ input[name='q']::placeholder {
     margin-top: 160px;
 }
 
+/* ---------------------------------------- ACCOUNT TEMPLATES */
+.acc-heading {
+    margin-top: 160px;
+}
+
 /* -------------------------------- M E D I A   Q U E R I E S */
 
 /* -------------------------------------------- X - L A R G E */
@@ -730,6 +735,7 @@ input[name='q']::placeholder {
     /* summer sale text */
     .sale-text {
         margin-top: 60px;
+        font-size: 20px;
     }
 
     /* ----------------------------------------- P R O D U C T S  app */
@@ -785,6 +791,11 @@ input[name='q']::placeholder {
     /* ----------------------- 'contact_us' page */
     .hear {
         font-size: 22px;
+    }
+
+    /* ---------------------------------------- ACCOUNT TEMPLATES */
+    .acc-heading {
+        margin-top: 20px;
     }
 }
 
@@ -855,12 +866,12 @@ input[name='q']::placeholder {
         font-size: 24px;
         text-align: center;
         background-color: rgba(139, 69, 19, 0.521);
-        padding-top: 5px;
+        padding-top: 3px;
         padding-bottom: 5px;
     }
     
     /* overlay for 'summer sale' text (mobile only) */
-    .overlay {
+    .overlay-home {
         background-color: rgba(139, 69, 19, 0.521);
         /*background-color: rgba(0, 0, 255, 0.24);*/
         max-height: 20px;
@@ -898,13 +909,12 @@ input[name='q']::placeholder {
     }
 
     /* overlay for 'need advice' section (mobile only) */
-    .overlay-1 {
+    .overlay-home-1 {
         background-color: rgba(139, 69, 19, 0.521);
-        /*background-color: rgba(0, 0, 255, 0.24);*/
         max-height: 200px;
         max-width: 220px;
         margin: auto;
-    }
+    } 
 
     /* ----------------------------------------- P R O D U C T S  app */
 
@@ -1007,5 +1017,10 @@ input[name='q']::placeholder {
     .mob-shop-btn {
         margin-left: -5px;
         margin-right: 20px;
+    }
+
+    /* ---------------------------------------- ACCOUNT TEMPLATES */
+    .acc-heading {
+        margin-top: 30px;
     }
 }
