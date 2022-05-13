@@ -501,7 +501,8 @@ input[name='q']::placeholder {
     margin-top: 170px;
 }
 
-/* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+/* headings for 'what_is_a_mtb' and 'mtb_sizing' pages 
+   and for 'who_we_are'; 'terms_conditions'; 'cycle_to_work' and 'contact_us' pages*/
 .bg-heading {
     font-family: 'Montserrat', sans-serif;
     color: rgb(40, 40, 232);
@@ -530,6 +531,11 @@ input[name='q']::placeholder {
 
 /* ----------------------------------------- I N F O  app */
 
+/* top spacing */
+.info-spacing {
+    margin-top: 160px;
+}
+
 /* ----------------------- terms_conditions page */
 .ol-text {
     margin-left: -25px;
@@ -549,10 +555,6 @@ input[name='q']::placeholder {
 .center {
     margin: auto;
 }
-
-
-
-
 
 /* ------------ allauth form formatting */
 .allauth-form-inner-content p {
@@ -767,6 +769,13 @@ input[name='q']::placeholder {
         margin-top: 20px;
     }
 
+    /* ----------------------------------------- I N F O  app */
+
+    /* top spacing */
+    .info-spacing {
+        margin-top: 20px;
+    }
+
 }
 
 /* ----------------------------------------------- M O B I L E S */
@@ -953,6 +962,13 @@ input[name='q']::placeholder {
     /* ----------------------- mtb_sizing page */
     /* top spacing */
     .bg-spacing-1 {
+        margin-top: 40px;
+    }
+
+    /* ----------------------------------------- I N F O  app */
+
+    /* top spacing */
+    .info-spacing {
         margin-top: 40px;
     }
 
