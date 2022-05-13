@@ -530,26 +530,25 @@ input[name='q']::placeholder {
 }
 
 /* ----------------------------------------- I N F O  app */
-/* ----------------------- who_we_are page */
+/* ----------------------- 'who_we_are page'; 'terms_conditions'; 'cycle_to_work' and 'contact_us' pages */
 /* top spacing*/
 .info-spacing {
     margin-top: 160px;
 }
 
-/* ----------------------- terms_conditions page */
-/* top spacing*/
-.info-spacing-1 {
-    margin-top: 160px;
-}
-
+/* ----------------------- 'terms_conditions' page */
 .ol-text {
     margin-left: -25px;
 }
 
-/* ----------------------- cycle_to_work page */
-/* top spacing*/
-.info-spacing-2 {
-    margin-top: 165px;
+/* ----------------------- 'contact_us' page */
+.hear {
+    color: #28a745;
+    font-size: 24px;
+}
+
+.address {
+    line-height: 14px;
 }
 
 /* font awesome icons */
@@ -786,18 +785,10 @@ input[name='q']::placeholder {
         margin-top: 20px;
     }
 
-    /* ----------------------- 'terms_conditions' page */
-    /* top spacing*/
-    .info-spacing-1 {
-        margin-top: 20px;
+    /* ----------------------- 'contact_us' page */
+    .hear {
+        font-size: 22px;
     }
-
-    /* ----------------------- cycle_to_work page */
-    /* top spacing*/
-    .info-spacing-2 {
-        margin-top: 20px;
-    }
-
 }
 
 /* ----------------------------------------------- M O B I L E S */
@@ -994,18 +985,10 @@ input[name='q']::placeholder {
         margin-top: 40px;
     }
 
-    /* ----------------------- 'terms_conditions' page */
-    /* top spacing*/
-    .info-spacing-1 {
-        margin-top: 40px;
+    /* ----------------------- 'contact_us' page */
+    .hear {
+        font-size: 18px;
     }
-
-    /* ----------------------- cycle_to_work page */
-    /* top spacing*/
-    .info-spacing-2 {
-        margin-top: 40px;
-    }
-
 
     /* keep shopping button */
     .mob-shop-btn {
