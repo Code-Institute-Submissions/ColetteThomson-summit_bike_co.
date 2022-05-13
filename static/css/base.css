@@ -16,15 +16,6 @@ h4 {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
-    /* .background-home {
-        background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;
-        background-size: cover;
-        /* view height - top header - footer 
-        height: calc(100vh - 164px - 56px);
-        color: rgb(66, 66, 66);
-        font-family: 'Roboto', sans-serif;
-    } */
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -196,13 +187,19 @@ h4 {
 /* -------------------------------------------- H O M E  app */
 
 /* ----------------------- index.html */
+/*  */
+.home-spacing {
+    margin: 0;
+    padding: 0;
+}
+
 /* image background */
 .background-home {
     /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
-    background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;
     background-size: cover;
-    /* view height - top header - footer 
-    height: calc(100vh - 164px); */
+    /* to push image down the page */
+    background-position-y: 100px;
     height: 100vh;
     padding: 0;
     margin-top: 3px;
@@ -639,10 +636,10 @@ input[name='q']::placeholder {
     /* image background */
     .background-home {
         /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652194984/summit-bike-co/home_1200by800_comp_ssdw3w.jpg') no-repeat center center fixed;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652194984/summit-bike-co/home_1200by800_comp_ssdw3w.jpg') no-repeat;
         background-size: cover;
-        /* view height - top header - footer 
-        height: calc(100vh - 164px);*/
+        background-position-y: 100px;
+        height: 100vh;
         padding: 0;
         margin-top: 4px;
     }
@@ -722,10 +719,10 @@ input[name='q']::placeholder {
     /* ------------------------- index.html */
     /* image background */
     .background-home {
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat center center fixed;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat;
         background-size: cover;
-        /* view height - top header - footer 
-        height: calc(100vh - 164px);*/
+        background-position-y: 60px;
+        height: 100vh;
         padding: 0;
         margin-top: 5px;
     }
@@ -844,10 +841,10 @@ input[name='q']::placeholder {
 
     /* ----------------------------- index.html */
     .background-home {
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat center center fixed;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat;
         background-size: cover;
-        /* view height - top header */
-        height: calc(100vh - 164px);
+        background-position-y: 10px;
+        height: 100vh;
         padding: 0;
         margin-top: 3px;
     }
