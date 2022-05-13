@@ -498,8 +498,18 @@ input[name='q']::placeholder {
 /* ----------------------- what_is_a_mtb page */
 
 /* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+.bg-spacing {
+    margin-top: 170px;
+}
+
 .bg-heading {
-    margin-top: 130px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(40, 40, 232);
+    font-size: 28px;
+}
+
+.bg-subheading {
+    font-size: 24px;
 }
 
 .bg-text {
@@ -726,8 +736,16 @@ input[name='q']::placeholder {
 
     /* ----------------------- what_is_a_mtb page */
     /* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+    .bg-spacing {
+        margin-top: 20px;
+    }
+
     .bg-heading {
-        margin-top: 130px;
+        font-size: 22px;
+    }
+
+    .bg-subheading {
+        font-size: 20px;
     }
 
 }
@@ -795,8 +813,8 @@ input[name='q']::placeholder {
 
     /* summer sale section */
     .sale-text {
-        margin-top: 70px;
-        font-size: 20px;
+        margin-top: 30px;
+        font-size: 10px;
         text-align: center;
     }
     
@@ -901,8 +919,16 @@ input[name='q']::placeholder {
 
     /* ----------------------- what_is_a_mtb page */
     /* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+    .bg-spacing {
+        margin-top: 40px;
+    }
+
     .bg-heading {
-        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .bg-subheading {
+        font-size: 18px;
     }
     
     /* keep shopping button */
