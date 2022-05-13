@@ -496,12 +496,12 @@ input[name='q']::placeholder {
 /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
 /* ----------------------- what_is_a_mtb page */
-
-/* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+/* top spacing */
 .bg-spacing {
     margin-top: 170px;
 }
 
+/* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
 .bg-heading {
     font-family: 'Montserrat', sans-serif;
     color: rgb(40, 40, 232);
@@ -519,6 +519,11 @@ input[name='q']::placeholder {
 }
 
 /* ----------------------- mtb_sizing page */
+/* top spacing */
+.bg-spacing-1 {
+    margin-top: 20px;
+}
+
 .table-heading {
     padding-right: 30px;
 }
@@ -601,6 +606,13 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
+}
+
+
+/* ----------------------- mtb_sizing page */
+/* top spacing */
+.bg-spacing-1 {
+    margin-top: 160px;
 }
 
 /* -------------------------------- M E D I A   Q U E R I E S */
@@ -735,17 +747,24 @@ input[name='q']::placeholder {
     /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
     /* ----------------------- what_is_a_mtb page */
-    /* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+    /* top spacing */
     .bg-spacing {
         margin-top: 20px;
     }
 
+    /* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
     .bg-heading {
         font-size: 22px;
     }
 
     .bg-subheading {
         font-size: 20px;
+    }
+
+    /* ----------------------- mtb_sizing page */
+    /* top spacing */
+    .bg-spacing-1 {
+        margin-top: 20px;
     }
 
 }
@@ -931,6 +950,12 @@ input[name='q']::placeholder {
         font-size: 18px;
     }
     
+    /* ----------------------- mtb_sizing page */
+    /* top spacing */
+    .bg-spacing-1 {
+        margin-top: 40px;
+    }
+
     /* keep shopping button */
     .mob-shop-btn {
         margin-left: -5px;
