@@ -530,13 +530,18 @@ input[name='q']::placeholder {
 }
 
 /* ----------------------------------------- I N F O  app */
-
-/* top spacing */
+/* ----------------------- who_we_are page */
+/* top spacing*/
 .info-spacing {
     margin-top: 160px;
 }
 
 /* ----------------------- terms_conditions page */
+/* top spacing*/
+.info-spacing-1 {
+    margin-top: 160px;
+}
+
 .ol-text {
     margin-left: -25px;
 }
@@ -771,8 +776,15 @@ input[name='q']::placeholder {
 
     /* ----------------------------------------- I N F O  app */
 
+    /* ----------------------- 'who_we_are' page */
     /* top spacing */
     .info-spacing {
+        margin-top: 20px;
+    }
+
+    /* ----------------------- 'terms_conditions' page */
+    /* top spacing*/
+    .info-spacing-1 {
         margin-top: 20px;
     }
 
@@ -966,11 +978,18 @@ input[name='q']::placeholder {
     }
 
     /* ----------------------------------------- I N F O  app */
-
+    /* ----------------------- 'who_we_are' page */
     /* top spacing */
     .info-spacing {
         margin-top: 40px;
     }
+
+    /* ----------------------- 'terms_conditions' page */
+    /* top spacing*/
+    .info-spacing-1 {
+        margin-top: 40px;
+    }
+
 
     /* keep shopping button */
     .mob-shop-btn {
