@@ -547,6 +547,10 @@ input[name='q']::placeholder {
 }
 
 /* ----------------------- cycle_to_work page */
+/* top spacing*/
+.info-spacing-2 {
+    margin-top: 165px;
+}
 
 /* font awesome icons */
 .icons i {
@@ -788,6 +792,12 @@ input[name='q']::placeholder {
         margin-top: 20px;
     }
 
+    /* ----------------------- cycle_to_work page */
+    /* top spacing*/
+    .info-spacing-2 {
+        margin-top: 20px;
+    }
+
 }
 
 /* ----------------------------------------------- M O B I L E S */
@@ -987,6 +997,12 @@ input[name='q']::placeholder {
     /* ----------------------- 'terms_conditions' page */
     /* top spacing*/
     .info-spacing-1 {
+        margin-top: 40px;
+    }
+
+    /* ----------------------- cycle_to_work page */
+    /* top spacing*/
+    .info-spacing-2 {
         margin-top: 40px;
     }
 
