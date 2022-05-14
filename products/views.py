@@ -108,7 +108,7 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             # display success message
-            messages.success(request, 'Successfully added product!')
+            messages.info(request, 'Successfully added product!')
             # redirect to bike_detail using product id
             return redirect(reverse('bike_detail', args=[product.id]))
         else:
@@ -151,7 +151,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             # display success message
-            messages.success(request, 'Successfully updated product!')
+            messages.info(request, 'Successfully updated product!')
             # redirect to bike_detail using product id
             return redirect(reverse('bike_detail', args=[product.id]))
         else:
@@ -189,7 +189,7 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     # display info message to user
-    messages.success(request, 'Product deleted!')
+    messages.info(request, 'Product deleted!')
     # redirect back to products page
     return redirect(reverse('products'))
 

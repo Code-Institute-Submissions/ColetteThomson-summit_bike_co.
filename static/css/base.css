@@ -280,6 +280,11 @@ h4 {
     color: yellow;
 }
 
+.btn-black:hover {
+    background: yellow;
+    color: black;
+}
+
 .btn-qty {
     background: black;
     color: white;
@@ -287,8 +292,7 @@ h4 {
 
 .btn-qty:hover,
 .btn-qty:active,
-.btn-qty:focus
-.btn-black:hover,
+.btn-qty:focus,
 .btn-black:active,
 .btn-black:focus {
     background: #222;
@@ -576,12 +580,6 @@ input[name='q']::placeholder {
     margin-left: -25px;
 }
 
-/* ----------------------- 'contact_us' page */
-.green {
-    color: #28a745;
-    font-size: 24px;
-}
-
 .address {
     line-height: 14px;
 }
@@ -598,6 +596,13 @@ input[name='q']::placeholder {
 .center {
     margin: auto;
 }
+
+/* used 'contact_us' page, bag templates, checkout templates, stock mgt templates */
+.green {
+    color: #28a745;
+    font-size: 24px;
+}
+
 
 /* ------------ allauth form formatting */
 .allauth-form-inner-content p {
@@ -661,6 +666,7 @@ input[name='q']::placeholder {
 }
 
 /* ---------------------------------------- ACCOUNT TEMPLATES */
+/* headings for account templates; profile templates; stock mgt templates */
 .acc-heading {
     margin-top: 160px;
     font-family: 'Montserrat', sans-serif;
@@ -1110,6 +1116,6 @@ input[name='q']::placeholder {
     /* ---------------------------------------- ACCOUNT TEMPLATES */
     .acc-heading {
         margin-top: 35px;
-        font-size: 24px;
+        font-size: 22px;
     }
 }
