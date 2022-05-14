@@ -512,7 +512,7 @@ input[name='q']::placeholder {
 
 /* ----------------------------------------- C H E C K O U T  app */
 
-/* ------------------------------- 'checkout' page */
+/* ------------------------------- 'checkout' pages */
 /* heading */
 .checkout-heading {
     margin-top: 160px;
@@ -523,6 +523,10 @@ input[name='q']::placeholder {
 
 #id_country {
     padding-top: 6px;
+}
+
+.colour {
+    color: rgb(40, 40, 232);
 }
 /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
@@ -659,6 +663,9 @@ input[name='q']::placeholder {
 /* ---------------------------------------- ACCOUNT TEMPLATES */
 .acc-heading {
     margin-top: 160px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(40, 40, 232);
+    font-size: 28px;
 }
 
 /* -------------------------------- M E D I A   Q U E R I E S */
@@ -807,7 +814,7 @@ input[name='q']::placeholder {
 
     /* ----------------------------------------- C H E C K O U T  app */
 
-    /* ------------------------------- 'checkout' page */
+    /* ------------------------------- 'checkout' pages */
     /* heading */
     .checkout-heading {
         margin-top: 20px;
@@ -853,6 +860,7 @@ input[name='q']::placeholder {
     /* ---------------------------------------- ACCOUNT TEMPLATES */
     .acc-heading {
         margin-top: 20px;
+        font-size: 26px;
     }
 }
 
@@ -1052,7 +1060,7 @@ input[name='q']::placeholder {
 
     /* ----------------------------------------- C H E C K O U T  app */
 
-    /* ------------------------------- 'checkout' page */
+    /* ------------------------------- 'checkout' pages */
     /* heading */
     .checkout-heading {
         margin-top: 40px;
@@ -1101,6 +1109,7 @@ input[name='q']::placeholder {
 
     /* ---------------------------------------- ACCOUNT TEMPLATES */
     .acc-heading {
-        margin-top: 30px;
+        margin-top: 35px;
+        font-size: 24px;
     }
 }
