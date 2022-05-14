@@ -123,9 +123,10 @@ h4 {
     width: 100% !important;
 }
 
-/* footer background */
-.footer-background {
-    background-color: rgb(238, 236, 236);
+/* header and footer background */
+.head-foot-background {
+    /* background-color: rgb(238, 236, 236); */
+    background-color: ivory;
 }
 
 .background {

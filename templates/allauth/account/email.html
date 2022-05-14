@@ -6,7 +6,7 @@
 
 <!-- uses allauth/account/base.html styling-->
 {% block inner_content %}
-<h2 class="gen-text mb-4 acc-heading">{% trans "E-mail Addresses" %}</h2>
+<h2 class="gen-text mb-4 acc-heading"><strong>{% trans "E-mail Addresses" %}</strong></h2>
     
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
