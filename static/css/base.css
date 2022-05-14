@@ -484,7 +484,7 @@ input[name='q']::placeholder {
     color: black;
 }
 
-/*  */
+/* bike model name */
 .bag-model{
     color: rgb(40, 40, 232);
     font-size: 18px;
@@ -510,6 +510,20 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
+/* ----------------------------------------- C H E C K O U T  app */
+
+/* ------------------------------- 'checkout' page */
+/* heading */
+.checkout-heading {
+    margin-top: 160px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(40, 40, 232);
+    font-size: 28px;
+}
+
+#id_country {
+    padding-top: 6px;
+}
 /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
 /* ----------------------- what_is_a_mtb page */
@@ -559,7 +573,7 @@ input[name='q']::placeholder {
 }
 
 /* ----------------------- 'contact_us' page */
-.hear {
+.green {
     color: #28a745;
     font-size: 24px;
 }
@@ -786,6 +800,20 @@ input[name='q']::placeholder {
         font-size: 26px;
     }
 
+    /* bike model name */
+    .bag-model{
+        font-size: 16px;
+    }
+
+    /* ----------------------------------------- C H E C K O U T  app */
+
+    /* ------------------------------- 'checkout' page */
+    /* heading */
+    .checkout-heading {
+        margin-top: 20px;
+        font-size: 26px;
+    }
+
     /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
     /* ----------------------- what_is_a_mtb page */
@@ -818,7 +846,7 @@ input[name='q']::placeholder {
     }
 
     /* ----------------------- 'contact_us' page */
-    .hear {
+    .green {
         font-size: 22px;
     }
 
@@ -1010,9 +1038,23 @@ input[name='q']::placeholder {
 
     /* ----------------------------------------- B A G  app */
 
-    /* ------------------------------- bag page */
+    /* ------------------------------- bag pages */
     /* heading */
     .bag-heading {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    /* bike model name */
+    .bag-model{
+        font-size: 14px;
+    }
+
+    /* ----------------------------------------- C H E C K O U T  app */
+
+    /* ------------------------------- 'checkout' page */
+    /* heading */
+    .checkout-heading {
         margin-top: 40px;
         font-size: 20px;
     }
@@ -1047,7 +1089,7 @@ input[name='q']::placeholder {
     }
 
     /* ----------------------- 'contact_us' page */
-    .hear {
+    .green {
         font-size: 18px;
     }
 
