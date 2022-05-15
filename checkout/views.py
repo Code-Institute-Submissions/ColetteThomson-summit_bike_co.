@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (render, redirect, reverse,
+                              get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -44,7 +45,8 @@ def checkout(request):
     """ checkout function, to prevent users from manually
         accessing the url """
 
-    print(f'${settings.STRIPE_PUBLIC_KEY} - ${settings.STRIPE_SECRET_KEY} - ${settings.STRIPE_WH_SECRET}')
+    # print(f'${settings.STRIPE_PUBLIC_KEY} - ${settings.STRIPE_SECRET_KEY} - \
+    # ${settings.STRIPE_WH_SECRET}')
 
     # stripe keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -95,7 +97,8 @@ def checkout(request):
                         order_line_item.save()
                     else:
                         # if has sizes, iterate through each size
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in \
+                                item_data['items_by_size'].items():
                             # create line item for each
                             order_line_item = OrderLineItem(
                                 order=order,
