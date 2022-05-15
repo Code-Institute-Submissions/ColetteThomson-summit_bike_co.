@@ -109,13 +109,6 @@
                                 <hr>
                             </div>
                         {% endif %}
-                        <!-- render on small,medium screens - hide on all other screens                       
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                 horizontal rule under each set of 2 products 
-                                <hr>
-                            </div>
-                        {% endif %} -->
                         <!-- render on large screens - hide on all other screens --> 
                         {% if forloop.counter|divisibleby:3 %}
                             <div class="product col-12 d-none d-lg-block d-xl-none mb-5">

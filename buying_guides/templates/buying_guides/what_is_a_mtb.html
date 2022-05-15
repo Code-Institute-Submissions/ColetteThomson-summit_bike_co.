@@ -130,10 +130,30 @@
                         are designed to be ridden uphill just as fast as they are downhill.
                     </p>
             </div>
-        </div>
-        
+        </div>        
     </div>
 </div>
 
+<!-- arrow button for users to navigate to top of page -->
+<div class="btt-button rounded-0">
+    <input type="submit" value="Top" onclick="pageTop()">
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+    <!-- block.super to ensure this code is appended to anything else 
+        already in the block (i.e. base.html), rather than replacing it -->
+    {{ block.super }}
+    <!-- button: scroll to top of page -->
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+
+        function pageTop() {
+            window.location.href = window.location.href;
+        }
+    </script>
 
 {% endblock %}

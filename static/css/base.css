@@ -481,7 +481,6 @@ input[name='q']::placeholder {
     font-family: 'Montserrat', sans-serif;
     color: rgb(40, 40, 232);
     font-size: 28px;
-    padding-left: 15px;
 }
 
 /* grand total on 'bag-total' */
