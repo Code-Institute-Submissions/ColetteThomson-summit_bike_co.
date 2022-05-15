@@ -9,6 +9,7 @@ from django.db.models.functions import Lower
 from .models import Product, Classification
 from .forms import ProductForm
 
+
 def all_bikes(request):
     """ shows all bikes, including sorting and search queries """
     # to return all products from model Product
@@ -27,10 +28,12 @@ def all_bikes(request):
             # set 'sort' from 'none' to sortkey
             sort = sortkey
             if sortkey == 'bike_model':
-                # use variable 'sortkey' to preserve original field 'bike_model'
+                # use variable 'sortkey' to preserve original
+                # field 'bike_model'
                 sortkey = 'lower_bike_model'
                 # use annotate for case-insensitive sorting
-                products = products.annotate(lower_bike_model=Lower('bike_model'))
+                products = products.annotate(lower_bike_model=Lower
+                                             ('bike_model'))
 
             if sortkey == 'classification':
                 # to allow drilling into related model (__)
@@ -46,8 +49,10 @@ def all_bikes(request):
 
         if 'classification' in request.GET:
             classifications = request.GET['classification'].split(',')
-            products = products.filter(classification__name__in=classifications)
-            classifications = Classification.objects.filter(name__in=classifications)
+            products = products. \
+                filter(classification__name__in=classifications)
+            classifications = Classification.objects. \
+                filter(name__in=classifications)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -59,7 +64,9 @@ def all_bikes(request):
                 return redirect(reverse('products'))
 
             # search query is contained in 'bike_model' or 'type' fields
-            queries = Q(bike_model__icontains=query) | Q(type__icontains=query) | Q(material__icontains=query) | Q(discipline__icontains=query)
+            queries = Q(bike_model__icontains=query) | \
+                Q(type__icontains=query) | Q(material__icontains=query) | \
+                Q(discipline__icontains=query)
             # queries are filtered
             products = products.filter(queries)
 
