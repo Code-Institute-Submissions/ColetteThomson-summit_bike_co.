@@ -30,7 +30,7 @@ class StripeWH_Handler:
         """ send the user a confirmation email """
         # store user's email
         cust_email = order.email
-        # render .txt files to strings
+        # render confirmation_email .txt files to strings
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             # context
