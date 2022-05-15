@@ -44,13 +44,17 @@ def add_to_bag(request, item_id):
                 # increment quantity for chosen size
                 bag[item_id]['items_by_size'][size] += quantity
                 # confirmation message to user (toasts)
-                messages.success(request, f'Updated size {size.upper()} {product.bike_model} quantity to {bag[item_id]["items_by_size"][size]}')
+                messages.success(request,
+                                 f'Updated size {size.upper()} \
+                                    {product.bike_model} quantity to \
+                                        {bag[item_id]["items_by_size"][size]}')
             else:
                 # set item to chosen quantity as is a new size for that item
                 bag[item_id]['items_by_size'][size] = quantity
                 # confirmation message to user (toasts)
                 messages.success(request,
-                                 f'Added size {size.upper()} {product.bike_model} to your bag')
+                                 f'Added size {size.upper()} \
+                                     {product.bike_model} to your bag')
         else:
             """
             if items not already in bag, add them using dictionary,
@@ -58,7 +62,9 @@ def add_to_bag(request, item_id):
             """
             bag[item_id] = {'items_by_size': {size: quantity}}
             # confirmation message to user (toasts)
-            messages.success(request, f'Added size {size.upper()} {product.bike_model} to your bag')
+            messages.success(request,
+                             f'Added size {size.upper()} \
+                                 {product.bike_model} to your bag')
 
     else:
         # if item has no size
@@ -67,7 +73,8 @@ def add_to_bag(request, item_id):
             bag[item_id] += quantity
             # confirmation message to user (toasts)
             messages.success(request,
-                             f'Updated {product.bike_model} quantity to {bag[item_id]}')
+                             f'Updated {product.bike_model} \
+                                 quantity to {bag[item_id]}')
         else:
             # if no bag, create one with item and quantity
             bag[item_id] = quantity
@@ -101,7 +108,9 @@ def adjust_bag(request, item_id):
             bag[item_id]['items_by_size'][size] = quantity
             # confirmation message to user (toasts)
             messages.success(request,
-                             f'Updated size {size.upper()} {product.bike_model} quantity to {bag[item_id]["items_by_size"][size]}')
+                             f'Updated size {size.upper()} \
+                                 {product.bike_model} quantity to \
+                                     {bag[item_id]["items_by_size"][size]}')
 
         else:
             # remove item if quantity submitted is zero
@@ -110,13 +119,15 @@ def adjust_bag(request, item_id):
                 bag.pop(item_id)
             # confirmation message to user (toasts)
             messages.success(request,
-                             f'Removed size {size.upper()} {product.bike_model} from your bag')
+                             f'Removed size {size.upper()} \
+                                 {product.bike_model} from your bag')
     else:
         # if there's no size remove item
         if quantity > 0:
             bag[item_id] = quantity
             messages.success(request,
-                             f'Updated {product.bike_model} quantity to {bag[item_id]}')
+                             f'Updated {product.bike_model} \
+                                 quantity to {bag[item_id]}')
         else:
             bag.pop(item_id)
             # confirmation message to user (toasts)
@@ -149,7 +160,8 @@ def remove_from_bag(request, item_id):
                 bag.pop(item_id)
             # confirmation message to user (toasts)
             messages.success(request,
-                             f'Removed size {size.upper()} {product.bike_model} from your bag')
+                             f'Removed size {size.upper()} \
+                                 {product.bike_model} from your bag')
         else:
             # if there's no size, remove (pop) from bag
             bag.pop(item_id)
