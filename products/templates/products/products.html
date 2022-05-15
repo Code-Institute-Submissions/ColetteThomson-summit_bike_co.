@@ -29,10 +29,10 @@
         </div>
         <div class="row mx-0">
             <!-- container for products listing -->
-            <div class="product-container col-10 offset-1">
+            <div class="product-container col-12 px-0">
                 
-                    <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
+                    <div class="col-12 order-md-first px-1">
+                        <p class="text-muted mt-3 text-center">
                             <!-- return user to products page if entered a 'search' or 'sorting' -->
                             {% if search_term or current_classifications or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">All Bikes Home</a> | </span>
