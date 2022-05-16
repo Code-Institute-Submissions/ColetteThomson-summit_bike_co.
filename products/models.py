@@ -22,8 +22,14 @@ class Product(models.Model):
     bike_model = models.CharField(max_length=254)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
                                  blank=True)
-    price_now = models.IntegerField()
-    price_was = models.IntegerField(null=True, blank=True)
+    price_now = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False,
+                                         editable=False)
+    price_was = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=True, blank=True,
+                                         editable=False)
+    # price_now = models.IntegerField()
+    # price_was = models.IntegerField(null=True, blank=True)
     brand = models.CharField(max_length=100, null=True)
     type = models.CharField(max_length=100)
     sizes = models.BooleanField(default=False, null=True, blank=True)

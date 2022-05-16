@@ -18,7 +18,6 @@
         <!-- link to bootstrap css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- google fonts -->
-        <!--<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Yatra+One&display=swap" rel="stylesheet">-->
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         
@@ -91,7 +90,7 @@
                             {% if request.user.is_authenticated %}
                                 <!-- if superuser, display options to manage shop 'stock' (using CRUD) -->
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Add a Product</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Stock Management</a>
                                     
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>

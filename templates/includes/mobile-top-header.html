@@ -1,11 +1,12 @@
 <!-- purpose of mobile-top-header.html: to ensure top portion of navbar... -->
 <!-- (separate from main navigation) will display properly on mobile -->
 
-<!-- button to open the 'search bar' -->
+<!-- link to 'home' page -->
 <h2 class="d-lg-none mobile-logo">
     <a class="link-mobile" href="{% url 'home' %}"><strong>Summit Bike Co.</strong></a>
 </h2>
 <ul class="menu">
+    <!-- button to open the 'search bar' -->
     <li class="list-inline-item">
         <!-- d-block and d-lg-none classes: to hide links on large screens -->
         <a class="header-text link-nav d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
