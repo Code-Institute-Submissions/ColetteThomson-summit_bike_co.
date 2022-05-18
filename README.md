@@ -28,6 +28,11 @@ The page 'My Profile' only appears if the user is registered. <br>
 
 The live project can be found [here]()
 
+## Facebook screenshots
+
+
+## Site Map
+
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
 There are ? models within the Summit Bike Co website:<br>
 * ?
