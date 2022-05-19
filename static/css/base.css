@@ -205,12 +205,20 @@ h4 {
     margin-top: 3px;
 }
 
+/* byline */
+.byline {
+    text-align: right;
+    font-size: 22px;
+    color: lime; 
+    letter-spacing: 1.5px; 
+}
+
 /* summer sale text */
 .sale-text {
     font-size: 26px;
     color: white;
     text-align: right;
-    margin-top: 200px;
+    margin-top: 170px;
 }
 
 .align-text {
@@ -357,6 +365,11 @@ input[name='q']::placeholder {
     margin-top: 160px;
     margin-left: 24px;
     color: rgb(40, 40, 232);
+}
+
+/* type of mountain bike heading */
+.type {
+    margin-left: 38px;
 }
 
 /*  position of individual bike container */
@@ -778,9 +791,17 @@ input[name='q']::placeholder {
         margin-top: 5px;
     }
     
+    /* byline */
+    .byline {
+        text-align: right;
+        font-size: 18px;
+        color: lime;  
+        letter-spacing: 1px;
+    }
+
     /* summer sale text */
     .sale-text {
-        margin-top: 60px;
+        margin-top: 40px;
         font-size: 20px;
     }
 
@@ -801,6 +822,11 @@ input[name='q']::placeholder {
     .bike-heading {
         margin-top: 20px;
         font-size: 25px;
+    }
+
+    /* type of mountain bike heading */
+    .type {
+        margin-left: 38px;
     }
 
     /* ----------------------------------------- B A G  app */
@@ -930,9 +956,21 @@ input[name='q']::placeholder {
         margin-top: 3px;
     }
 
+    /* byline */
+    .byline {
+        text-align: center;
+        font-size: 14px;
+        color: lime;  
+        background-color: rgba(139, 69, 19, 0.71);
+        margin-top: 30px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        letter-spacing: 0.5px;
+    }
+
     /* summer sale section */
     .sale-text-1 {
-        margin-top: 50px;
+        margin-top: 30px;
         font-size: 24px;
         text-align: center;
         background-color: rgba(139, 69, 19, 0.521);
@@ -943,7 +981,6 @@ input[name='q']::placeholder {
     /* overlay for 'summer sale' text (mobile only) */
     .overlay-home {
         background-color: rgba(139, 69, 19, 0.521);
-        /*background-color: rgba(0, 0, 255, 0.24);*/
         max-height: 20px;
         max-width: 220px;
         margin: auto;
@@ -1015,6 +1052,11 @@ input[name='q']::placeholder {
         margin-left: 10px;
         padding-left: 0;
         font-size: 20px;
+    }
+
+    /* type of mountain bike heading */
+    .type {
+        margin-left: 10px;
     }
 
     /* price and rating blocks */

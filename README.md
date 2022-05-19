@@ -33,6 +33,49 @@ The live project can be found [here]()
 
 ## Site Map
 
+
+## Search Engine Optimisation (SEO)
+###  Keywords
+As Summit Bike Co. specialises in selling only mountain bikes, keywords were selected with this in mind.<br>
+Placement of these keywords within the website has been implemented where possible using semantic HTML elements 
+(i.e. headings) and one utilising an anchor tag.<br>
+Research (using Wordtracker.com) into short-tail and long-tail keywords suitable for Summit Bike Co. yielded
+the following:<br>
+
+#### Shortail keywords
+The following **product based keyword** enquiry showed a very high volume and high level of organic competition.
+* mountain bikes
+Represented in multiple places throughout the website <br>
+
+#### Longtail Keywords
+The following **product based keyword** enquiries showed a mid-range volume of searches, and a mid-range level of
+organic competition:<br>
+* full suspension mountain bikes
+* hardtail mountain bikes
+These are both represented in:<br>
+The individual 'Bike Model [name]...' pages:<br>
+* A <h2> on each individual bike_detail page (i.e. name of bike) along with a reference in the relevant
+individual bike's product 'description' section
+* as a dropdown option ('By Type') under the 'All Mountain Bikes' menu option
+* as a sort option on both the 'Bike Model [name]...' pages and the 'All Mountain Bikes' page
+<br>
+The following **information based keyword** enquiries showed a lower volume of searches, but also low organic
+competition:<br>
+* what is a mountain bike
+* what are hardtail mountain bikes
+* what are full suspension mountain bikes <br>
+Represented as: <h2>'s on the 'What is a Mountain Bike' page accessed via the dropdown option under the 'Buying Guides' menu <br>
+
+* what size mountain bike do I need <br>
+Represented as: a <h4> on the 'Mountain Bike Sizing Guide' page accessed via the dropdown option under the 'Buying Guides' menu <br>
+
+**Long-tail keywords pertaining to information from external 3rd party organisations:**<br>
+This long-tail keyword showed a high volume, with mid to high level of organic competition.  As this particular
+scheme is a UK Government Initiative and is implemented by most mountain bike sellers, the high volume and high 
+competition are deemed not have an impact on Summit Bike Co. as a business - but representation is essential in demonstrating that Summit Bike Co. both supports and offers this scheme to their customers.
+* cycle to work scheme
+Represented as an anchor tag (<a>) on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
+
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
 There are ? models within the Summit Bike Co website:<br>
 * ?
@@ -286,6 +329,7 @@ No known limitations.
 * [Cloudinary](https://cloudinary.com/) - cloud storage of Chat image for smartevents WMP website; serve static files
 * [PicPick](https://picpick.app/en/) - used to create screenshots of smartevents WMP Website pages
 * [Heroku](https://www.heroku.com/) - final project (website) deployed to and stored on Heroku
+* [Wordtracker](https://www.wordtracker.com/) - utilised for search engine optimisation
 
 ## Testing
 * Manual testing has been performed to check for back-end functionality (Django, Python, Javascript), as well as visual effects and website layout (HTML, Bootstrap, CSS).
