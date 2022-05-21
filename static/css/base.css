@@ -207,9 +207,18 @@ h4 {
 
 /* byline */
 .byline {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800; 
+    font-size: 18px;
+    color: black; 
+}
+
+/* 'shop online or visit instore' heading */
+.byline-1 {
     text-align: right;
     font-size: 22px;
-    color: lime; 
+    color: yellow; 
     letter-spacing: 1.5px; 
 }
 
@@ -798,16 +807,26 @@ input[name='q']::placeholder {
     
     /* byline */
     .byline {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    /* shop online visit instore heading */
+    .byline-1 {
         text-align: right;
         font-size: 18px;
-        color: lime;  
         letter-spacing: 1px;
     }
 
     /* summer sale text */
     .sale-text {
         margin-top: 40px;
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .sale-text-1 {
+        margin-top: 40px;
+        font-size: 30px;
     }
 
     /* ----------------------------------------- P R O D U C T S  app */
@@ -963,11 +982,15 @@ input[name='q']::placeholder {
 
     /* byline */
     .byline {
+        font-size: 12px;
+    }
+
+    /* 'shop online or visit instore' heading */
+    .byline-1 {
         text-align: center;
         font-size: 14px;
-        color: lime;  
         background-color: rgba(139, 69, 19, 0.71);
-        margin-top: 30px;
+        margin-top: 0;
         padding-top: 3px;
         padding-bottom: 3px;
         letter-spacing: 0.5px;
@@ -987,8 +1010,10 @@ input[name='q']::placeholder {
     .overlay-home {
         background-color: rgba(139, 69, 19, 0.521);
         max-height: 20px;
-        max-width: 220px;
+        max-width: 280px;
         margin: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* 'view our range' button */
@@ -996,6 +1021,7 @@ input[name='q']::placeholder {
         padding: 0;
         font-size: 20px;
         min-width: 190px;
+        text-align: center;
     }
 
     /* need advice section */

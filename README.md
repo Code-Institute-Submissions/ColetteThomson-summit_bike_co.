@@ -3,11 +3,10 @@
 ## Purpose
 Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Shoppers can register as an account holder and are able to save contact, delivery and payment information under their own profile. Shoppers without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with a selection of sizes and required quantity to assist shoppers in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. also offers shoppers the option of subscribing to their monthly newsletter.  Shoppers can stay in touch by following the social media of Summit Bike Co.
 
-## High level overview of registered user roles and permissions within WMP:
-*Note:  All users (with the exception of unregistered users) will need to be set up with appropriate permissions by the superuser Admin.  All users will have read-only access to the Home page (landing page).*
+## High level overview of user roles within Summit Bike Co:
 
-* **Superuser (Admin)** - has full CRUD (create, read (view), update, delete) from the admin panel (and read-only from the website), across all pages.
-* **Registered User** - will have 
+* **Superuser (admin)** - has full CRUD (create, read (view), update, delete) from the admin panel and across all frontend pages
+* **Registered User** - will have full CRUD to their own Profile information (My Profile page) and the products within their own Shopping Bag (Checkout page).  They will have read only access to all other pages.
 * **Unregistered User** - will have 
 * **Store Owner** - 
 
