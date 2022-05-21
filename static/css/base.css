@@ -495,6 +495,11 @@ input[name='q']::placeholder {
     font-size: 28px;
 }
 
+/* heading margin */
+.bag-spacing {
+    margin-left: 15px;
+}
+
 /* grand total on 'bag-total' */
 .g-total {
     color: black;

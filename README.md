@@ -85,38 +85,38 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 ## Wireframes for Summit Bike Co
 
 ### HOME app
-[Home page](). <br>
+[Home page](/media/WF_home.jpg). <br>
 
 ### PRODUCTS app
-[Add Product](). <br>
-[Edit Product](). <br>
-[Bike Detail](). <br>
-[Products](). <br>
+[Add Product](/media/WF_add-product.jpg). <br>
+[Edit Product](/media/WF_edit-product.jpg). <br>
+[Bike Detail](/media/WF_individual-bike-model.jpg). <br>
+[Products](/media/WF_all-mountain-bikes.jpg). <br>
 
 ### BAG app
-[Bag](). <br>
+[Bag](/media/WF_shopping-bag.jpg). <br>
 
 ### CHECKOUT app
-[Checkout](). <br>
-[Checkout Success](). <br>
+[Checkout](/media/WF_checkout.jpg). <br>
+[Checkout Success](/media/WF_thank-you.jpg). <br>
 
 ### BUYING_GUIDES app
-[What is a Mountain Bike](). <br>
-[Mountain Bike Sizing Guide](). <br>
+[What is a Mountain Bike](/media/WF_what-is-a-mtb.jpg). <br>
+[Mountain Bike Sizing Guide](/media/WF_mtb-sizing-guide.jpg). <br>
 
 ### INFO app
-[Who We are](). <br>
-[Cycle to Work](). <br>
-[Terms and Conditions](). <br>
-[Contact Us](). <br>
+[Who We are](/media/WF_who-we-are.jpg). <br>
+[Cycle to Work](/media/WF_cycle-to-work.jpg). <br>
+[Terms and Conditions](/media/WF_terms-conditions.jpg). <br>
+[Contact Us](/media/WF_contact-us.jpg). <br>
 
 ### PROFILES app
-[My Profile](). <br>
+[My Profile](/media/WF_my-profile.jpg). <br>
 
 ### ALLAUTH ACCOUNT pages:<br>
-[Log In](). <br>
-[Log Out](). <br>
-[Sign Up](). <br>
+[Log In](/media/WF_account-login.jpg). <br>
+[Log Out](/media/WF_account-logout.jpg). <br>
+[Register](/media/WF_register.jpg). <br>
 
 ## User Experience Design
 

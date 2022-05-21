@@ -26,8 +26,6 @@ class Product(models.Model):
                                     null=False, blank=False,)
     price_was = models.DecimalField(max_digits=6, decimal_places=2,
                                     null=True, blank=True,)
-    # price_now = models.IntegerField()
-    # price_was = models.IntegerField(null=True, blank=True)
     brand = models.CharField(max_length=100, null=True)
     type = models.CharField(max_length=100)
     sizes = models.BooleanField(default=False, null=True, blank=True)
@@ -39,7 +37,6 @@ class Product(models.Model):
     gender = models.CharField(max_length=30, null=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    frame_in_inches = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return self.bike_model
