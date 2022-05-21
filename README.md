@@ -1,7 +1,7 @@
 # Summit Bike Co.
 
 ## Purpose
-This website has 
+Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Shoppers can register as an account holder and are able to save contact, delivery and payment information under their own profile. Shoppers without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with a selection of sizes and required quantity to assist shoppers in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. also offers shoppers the option of subscribing to their monthly newsletter.  Shoppers can stay in touch by following the social media of Summit Bike Co.
 
 ## High level overview of registered user roles and permissions within WMP:
 *Note:  All users (with the exception of unregistered users) will need to be set up with appropriate permissions by the superuser Admin.  All users will have read-only access to the Home page (landing page).*
@@ -77,36 +77,39 @@ competition are deemed not have an impact on Summit Bike Co. as a business - but
 Represented as an anchor tag (<a>) on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
 
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
-There are ? models within the Summit Bike Co website:<br>
-* ?
+There are 4 models within the Summit Bike Co website:<br>
+* django.contrib.auth User model
+* Products
+* Checkout
+* Profiles
 
-The ERD showing the relationship between models on the Summit Bike Co website can be found [here](). <br>
+The ERD showing the relationship between models on the Summit Bike Co website can be found [here](/media/ERD_SBC.jpg). <br>
 
 ## Wireframes for Summit Bike Co
 
-### HOME app
-[Home page](/media/WF_home.jpg). <br>
+### HOME app pages
+[Home](/media/WF_home.jpg). <br>
 
-### PRODUCTS app
-[Add Product](/media/WF_add-product.jpg). <br>
-[Edit Product](/media/WF_edit-product.jpg). <br>
-[Bike Detail](/media/WF_individual-bike-model.jpg). <br>
-[Products](/media/WF_all-mountain-bikes.jpg). <br>
+### PRODUCTS app pages
+[Add a Product](/media/WF_add-product.jpg). <br>
+[Edit a Product](/media/WF_edit-product.jpg). <br>
+[Bike Model Detail](/media/WF_individual-bike-model.jpg). <br>
+[All Mountain Bikes](/media/WF_all-mountain-bikes.jpg). <br>
 
-### BAG app
-[Bag](/media/WF_shopping-bag.jpg). <br>
+### BAG app pages
+[Shopping Bag](/media/WF_shopping-bag.jpg). <br>
 
-### CHECKOUT app
+### CHECKOUT app pages
 [Checkout](/media/WF_checkout.jpg). <br>
-[Checkout Success](/media/WF_thank-you.jpg). <br>
+[Thank You](/media/WF_thank-you.jpg). <br>
 
-### BUYING_GUIDES app
+### BUYING_GUIDES app pages
 [What is a Mountain Bike](/media/WF_what-is-a-mtb.jpg). <br>
 [Mountain Bike Sizing Guide](/media/WF_mtb-sizing-guide.jpg). <br>
 
 ### INFO app
 [Who We are](/media/WF_who-we-are.jpg). <br>
-[Cycle to Work](/media/WF_cycle-to-work.jpg). <br>
+[Cycle to Work Scheme](/media/WF_cycle-to-work.jpg). <br>
 [Terms and Conditions](/media/WF_terms-conditions.jpg). <br>
 [Contact Us](/media/WF_contact-us.jpg). <br>
 
