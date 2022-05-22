@@ -72,8 +72,8 @@ Represented as: a <h4> on the 'Mountain Bike Sizing Guide' page accessed via the
 This long-tail keyword showed a high volume, with mid to high level of organic competition.  As this particular
 scheme is a UK Government Initiative and is implemented by most mountain bike sellers, the high volume and high 
 competition are deemed not have an impact on Summit Bike Co. as a business - but representation is essential in demonstrating that Summit Bike Co. both supports and offers this scheme to their customers.
-* cycle to work scheme
-Represented as an anchor tag (<a>) on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
+* cycle to work scheme <br>
+Represented as an anchor tag on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
 
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
 There are 4 models within the Summit Bike Co website:<br>
@@ -396,8 +396,10 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 * The CSS stylesheet was run through the [CSS Validation Service-Jigsaw](https://jigsaw.w3.org/css-validator/) and showed no errors. <br>
 [CSS validation]().<br>
 
-* The Javascript file was run through the [JSHint Validation Service](https://jshint.com) and showed no errors.<br>
-[JS validation]().<br>
+* The Javascript code was run through the [JSHint Validation Service](https://jshint.com) and showed no errors.<br>
+[JS validation for summit_bike_co app and bag app](/media/JSHint_summit-bike-co-app_and_bag-app.jpg).<br>
+[JS validation for products app](/media/JSHint_products-app.jpg).<br>
+[JS validation for checkout app](/media/JSHint_checkout-app.jpg).<br>
 
 ## Lighthouse Reports
 * Home app: index.html page <br>

@@ -31,11 +31,11 @@ var style = {
         iconColor: '#dc3545'
     }
 };
+
 /* use 'elements' to create a card element with style parameters */
 var card = elements.create('card', {style: style});
 /* mount card to div in checkout.html*/
 card.mount('#card-element');
-
 
 /* handle realtime validation errors on the card element */
 /* add listener to listen for changes */
@@ -152,5 +152,5 @@ form.addEventListener('submit', function(ev) {
         /* triggered if view sends back 400 response. reloads page and show
          user error message from the view */
         location.reload();
-    })
+    });
 });

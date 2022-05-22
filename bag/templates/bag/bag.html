@@ -92,8 +92,8 @@
 <!-- scroll button to move to top of page -->
 <script>
     $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
+        window.scrollTo(0,0);
+    });
 </script>
 
 {% include 'products/includes/quantity_input_script.html' %}
@@ -107,7 +107,7 @@
         console.log("form", form);
         form.submit();
         console.log("form submitted");
-    })
+    });
 
     // on click event of remove-item
     $('.remove-item').click(function(e) {
@@ -127,7 +127,7 @@
                 // reload page to reflect updated bag
                 location.reload();
             });
-    })
+    });
 </script>
 
 {% endblock %}
