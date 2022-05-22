@@ -36,7 +36,6 @@ h4 {
 
 /*  body text and buttons */
 .gen-text {
-    /*color: #000 !important;*/
     color: black;
 }
 
@@ -110,7 +109,6 @@ h4 {
     color: black;
 }
 
-
 /* --------------------------------------------- F O O T E R */
 /* footer divider */
 .division {
@@ -124,7 +122,6 @@ h4 {
 
 /* header and footer background */
 .head-foot-background {
-    /* background-color: rgb(238, 236, 236); */
     background-color: ivory;
 }
 
@@ -187,15 +184,8 @@ h4 {
 /* -------------------------------------------- H O M E  app */
 
 /* ----------------------- index.html */
-/*  */
-.home-spacing {
-    margin: 0;
-    padding: 0;
-}
-
 /* image background */
 .background-home {
-    /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
     background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;
     background-size: cover;
     /* to push image down the page */
@@ -212,14 +202,6 @@ h4 {
     font-weight: 800; 
     font-size: 18px;
     color: black; 
-}
-
-/* 'shop online or visit instore' heading */
-.byline-1 {
-    text-align: right;
-    font-size: 22px;
-    color: yellow; 
-    letter-spacing: 1.5px; 
 }
 
 /* summer sale text */
@@ -267,7 +249,7 @@ h4 {
     color: yellow;
 }
 
-/* need advice section */
+/* 'need advice' section */
 .advice {
     color: yellow;
     font-size: 26px;
@@ -317,28 +299,13 @@ h4 {
     color: white;
 }
 
-/* --------------------- Background for all screens (except Home) */
-
-.background-other {
-    margin: 0;
-    padding: 5px 12px 5px 10px;
-    background: rgb(247, 247, 189);
-}
-
 /* ----------------------------------------- P R O D U C T S  app */
 
 /* ----------------------- products (all bikes) page */
 
-/* main heading for tablet screen only
-.heading {
-    margin-top: 10px;
-}*/
+/* main heading */
 .prod-heading {
     margin-top: 160px;
-}
-
-.prod-listing {
-    color: rgb(40, 40, 232);
 }
 
 /* bike classification (type) */
@@ -453,6 +420,7 @@ input[name='q']::placeholder {
     margin-right: 0;
 }
 
+/* shopping bag button */
 .shop-bag-btn {
     margin-left: 26px;
     margin-right: 0;
@@ -475,7 +443,7 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
-/* product form: image checkbox */
+/* product form: image checkbox 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #dc3545;
@@ -485,7 +453,7 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
-}
+} */
 
 /*  keep shopping button */
 .keep-shopping-btn {
@@ -552,6 +520,7 @@ input[name='q']::placeholder {
     font-size: 28px;
 }
 
+/* 'country' field on checkout form */
 #id_country {
     padding-top: 6px;
 }
@@ -591,6 +560,7 @@ input[name='q']::placeholder {
     margin-top: 20px;
 }
 
+/* sizing table heading */
 .table-heading {
     padding-right: 30px;
 }
@@ -607,6 +577,8 @@ input[name='q']::placeholder {
     margin-left: -25px;
 }
 
+/* ----------------------- 'contact_us' page */
+/* company address */
 .address {
     line-height: 14px;
 }
@@ -624,14 +596,14 @@ input[name='q']::placeholder {
     margin: auto;
 }
 
-/* used 'contact_us' page, bag templates, checkout templates, stock mgt templates */
+/* used on 'contact_us' page, bag templates, checkout templates, stock mgt templates */
 .green {
     color: #28a745;
     font-size: 24px;
 }
 
 
-/* ------------ allauth form formatting */
+/* ---------------------- allauth form formatting */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -686,14 +658,14 @@ input[name='q']::placeholder {
 }
 
 
-/* ----------------------- mtb_sizing page */
+/* --------------------------------------- mtb_sizing page */
 /* top spacing */
 .bg-spacing-1 {
     margin-top: 160px;
 }
 
 /* ---------------------------------------- ACCOUNT TEMPLATES */
-/* headings for account templates; profile templates; stock mgt templates */
+/* headings for: account templates; profile templates; stock mgt templates */
 .acc-heading {
     margin-top: 160px;
     font-family: 'Montserrat', sans-serif;
@@ -704,7 +676,7 @@ input[name='q']::placeholder {
 /* ------------------------------------------------------------------------- M E D I A   Q U E R I E S */
 
 /* -------------------------------------------- X - L A R G E */
-/* Slightly larger container on xl screens */
+/* slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
@@ -714,7 +686,6 @@ input[name='q']::placeholder {
 
     /* image background */
     .background-home {
-        /*  background: url('/media/home_1024by683_comp.jpg') no-repeat center center fixed;*/
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652194984/summit-bike-co/home_1200by800_comp_ssdw3w.jpg') no-repeat;
         background-size: cover;
         background-position-y: 100px;
@@ -747,7 +718,7 @@ input[name='q']::placeholder {
         font-size: 1rem;
     }
 
-    /* ----------------------- bike_detail page */
+    /* ----------------------------- bike_detail page */
     /* keep shopping button */
     .btn.keep-shopping-btn.rounded-0,
     .btn.btn-black.rounded-0 {
@@ -811,13 +782,6 @@ input[name='q']::placeholder {
         font-size: 14px;
         margin-right: 4.063rem;
         margin-left: 0;
-    }
-
-    /* shop online visit instore heading */
-    .byline-1 {
-        text-align: right;
-        font-size: 18px;
-        letter-spacing: 1px;
     }
 
     /* summer sale text */
@@ -998,6 +962,7 @@ input[name='q']::placeholder {
     /* -------------------------------------------- H O M E  app */    
 
     /* ----------------------------- index.html */
+    /* image background */
     .background-home {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat;
         background-size: cover;
@@ -1012,17 +977,6 @@ input[name='q']::placeholder {
         font-size: 12px;
         margin-right: 0.625rem;
         margin-left: 0;
-    }
-
-    /* 'shop online or visit instore' heading */
-    .byline-1 {
-        text-align: center;
-        font-size: 14px;
-        background-color: rgba(139, 69, 19, 0.71);
-        margin-top: 1.875rem;
-        padding-top: 0.188rem;
-        padding-bottom: 0.188rem;
-        letter-spacing: 0.5px;
     }
 
     /* summer sale section */
@@ -1054,7 +1008,7 @@ input[name='q']::placeholder {
         text-align: center;
     }
 
-    /* need advice section */
+    /* 'need advice' section */
     .advice-m {
         text-align: center;
         margin-bottom: 0.313rem;
@@ -1179,7 +1133,7 @@ input[name='q']::placeholder {
     /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
     /* ----------------------- what_is_a_mtb page */
-    /* headings for 'what_is_a_mtb' and 'mtb_sizing' pages */
+    /* headings for: 'what_is_a_mtb' and 'mtb_sizing' pages */
     .bg-spacing {
         margin-top: 2.5rem;
     }
