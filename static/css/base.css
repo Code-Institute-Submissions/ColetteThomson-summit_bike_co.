@@ -928,7 +928,7 @@ input[name='q']::placeholder {
     .mobile-logo {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
-        margin: auto;
+        float: left;
     }
 
     /* navigation menu on all mobile pages */
