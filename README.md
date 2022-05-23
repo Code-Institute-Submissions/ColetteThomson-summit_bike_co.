@@ -374,11 +374,11 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: products.html page]().<br>
 
 * Bag app: <br> 
-[HTML: bag.html]().<br>
+[HTML: bag.html](/media/HTML-val_bag.jpg).<br>
 
 * Checkout app: <br> 
-[HTML: checkout.html]().<br>
-[HTML: checkout_success.html]().<br>
+[HTML: checkout.html](/media/HTML-val_checkout.jpg).<br>
+[HTML: checkout_success.html](/media/HTML-val_checkout_success.jpg).<br>
 
 * Buying_Guides app: <br> 
 [HTML: what_is_a_mtb.html](/media/HTML-val_what_is_a_mtb.jpg).<br>
@@ -391,7 +391,7 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: contact_us.html](/media/HTML-val_contact_us.jpg).<br>
 
 * Profiles app: <br> 
-[HTML: profile.html]().<br>
+[HTML: profile.html](/media/HTML-val_profile.jpg).<br>
 
 * The CSS stylesheet was run through the [CSS Validation Service-Jigsaw](https://jigsaw.w3.org/css-validator/) and showed no errors. <br>
 [CSS validation]().<br>
