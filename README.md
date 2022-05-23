@@ -365,12 +365,12 @@ The following issue arose ...
 ## Code Validation
 All 21 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
 * Home app: index.html page <br>
-[HTML: index.html page]().<br>
+[HTML: index.html page](/media/HTML-val_index.jpg).<br>
 
 * Products app: <br>
-[HTML: add_product.html page]().<br>
-[HTML: edit_product.html page]().<br>
-[HTML: bike_detail.html page]().<br>
+[HTML: add_product.html page](/media/HTML-val_add_product.jpg).<br>
+[HTML: edit_product.html page](/media/HTML-val_edit_product.jpg).<br>
+[HTML: bike_detail.html page](/media/HTML-val_bike_detail.jpg).<br>
 [HTML: products.html page]().<br>
 
 * Bag app: <br> 
@@ -381,14 +381,14 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: checkout_success.html]().<br>
 
 * Buying_Guides app: <br> 
-[HTML: what_is_a_mtb.html]().<br>
-[HTML: mtb_sizing.html]().<br>
+[HTML: what_is_a_mtb.html](/media/HTML-val_what_is_a_mtb.jpg).<br>
+[HTML: mtb_sizing.html](/media/HTML-val_mtb-sizing.jpg).<br>
 
 * Info app: <br> 
-[HTML: who_we_are.html]().<br>
-[HTML: cycle_to_work.html]().<br>
-[HTML: terms_conditions.html]().<br>
-[HTML: contact_us.html]().<br>
+[HTML: who_we_are.html](/media/HTML-val_who_we_are.jpg).<br>
+[HTML: cycle_to_work.html](/media/HTML-val_cycle_to_work.jpg).<br>
+[HTML: terms_conditions.html](/media/HTML-val_terms_conditions.jpg).<br>
+[HTML: contact_us.html](/media/HTML-val_contact_us.jpg).<br>
 
 * Profiles app: <br> 
 [HTML: profile.html]().<br>

@@ -83,7 +83,7 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <!-- parent menu containing font awesome user icon and 'my account' text -->
-                        <a class="header-text link-nav" href="#" class="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-text link-nav user-options" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -179,9 +179,9 @@
 
 <!-- Footer -->
 <footer class="container-wrapper w-100 background">
-    <div class="container quotes-container content-container">
-    </div>
+    <div class="container quotes-container content-container"></div>
     <div class="row w-100 mx-0 head-foot-background">
+        <!-- footer divider -->
         <div class="division"></div>
         <div class="col-12 col-md-4">
             <!-- footer header -->
@@ -208,44 +208,45 @@
                     target="_blank" class="footer-text"><strong>Our Privacy Policy</strong></a>
                 </p>
         </div>
+    
         <div class="col-12 col-md-6">
             <!-- newsletter signup form (from MailChimp) -->
             <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
         
             <div id="mc_embed_signup" class="mob-subscribe">
-            <form action="https://herokuapp.us14.list-manage.com/subscribe/post?u=22d23267d57e0f2ac7e67a3d1&amp;id=86cc7d2cc2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-	                <h2>Subscribe</h2>
-                        <p class="paragraph">Get exclusive offers and discounts by subscribing to our monthly newsletter</p>
-                </div>
-                <!-- email input -->
-                <div class="mc-field-group">
-	                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                    </label>
-	                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                </div>
-            </div>
+                <form action="https://herokuapp.us14.list-manage.com/subscribe/post?u=22d23267d57e0f2ac7e67a3d1&amp;id=86cc7d2cc2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+	                    <h2>Subscribe</h2>
+                            <p class="paragraph">Get exclusive offers and discounts by subscribing to our monthly newsletter</p>
+                    </div>
+                    <!-- email input -->
+                    <div class="mc-field-group">
+	                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                        </label>
+	                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                    </div>
         
-	        <div id="mce-responses" class="clear foot">
-		        <div class="response" id="mce-error-response" style="display:none"></div>
-		        <div class="response" id="mce-success-response" style="display:none"></div>
-	        </div>    
-            <!-- to prevent form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_22d23267d57e0f2ac7e67a3d1_86cc7d2cc2" tabindex="-1" value="">
+	                <div id="mce-responses" class="clear foot">
+		                <div class="response" id="mce-error-response" style="display:none"></div>
+		                <div class="response" id="mce-success-response" style="display:none"></div>
+	                </div>    
+                    <!-- to prevent form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_22d23267d57e0f2ac7e67a3d1_86cc7d2cc2" tabindex="-1" value="">
+                    </div>
+                    <!-- subscribe button -->
+                    <ul class="list-inline list-unstyled optionalParent spacing mob-subscribe">
+                        <li class="list-inline-item clear foot pr-4">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        </li>
+                        <!-- mailchimp logo -->
+                        <li class="list-inline-item brandingLogo mchimp-logo">
+                            <a href="http://eepurl.com/h0wvVv" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp logo"></a>
+                        </li>
+                    </ul>
+                </form>
             </div>
-            <!-- subscribe button -->
-            <ul class="list-inline list-unstyled optionalParent spacing mob-subscribe">
-                <li class="list-inline-item clear foot pr-4">
-                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                </li>
-                <!-- mailchimp logo -->
-                <li class="list-inline-item brandingLogo mchimp-logo">
-                    <a href="http://eepurl.com/h0wvVv" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp logo"></a></p>
-                </li>
-            </ul>
-            </form>
-        </section>
+        </div>
     </div>
 </footer>
 
@@ -279,5 +280,5 @@
 {% endblock %}
 
 
-  </body>
+</body>
 </html>

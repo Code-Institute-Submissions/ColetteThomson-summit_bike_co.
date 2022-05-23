@@ -29,6 +29,6 @@ class ProductForm(forms.ModelForm):
         # (instead of using the id) - and shown in select box of form
         self.fields['classification'].choices = friendly_names
         # iterate through rest of fields
-        for field_name, field in self.fields.items():
+        # for field_name, field in self.fields.items():
             # set class to match store theme
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            # field.widget.attrs['class'] = 'border-black rounded-0'

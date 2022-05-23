@@ -23,10 +23,10 @@
 
         <!-- dropdown menu for 'Buying Guides' -->
         <li class="nav-item dropdown">
-            <a class="font-weight-bold link-nav mr-5 header-text" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold link-nav mr-5 header-text" href="#" id="link-buying-guides"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Buying Guides
             </a>
-            <div class="dropdown-menu border-0" aria-label="navbarDropdown">
+            <div class="dropdown-menu border-0" aria-labelledby="link-buying-guides">
                 <a href="{% url 'what_is_a_mtb' %}" class="dropdown-item" aria-current="page">What is a Mountain Bike?</a>
                 <a href="{% url 'mtb_sizing' %}" class="dropdown-item" aria-current="page">Mountain Bike Sizing Guide</a>
             </div>
