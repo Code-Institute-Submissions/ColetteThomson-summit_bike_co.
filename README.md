@@ -371,7 +371,7 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: add_product.html page](/media/HTML-val_add_product.jpg).<br>
 [HTML: edit_product.html page](/media/HTML-val_edit_product.jpg).<br>
 [HTML: bike_detail.html page](/media/HTML-val_bike_detail.jpg).<br>
-[HTML: products.html page]().<br>
+[HTML: products.html page](/media/HTML-val_products.jpg).<br>
 
 * Bag app: <br> 
 [HTML: bag.html](/media/HTML-val_bag.jpg).<br>
