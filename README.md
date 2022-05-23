@@ -37,7 +37,7 @@ The live project can be found [here]()
 ###  Keywords
 As Summit Bike Co. specialises in selling only mountain bikes, keywords were selected with this in mind.<br>
 Placement of these keywords within the website has been implemented where possible using semantic HTML elements 
-(i.e. headings) and one utilising an anchor tag.<br>
+(i.e. headings) and one keyword utilising an anchor tag.<br>
 Research (using Wordtracker.com) into short-tail and long-tail keywords suitable for Summit Bike Co. yielded
 the following:<br>
 
@@ -51,29 +51,29 @@ The following **product based keyword** enquiries showed a mid-range volume of s
 organic competition:<br>
 * full suspension mountain bikes
 * hardtail mountain bikes
-These are both represented in:<br>
-The individual 'Bike Model [name]...' pages:<br>
-* A <h2> on each individual bike_detail page (i.e. name of bike) along with a reference in the relevant
-individual bike's product 'description' section
+These are seen in both the individual 'Bike Model [name]...' page and the 'All Mountain Bikes' page
+and are represented as:<br>
+* A 'h2' on each individual bike_detail page along with a reference in the relevant individual bike's product 'description' section
 * as a dropdown option ('By Type') under the 'All Mountain Bikes' menu option
 * as a sort option on both the 'Bike Model [name]...' pages and the 'All Mountain Bikes' page
 <br>
+
 The following **information based keyword** enquiries showed a lower volume of searches, but also low organic
 competition:<br>
 * what is a mountain bike
 * what are hardtail mountain bikes
 * what are full suspension mountain bikes <br>
-Represented as: <h2>'s on the 'What is a Mountain Bike' page accessed via the dropdown option under the 'Buying Guides' menu <br>
+Represented as: 3 x 'h2's on the 'What is a Mountain Bike' page accessed via the dropdown option under the 'Buying Guides' menu <br>
 
 * what size mountain bike do I need <br>
-Represented as: a <h4> on the 'Mountain Bike Sizing Guide' page accessed via the dropdown option under the 'Buying Guides' menu <br>
+Represented as: a 'h4' on the 'Mountain Bike Sizing Guide' page accessed via the dropdown option under the 'Buying Guides' menu <br>
 
 **Long-tail keywords pertaining to information from external 3rd party organisations:**<br>
 This long-tail keyword showed a high volume, with mid to high level of organic competition.  As this particular
 scheme is a UK Government Initiative and is implemented by most mountain bike sellers, the high volume and high 
 competition are deemed not have an impact on Summit Bike Co. as a business - but representation is essential in demonstrating that Summit Bike Co. both supports and offers this scheme to their customers.
 * cycle to work scheme <br>
-Represented as an anchor tag on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
+Represented as: an anchor tag on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
 
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
 There are 4 models within the Summit Bike Co website:<br>
@@ -125,23 +125,36 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 ### User Stories
 #### New User Usability Goals
 * As a new user, I want to immediately understand the main purpose of the website
-* As a new user, I want information on what services they offer
+* As a new user, I want to be able to see what services they offer
 * As a new user, I want to be able to easily contact the organisation
+* As a new user, I want to be able to view the privacy policy
+* As a new user, I want to be able to view the terms and conditions of the organisation
+* As a new user, I want to be able to view the Cycle to Work Scheme for the organisation
+* As a new user, I want to be able to view advice on product sizing to suit my needs
+* As a new user, I want to be able to view advice on which product is best suited to my needs
 * As a new user, the navigational layout must be easy to understand and follow
 * As a new user, I want to be able to view the website on all device types
 #### New User Functionality Goals
-* As a new user, I want to register for an account, so that I can access appropriate website content
-* As a new user, I want to understand what access I have to what website content
+* As a new user, I want to register for an account, so that I can view my user profile
+* As a new user, I want to be able to enter personal and payment information securely
+* As a new user, I want to make a purchase without registering for an account
+* As a new user, I want to be able to select my required size and quantity of each product
+* As a new user, I want to be able to view products in my shopping bag
+* As a new user, I want to be able to adjust the contents of my shopping bag before checking out
+* As a new user, I want to be able to view my order confirmation after checkout
+* As a new user, I want to receive a confirmation email when I have completed an order
+* As a new user, I want to be able to subscribe to the organisation's newsletter
+* As a new user, I want to be able to search for a required product
+* As a new user, I want to be able to view a specific classification of products
+* As a new user, I want to be able to see all the products the organisation has for sale
 
 #### Returning User Functionality Goals
-* As a returning user, I want to have appropriate access to website content as per my permissions
-* As a returning user, I want to be able to find (read/view) the information I'm looking for
-* As a returning user, I want to be able to create (add) new content, as per my permissions
-* As a returning user, I want to be able to edit (update) existing content, as per my permissions
-* As a returning user, I want to be able to delete existing content, as per my permissions
-* As a returning user, I want to be able to view all the organisation's active projects in the Chat
-* As a returning user, I want to be able to add my ideas or suggestions on the different Project Posts
-* As a returning user, I want confirmation of actions I have performed on the WMP website
+* As a returning user, I want to be able to view my order history
+* As a returning user, I want to be able to update my personal and delivery details
+* As a returning user, I want to be know that my personal and payment information is secure
+* As a store owner, I want to be able to add a new product to the current stock
+* As a store owner, I want to be able to edit/update an existing product
+* As a store owner, I want to be able to delete an existing product
 
 ## Structural Features of the Summit Bike Co. website
 
