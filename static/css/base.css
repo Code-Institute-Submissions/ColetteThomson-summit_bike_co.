@@ -528,6 +528,10 @@ input[name='q']::placeholder {
 .colour {
     color: rgb(40, 40, 232);
 }
+
+.spinner {
+    font-size: x-small;
+}
 /* ----------------------------------------- B U Y I N G _ G U I D E S  app */
 
 /* ----------------------- what_is_a_mtb page */
