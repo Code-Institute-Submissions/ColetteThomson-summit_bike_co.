@@ -354,26 +354,25 @@ No known limitations.
 Exceptions: the 'Home' page, will direct to 'index.html'; the 'show_admin_person.html' and 'show_techsupport_person.html' will direct to 'Personal Details'; the 'show_project' will direct to 'Project Details'. 
 
 ### Test Cases
-* Test cases can be found here for the **index.html** (home) and base.html: <br> 
-[Home app and base.html]()
-* Test cases can be found here for the **Chat** app pages (post_list.html | post_detail.html) : <br> 
-[Products app]()<br>
-* Test cases can be found here for the various **Events** app pages (add... | update... | delete... | view... ): <br>
-[Bag app]().<br>
-* Test cases can be found here for the **Logout, Login, Register** and **un-registered users** pages: <br>
-[Checkout app]().<br>
-* Test cases can be found here for the <br>
-[Buying_Guides app]().<br>
-* Test cases can be found here for the <br>
-[Info app](). <br>
-* Test cases can be found here for the <br>
-[Profiles app](). <br>
-* Test cases can be found here for the <br>
-[AllAuth Accounts pages]().<br>
-* Test cases can be found here for the <br>
+* Test cases can be found here for the **home** app page (index.html) and base.html: <br> 
+[Home app and base.html](/media/TC_base_home.jpg)
+* Test cases can be found here for the **products** app pages: <br> 
+[Products app](/media/TC_products.jpg)<br>
+* Test cases can be found here for the **bag** app page: <br>
+[Bag app](/media/TC_bag.jpg).<br>
+* Test cases can be found here for the **checkout** app pages: <br>
+[Checkout app](/media/TC_checkout.jpg).<br>
+* Test cases can be found here for the **buying_guides** app pages: <br>
+[Buying_Guides app](/media/TC_buying_guides.jpg).<br>
+* Test cases can be found here for the **info** app pages:<br>
+[Info app](/media/TC_info.jpg).<br>
+* Test cases can be found here for the **profiles** app page:<br>
+[Profiles app](/media/TC_profile.jpg). <br>
+* Test cases can be found here for the **Logout, Login, Register** pages:<br>
+[AllAuth Accounts pages](/media/TC_login_logout_register.jpg).<br>
 
 ### Testing Issues and Resolutions
-The following issue arose ...
+No known issues arose during testing.
 
 ## Code Validation
 All 21 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
