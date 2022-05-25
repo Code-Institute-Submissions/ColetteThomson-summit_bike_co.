@@ -54,7 +54,7 @@
         <div id="topnav" class="row pt-lg-1 d-none d-lg-flex pl-2 head-foot-background">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <!-- link to home page -->
-                <a href="{% url 'home' %}" class="link-nav link-logo">
+                <a href="{% url 'home' %}" class="link-nav link-logo" aria-label="back to home page">
                     <!-- logo -->
                     <h2 class="logo my-0"><strong>Summit Bike Co.</strong></h2>
                     <h3 class="byline">mountain bike shop</h3>
@@ -110,7 +110,7 @@
                     <!-- link for shopping bag -->
                     <li class="list-inline-item pr-1">
                         <!-- using total variable: if item in shopping bag change font colour -->
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav" href="{% url 'view_bag' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav" href="{% url 'view_bag' %}" aria-label="shopping bag total">
                             <div class="text-center">
                                 <!-- font awesome shopping bag icon -->
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -205,7 +205,7 @@
                 </p>
                 <!-- link: privacy policy -->
                 <p class="priv-pol"><a href="https://www.privacypolicygenerator.info/live.php?token=o8hofJE237OXPOsLlOSQaOz7uJUTTe7M" 
-                    target="_blank" class="footer-text"><strong>Our Privacy Policy</strong></a>
+                    target="_blank" class="footer-text" aria-label="privacy policy"><strong>Our Privacy Policy</strong></a>
                 </p>
         </div>
     
@@ -237,11 +237,7 @@
                     <!-- subscribe button -->
                     <ul class="list-inline list-unstyled optionalParent spacing mob-subscribe">
                         <li class="list-inline-item clear foot pr-4">
-                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                        </li>
-                        <!-- mailchimp logo -->
-                        <li class="list-inline-item brandingLogo mchimp-logo">
-                            <a href="http://eepurl.com/h0wvVv" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp logo"></a>
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" aria-label="subscribe">
                         </li>
                     </ul>
                 </form>

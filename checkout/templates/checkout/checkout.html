@@ -42,10 +42,13 @@
                             <a href="{% url 'bike_detail' item.product.id %}">
                                 <!-- if product image, display -->
                                 {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.bike_model }}">
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.bike_model }}"
+                                    aria-label="bike model image">
                                 {% else %}
                                     <!-- if no product image -->
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.bike_model}}">
+                                    <img class="w-100"
+                                    src="https://res.cloudinary.com/drxo58fsj/image/upload/v1652270722/summit-bike-co/noimage_javo3d.png"
+                                    alt="{{ product.bike_model}}" aria-label="no image">
                                 {% endif %}
                             </a>
                         </div>
@@ -129,14 +132,14 @@
                     <!-- checkout form bag link and submit button -->
                     <div class="submit-button text-right mt-5 mb-2">  
                         <!-- link back to shopping bag, in case user wants to adjust anything -->                  
-						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0" aria-label="adjust bag">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
                         <!-- submit button -->
-						<button id="submit-button" class="btn btn-black rounded-0">
+						<button id="submit-button" class="btn btn-black rounded-0" aria-label="complete order">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
@@ -156,12 +159,12 @@
     </div>
     <!-- loading spinner icon to indicate payment is being processed -->
     <div id="loading-overlay">
-        <h1 class="text-light spinner loading-spinner">processing...
+        <h2 class="text-light spinner loading-spinner">processing...
             <span class="icon">
                 <!-- font awesome spin icon -->
                 <i class="fas fa-3x fa-sync-alt fa-spin"></i>
             </span>
-        </h1>
+        </h2>
     </div>
 {% endblock %}
 

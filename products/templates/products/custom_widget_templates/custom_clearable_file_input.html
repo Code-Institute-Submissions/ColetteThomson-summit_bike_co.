@@ -4,7 +4,7 @@
     <p>{{ widget.initial_text }}:</p>
     <a href="{{ widget.value.url }}">
         <!-- preview of product image -->
-        <img width="150" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="{{ product.bike_model }}">
+        <img width="150" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="{{ product.bike_model }}" aria-label="{{ product.bike_model }}">
     </a>
     {% if not widget.required %}
         <!-- bootstrap styling for image checkbox -->

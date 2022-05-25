@@ -398,6 +398,7 @@ input[name='q']::placeholder {
 }
 
 .sub-heading {
+    font-size: 22px;
     margin-left: 40px;
     color: rgb(40, 40, 232);
     font-weight: 600;
@@ -478,11 +479,6 @@ input[name='q']::placeholder {
     margin-left: 15px;
 }
 
-/* grand total on 'bag-total' */
-.g-total {
-    color: black;
-}
-
 /* bike model name */
 .bag-model{
     color: rgb(40, 40, 232);
@@ -507,6 +503,17 @@ input[name='q']::placeholder {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* total and delivery amounts */
+.total {
+    font-size: 20px;
+}
+
+/* grand total on 'bag-total' */
+.g-total {
+    font-size: 22px;
+    color: black;
 }
 
 /* ----------------------------------------- C H E C K O U T  app */
@@ -549,6 +556,7 @@ input[name='q']::placeholder {
 }
 
 .bg-subheading {
+    color: rgb(40, 40, 232);
     font-size: 24px;
 }
 
@@ -856,6 +864,17 @@ input[name='q']::placeholder {
         font-size: 16px;
     }
 
+    /* total and delivery amounts */
+    .total {
+        font-size: 18px;
+    }
+
+    /* grand total on 'bag-total' */
+    .g-total {
+        font-size: 20px;
+        color: black;
+    }
+
     /* ----------------------------------------- C H E C K O U T  app */
 
     /* ------------------------------- 'checkout' pages */
@@ -1094,6 +1113,7 @@ input[name='q']::placeholder {
     }
 
     .mob-heading {
+        font-size: 20px;
         margin-left: 0.625rem;
         color: rgb(40, 40, 232);
         font-weight: 600;
@@ -1125,6 +1145,17 @@ input[name='q']::placeholder {
         font-size: 14px;
     }
 
+    /* total and delivery amounts */
+    .total {
+        font-size: 14px;
+    }
+
+    /* grand total on 'bag-total' */
+    .g-total {
+        font-size: 16px;
+        color: black;
+    }
+
     /* ----------------------------------------- C H E C K O U T  app */
 
     /* ------------------------------- 'checkout' pages */
@@ -1143,11 +1174,11 @@ input[name='q']::placeholder {
     }
 
     .bg-heading {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .bg-subheading {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     /* ----------------------- mtb_sizing page */

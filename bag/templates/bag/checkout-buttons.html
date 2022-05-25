@@ -2,7 +2,7 @@
      (taken from 'bag.html') -->
 
 <!-- keep shopping button -->
-<a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 btn-lg">
+<a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 btn-lg" aria-label="keep shopping">
     <span class="icon">
         <!-- font awesome icon: left chevron -->
         <i class="fas fa-chevron-left"></i>
@@ -10,7 +10,7 @@
     <span class="text-uppercase">Keep Shopping</span>
 </a>
 <!-- secure checkout button -->
-<a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+<a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg" aria-label="secure checkout">
     <span class="text-uppercase">Secure Checkout</span>
     <span class="icon">
         <!-- font awesome icon: closed lock -->

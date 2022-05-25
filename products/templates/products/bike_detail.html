@@ -24,12 +24,15 @@
                     {% if product.image %}
                         <!-- link to product image in a new window -->
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-bottom img-fluid detail-image" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
+                            <img class="card-img-bottom img-fluid detail-image" src="{{ product.image.url }}"
+                            alt="{{ product.bike_model }}" width="640" height="395">
                         </a>
                         {% else %}
                         <!-- default image if no product image available -->
                         <a href="">
-                            <img class="card-img-bottom img-fluid noimage" src="https://res.cloudinary.com/drxo58fsj/image/upload/v1652270722/summit-bike-co/noimage_javo3d.png" alt="{{ product.bike_model }}">
+                            <img class="card-img-bottom img-fluid noimage"
+                            src="https://res.cloudinary.com/drxo58fsj/image/upload/v1652270722/summit-bike-co/noimage_javo3d.png"
+                            alt="{{ product.bike_model }}" width="224" height="146">
                         </a>
                     {% endif %}
                 </div>
@@ -80,7 +83,7 @@
             <!-- product description -->
             <div class="row w-100">
                 <div class="col-12">
-                    <h4 class="sub-heading mob-heading">Description:  </h4>
+                    <h3 class="sub-heading mob-heading">Description:  </h3>
                     <p class="description">
                         A <strong>{{ product.type }}</strong>, {{ product.discipline }} mountain bike in {{ product.colour }} 
                         manufactured by {{ product.brand }}. With a durable {{ product.material }} frame, a wheel size of 
@@ -127,7 +130,7 @@
                                         <!-- bootstrap class -->
                                         <div class="input-group-prepend">
                                             <!-- decrease quantity selector button with product.id and increment qty (needed for JS) -->
-                                            <button class="decrement-qty btn btn-qty rounded-0" 
+                                            <button class="decrement-qty btn btn-qty rounded-0" aria-label="decrease quantity"
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <!-- font awesome minus icon -->
@@ -140,7 +143,7 @@
                                             value="1" min="1" max="50" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">
                                                 <!-- increase quantity selector button with product.id and increment qty (needed for JS) -->
-                                                <button class="increment-qty btn btn-qty rounded-0"
+                                                <button class="increment-qty btn btn-qty rounded-0" aria-label="increase quantity"
                                                     data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                     <span class="icon">
                                                         <!-- font awesome plus icon -->
@@ -156,14 +159,14 @@
                         <!-- if product has 'sizes': adjust margins and spacing -->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <!-- keep shopping button (links user to products page) -->
-                            <a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 mt-2 shop-bag-btn mob-shop-btn">
+                            <a href="{% url 'products' %}" class="btn keep-shopping-btn rounded-0 mt-2 shop-bag-btn mob-shop-btn" aria-label="keep shopping">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                                 <!-- submit button for input form (shopping) -->
-                                <input type="submit" class="btn btn-black add-to-bag-btn rounded-0 text-uppercase mt-2 mob-shop-btn"
+                                <input type="submit" class="btn btn-black add-to-bag-btn rounded-0 text-uppercase mt-2 mob-shop-btn" aria-label="add to bag"
                                     value="Add to Bag">
                             
                             <!-- hidden field using request.path attribute to submit 'redirect-url', containing current url' -->

@@ -211,14 +211,15 @@
             {% if from_profile %}
                 <!-- render back to profile button -->
                 <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                    <span class="icon mr-2">
+                    <span class="icon mr-2" aria-label="back to profile">
                         <i class="fas fa-angle-left"></i>
                     </span>
                     <span class="text-uppercase">Back to Profile</span>
                 </a>
             {% else %}
                 <!-- if user not on profile page, render 'need something else?' button -->
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" 
+                class="btn btn-black rounded-0 my-2" aria-label="need something else?">
                     <span class="icon mr-2">
                         <i class="fas fa-gifts"></i>
                     </span>

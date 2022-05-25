@@ -13,7 +13,7 @@ class ProductForm(forms.ModelForm):
         # dunder field to include all fields in Product
         fields = '__all__'
     # use widget for image field
-    image = forms.ImageField(label='Image', required=False,
+    image = forms.ImageField(label='Bike Model Image', required=False,
                              widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
@@ -28,7 +28,3 @@ class ProductForm(forms.ModelForm):
         # update classification field with friendly_name
         # (instead of using the id) - and shown in select box of form
         self.fields['classification'].choices = friendly_names
-        # iterate through rest of fields
-        # for field_name, field in self.fields.items():
-            # set class to match store theme
-            # field.widget.attrs['class'] = 'border-black rounded-0'

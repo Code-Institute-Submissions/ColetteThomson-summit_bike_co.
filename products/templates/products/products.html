@@ -50,12 +50,15 @@
                                 <!-- image at top of product card -->
                                 {% if product.image %}
                                 <a href="{% url 'bike_detail' product.id %}">
-                                    <img class="card-img-bottom img-fluid mobile-img" src="{{ product.image.url }}" alt="{{ product.bike_model }}">
+                                    <img class="card-img-bottom img-fluid mobile-img" src="{{ product.image.url }}" 
+                                    alt="{{ product.bike_model }}" width="640" height="395" aria-label="bike model image">
                                 </a>
                                 {% else %}
                                 <!-- default image if no product image available -->
                                 <a href="{% url 'bike_detail' product.id %}">
-                                    <img class="card-img-bottom img-fluid" src="https://res.cloudinary.com/drxo58fsj/image/upload/v1652270722/summit-bike-co/noimage_javo3d.png" alt="{{ product.bike_model }}">
+                                    <img class="card-img-bottom img-fluid"
+                                    src="https://res.cloudinary.com/drxo58fsj/image/upload/v1652270722/summit-bike-co/noimage_javo3d.png"
+                                    alt="{{ product.bike_model }}" width="224" height="146" aria-label="no image">
                                 </a>
                                 {% endif %}
                                 <!-- body of product card -->
@@ -90,9 +93,9 @@
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <!-- link to edit/update a product -->
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <a href="{% url 'edit_product' product.id %}" aria-label="edit a product">Edit</a> | 
                                                     <!-- link to delete a product -->
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}" aria-label="delete a product">Delete</a>
                                                 </small>
                                             {% endif %}
                                         </div>

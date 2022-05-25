@@ -2,8 +2,8 @@
      (taken from 'bag.html') -->
 
 <!-- list bag total, delivery charges and grand total -->
-<h6>Bag Total: £{{ total|floatformat:2 }}</h6>
-<h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+<h3 class="total">Bag Total: £{{ total|floatformat:2 }}</h3>
+<h3 class="total">Delivery: £{{ delivery|floatformat:2 }}</h3>
 <h4 class="mt-4 g-total"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
 <!-- show user summary of costs -->
 {% if free_delivery_delta > 0 %}

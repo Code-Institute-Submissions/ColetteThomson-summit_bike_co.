@@ -3,8 +3,8 @@
 
 <!-- if product has an image -->
 {% if item.product.image %}
-<img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.bike_model }}">
+<img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.bike_model }}" width="640" height="395">
 {% else %}
 <!-- if no product image, display 'noimage' image -->
-<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.bike_model }}">
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.bike_model }}" width="224" height="146">
 {% endif %}
