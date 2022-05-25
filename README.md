@@ -415,27 +415,27 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 
 ## Lighthouse Reports
 * Home app: index.html page <br>
-[Lighthouse: index.html]().<br>
+[Lighthouse: index.html](/media/LR_index.jpg).<br>
 * Products app: <br>
-[Lighthouse: Add a Product]().<br>
-[Lighthouse: Edit a Product]().<br>
-[Lighthouse: Bike Model (name...)]().<br>
-[Lighthouse: All Mountain Bikes]().<br>
+[Lighthouse: Add a Product](/media/LR_add_product.jpg).<br>
+[Lighthouse: Edit a Product](/media/LR_edit_product.jpg).<br>
+[Lighthouse: Bike Model (name...)](/media/LR_bike_detail.jpg).<br>
+[Lighthouse: All Mountain Bikes](/media/LR_products.jpg).<br>
 * Bag app: <br>
-[Lighthouse: Shopping Bag]().<br>
+[Lighthouse: Shopping Bag](/media/LR_bag.jpg).<br>
 * Checkout app: <br>
-[Lighthouse: Checkout]().<br>
-[Lighthouse: Thank You]().<br>
+[Lighthouse: Checkout](/media/LR_checkout.jpg).<br>
+[Lighthouse: Thank You](/media/LR_thankyou.jpg).<br>
 * Buying_Guides app: <br>
-[Lighthouse: What is a Mountain Bike]().<br>
-[Lighthouse: Mountain Bike Sizing Guide]().<br>
+[Lighthouse: What is a Mountain Bike](/media/LR_what_is_a_mtb.jpg).<br>
+[Lighthouse: Mountain Bike Sizing Guide](/media/LR_mtb_sizing.jpg).<br>
 * Info app: <br>
-[Lighthouse: Who We Are]().<br>
-[Lighthouse: Cycle to Work Scheme]().<br>
-[Lighthouse: Terms and Conditions]().<br>
-[Lighthouse: Contact Details]().<br>
+[Lighthouse: Who We Are](/media/LR_who_we_are.jpg).<br>
+[Lighthouse: Cycle to Work Scheme](/media/LR_cycle_to_work.jpg).<br>
+[Lighthouse: Terms and Conditions](/media/LR_terms_conditions.jpg).<br>
+[Lighthouse: Contact Details](/media/LR_contact_us.jpg).<br>
 * Profiles app: <br>
-[Lighthouse: My Profile]().<br>
+[Lighthouse: My Profile](/media/LR_profile.jpg).<br>
 
 ## Deployment
 ### Project Creation
