@@ -161,17 +161,42 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 ### Website Responsiveness
 * Bootstrap and CSS @media queries have been used to ensure the website is viewable across laptops/desktops, tablets and mobile phones. The size and layout of text content, backgrounds and images will all adapt according to the viewing device to ensure readability and quality.
 * All features on each web page are fully accessible and responsive across all viewing devices (laptops/desktops, tablets and mobile phones). 
-* This feature fulfills the user story: *'As a new user, I want to be able to view the website on all device types'*. 
+* This feature fulfills the user stories: *'As a'*
 
-### Navigation Options
+### Navigation Options and Header
 * This feature is intended to enable the user to quickly and easily navigate between web pages without having to utilise the browser 'back' button.
-* Present on all 21 pages of the website, the fully navigational links - on the top of each page (menu links) and/or in the body of the page (hyperlinks or buttons) - will provide access to other pages in the website.
-* Clicking on the 'WMP' in the navigation bar (at the top of each page) will return the user to the home page.
-* This feature fulfills the user stories: *'As a new user, the navigational layout must be easy to understand and follow'* and *'As a new user, I want information on what services they offer'*.
+* Present on all 15 pages of the website, the fully navigational links - on the top of each page (menu links) and/or in the body of the page (hyperlinks or buttons) - will provide access to other pages in the website.
+* Clicking on the 'Summit Bike Co' or the 'mountain bike shop' in the navigation bar (at the top of each page) will return the user to the home page.
+* This feature fulfills the user stories: *'As a'*
+
+The **Search...** bar (in the header):
+* a search bar for users to enter their criteria
+* a 'search' button (icon) to submit their criteria
+* a confirmation of the user's submitted search (eg. 28 products found for ...)
+* a listing of linked matches to the user's criteria should their search be successful
+* This feature fulfills the user stories: *'As a'*
+
+The **My Account** dropdown (in the header):
+* if user is authenticated as a superuser (admin/store owner) they will have access to 'Stock Management' where new products can be added
+* if user has registered for an account they will have access to 'My Profile' where contact and delivery information can be stored for that particular user
+* This feature fulfills the user stories: *'As a'*
+
+The **Logout**; **Login** and **Register** pages:
+* Logout - confirmation to a registered user that they want to logout
+* Login - request of login information (username and password) from registered users
+* Register - request of user information (email address, username and password) from new users
+* This feature fulfills the user stories: *'As a'*
+
+A screenshot of the 'Logout' page can be found [here](). <br>
+A screenshot of the 'Login' page can be found [here](). <br>
+A screenshot of the 'Register' page can be found [here](). <br>
+
 
 ### Footer Element
-* Present on all 21 pages of the website, the footer contains copyright information and navigational links to the social media accounts of smartevents WMP.
-* This feature fulfills the user stories: *'As a new user, I want information on what services they offer'*.
+* Present on all 15 pages of the website, the footer contains navigational links to the social media accounts of Summit Bike Co.
+* Shoppers are able to subscribe to the monthly newsletter
+* There is a link to the privacy policy for Summit Bike Co
+* This feature fulfills the user stories: *'As a'*
 
 # Details of Summit Bike Co. Web Pages
 **NB**: *Unfortunately the smartevents WMP website will not display in the 'amiresponsivedesign.is' website. Therefore, screenshots of individual pages have been provided instead. Note: all website pages have been tested (and passed) for responsive design as per the test cases.*<br>
@@ -179,10 +204,12 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 ## 1.  The 'Home' app: index.html (Home page or Landing page)
 
 This page is intended to provide:
-* an at-a-glance view of the main purpose of the website, i.e. a Workforce Management Platform (WMP) to help project managers and their teams select the right resource for the right task - and - the availability of a project Chat to encourage project team member interaction and participation.
-* an at-a-glance high level view of the different WMP roles and permissions, so that potential users can immediately see what user options are available.
-* contact details (email and phone) for the website Administrator, so that users can request to be set up as a registered website user
-* This feature fulfills the user stories: *'As a new user, I want to immediately understand the main purpose of the website'* and *'As a new user, I want information on what services they offer* and *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to register for an account, so that I can access appropriate website content'* and *'As a new user, I want to understand what access I have to what website content'* and *'As a new user, the navigational layout must be easy to understand and follow'*.
+* an at-a-glance view of the main purpose of the website, i.e. Summit Bike Co. a mountain bike shop, that sells mountain bikes
+* shows current promotion: 'Summer Sale now on!'
+* provides a quick access link to the organisation's products: 'view our range'
+* provides quick access links to 'buying guides' for shoppers who require product assistance
+* provides quick access link to 'contact us' for shoppers who want to obtain contact details
+* This feature fulfills the user stories: *'As a'*
 
 A screenshot of the 'Home' page (index.html) can be found [here](/smartevents/images/mu_home_perm.jpg). <br>
 
@@ -193,16 +220,15 @@ The **All Bikes** page is intended to provide:
 * details of each active project listed can be accessed by clicking either the project name (eg Project 1...) or the slug (eg: energy consumption...).
 * the author (i.e. the Administator) is displayed above the project name.
 * the date and time the Post was created and the current amount of 'likes' for that particular project.
-* This feature fulfills the user stories: *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want to be able to view all the organisation's active projects in the Chat'*
+* This feature fulfills the user stories: *'As a'*
 
-*without/no permissions :*<br> 
 A screenshot of the 'All Mountain Bikes' page can be found [here](). <br>
 
 The **Bike Model ...** page is intended to provide:
 * a list ...
 * product specification.
 * user messaging: 
-* This feature fulfills the user stories: *'As a returning user, I want to be able to view all the organisation's active projects in the Chat'* and *'As a returning user, I want to be able to add my ideas or suggestions on the different Project Posts'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
+* This feature fulfills the user stories: *'As a'*
 
 ## 3.  Dropdown for 'Buying Guides'
 
@@ -210,78 +236,16 @@ The **Bike Model ...** page is intended to provide:
 * a list ...
 * product specification.
 * user messaging: 
-* This feature fulfills the user stories: *'As a returning user, I want to be able to view all the organisation's active projects in the Chat'* and *'As a returning user, I want to be able to add my ideas or suggestions on the different Project Posts'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
-
-The **Search...** bar:
-* a search bar for users to enter their criteria (this field is case sensitive).
-* a 'search' button to submit their criteria.
-* a confirmation of the user's submitted search (i.e. you searched for ...).
-* a listing of linked matches to the user's criteria should their search be successful.
-* This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'*.
+* This feature fulfills the user stories: *'As a'*
 
 
-*without/no permissions :*<br> 
-A screenshot of the 'All Projects' page can be found [here](/smartevents/images/mu_all-projects_np.jpg). <br>
-A screenshot of the 'All Admin People' page can be found [here](/smartevents/images/mu_all-admin-people_np.jpg). <br>
-A screenshot of the 'All Tech Support People' page can be found [here](/smartevents/images/mu_all-tech-people_np.jpg). <br>
 
-*with permissions :*<br> 
-A screenshot of the 'All Projects' page with permissions can be found [here](/smartevents/images/mu_all-projects_perm.jpg). <br>
-A screenshot of the 'All Admin People' page with permissions can be found [here](/smartevents/images/mu_all-admin-people_perm.jpg). <br>
-A screenshot of the 'All Tech Support People' page with permissions can be found [here](/smartevents/images/mu_all-tech-people_perm.jpg). <br>
 
-The three **Add...** pages are intended to provide:
-* depending on user permissions: the display of an empty form for the user to: 'add a new administration person' OR 'add a new technical support person' OR 'add a new project'.
-* a 'submit' button to confirm the user's entry of the completed form.
-* user messaging: confirmation that the user has: 'added a new administration person' OR 'added a new technical support person' OR 'added a new project'.
-* This feature fulfills the user stories: *' As a returning user, I want to be able to create (add) new content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
 
-*with permissions :*<br>
-A screenshot of the 'Add Project' page can be found [here](/smartevents/images/mu_add-project_perm.jpg). <br>
-A screenshot of the 'Add Admin People' page can be found [here](/smartevents/images/mu_add-admin-person_perm.jpg). <br>
-A screenshot of the 'Add Tech Support People' page can be found [here](/smartevents/images/mu_add-tech-person_perm.jpg). <br>
 
-### 'Personal Details' pages for 'Admin People' and 'Tech People'
-Note: these pages become accessible when clicking the 'person name...' from either the 'All Admin People' page OR the 'All Tech Support People' page.
 
-The two **Personal Details** (**show_admin_person** and **show_techsupport_person**) pages are intended to provide:
-* an overview of an individual person's details. 
-* depending on user permissions: the inclusion of 'update...' and 'delete...' buttons. If no permissions user will only be able to view the personal details overview of: 'Admin person' OR 'Tech Support person'.
-* user messaging: confirmation of 'updating' or 'deleting' of a person.
-* This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and *'As a returning user, I want to be able to edit (update) existing content, as per my permissions'* and *'*As a returning user, I want to be able to delete existing content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
 
-*without/no permissions :*<br> 
-A screenshot of the 'Personal Details' page (from 'All Admin People') can be found [here](/smartevents/images/mu_personal-details-admin_np.jpg). <br>
-A screenshot of the 'Personal Details' page (from 'All Tech Support People') can be found [here](/smartevents/images/mu_personal-details-tech_np.jpg). <br>
 
-*with permissions :*<br>
-A screenshot of the 'Personal Details' page with permissions(from 'All Admin People') can be found [here](/smartevents/images/mu_personal-details-admin_perm.jpg). <br>
-A screenshot of the 'Personal Details' page with permissions (from 'All Tech Support People') can be found [here](/smartevents/images/mu_personal-details-tech_perm.jpg). <br>
-
-### 'Project Details' page for 'Projects'
-Note: this page becomes accessible when clicking the 'project name...' from the 'All Projects' page.
-
-The **Project Details** (**show_project**) page for 'Projects' is intended to provide:
-* an overview of an active project's details. 
-* depending on user permissions: the inclusion of 'update...' and 'delete...' buttons. If no permissions user will only be able to view the project details overview of: 'Project Name....
-* user messaging: confirmation of 'updating' or 'deleting' of a project.
-* This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and *'As a returning user, I want to be able to edit (update) existing content, as per my permissions'* and *'*As a returning user, I want to be able to delete existing content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
-
-*without/no permissions :*<br> 
-A screenshot of the 'Project Details' page (from 'All Projects') can be found [here](/smartevents/images/mu_project-details_np.jpg). <br>
-
-*with permissions :*<br>
-A screenshot of the 'Project Details' page with permissions (from 'All Projects') can be found [here](/smartevents/images/mu_project-details_perm.jpg). <br>
-
-### 'Update...' pages and 'Delete...' button for 'Projects', 'Admin People' and 'Tech Support People'
-Note: this page is permission-based and becomes accessible when clicking the 'project name...' from the 'All Projects' page OR the 'person name...' from the 'All Admin People' OR 'All Tech Support People' pages.
-This page is also accessible from the 'Personal Details' and 'Project Details' pages.
-
-The **Update...** pages are intended to provide:
-* a pre-populated form with existing information on: 'Projects' OR 'Admin People' OR 'Tech Support People'.
-* an 'update...' button to confirm the user's changes to the existing form information.
-* user messaging: confirmation of the 'updating' of a project's details OR a person's details.
-* This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and *'As a returning user, I want to be able to edit (update) existing content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
 
 The **Delete...** button (next to the 'update' button)
 Note: this button is permission-based and is accessible from the 'All Projects' page OR the 'All Admin People' page OR the 'All Tech Support People' page. This button is also accessible from the 'Personal Details' and 'Project Details' pages.
@@ -289,21 +253,7 @@ Note: this button is permission-based and is accessible from the 'All Projects' 
 * user messaging: confirmation of the 'deleting' of a project's details OR a person's details.
 * This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and '*As a returning user, I want to be able to delete existing content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
 
-*with permissions :*<br>
-A screenshot of the 'Update Project' page (from 'Projects') can be found [here](/smartevents/images/mu_update-project_perm.jpg). <br>
-A screenshot of the 'Update Person' page (from 'Admin People') can be found [here](/smartevents/images/mu_update-admin-person_perm.jpg). <br>
-A screenshot of the 'Update Person' page (from 'Tech People') can be found [here](/smartevents/images/mu_update-tech-person_perm.jpg). <br>
 
-## 4.  'Logout'; 'Login' and 'Register' pages
-
-These pages are intended to provide:
-* Logout - confirmation to a registered user that they want to logout
-* Login - request of login information (username and password) from registered users
-* Register - request of user information (username, password, re-type password, optional email) from new users
-
-A screenshot of the 'Logout' page can be found [here](). <br>
-A screenshot of the 'Login' page can be found [here](). <br>
-A screenshot of the 'Register' page can be found [here](). <br>
 
 ## Design of the Summit Bike Co. website
 
