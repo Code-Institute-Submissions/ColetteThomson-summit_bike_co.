@@ -122,8 +122,10 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 * As a new user, I want to immediately understand the main purpose of the website
 * As a new user, I want to be able to see what products they offer
 * As a new user, I want to be able to easily contact the organisation
+* As a new user, I want to be able to view delivery information
 * As a new user, I want to be able to view the social media activity of the organisation
 * As a new user, I want to be able to view the privacy policy of the organisation
+* As a new user, I want to be able to view general information about the organisation
 * As a new user, I want to be able to view the terms and conditions of the organisation
 * As a new user, I want to be able to view the Cycle to Work Scheme for the organisation
 * As a new user, I want to be able to view advice on product sizing to suit my needs
@@ -178,6 +180,10 @@ The **Search...** bar (in the header):
 * a listing of product matches to the user's criteria should their search be successful
 * This feature fulfills the user stories: *'As a new user, I want to be able to search for a required product'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to see what products they offer'*.
 
+The **Free delivery on orders over £1500!** banner:
+* present on all 15 pages of the website
+* This feature fulfills the user story: *'As a new user, I want to be able to view delivery information'*.
+
 The **Logout**; **Login** and **Register** pages:
 * **Logout** - confirmation to a registered user that they want to logout
 * This feature fulfills the user story: *'As a returning user, I want to be able to easily logout into my account'*.
@@ -198,7 +204,7 @@ A screenshot of the 'Register' page can be found [here](). <br>
 * This feature fulfills the user stories: *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view the social media activity of the organisation'* and *'As a new user, I want to be able to view the privacy policy of the organisation'* and *'As a new user, I want to be able to subscribe to the organisation's newsletter'*
 
 # Details of Summit Bike Co. Web Pages
-**NB**: *Unfortunately the smartevents WMP website will not display in the 'amiresponsivedesign.is' website. Therefore, screenshots of individual pages have been provided instead. Note: all website pages have been tested (and passed) for responsive design as per the test cases.*<br>
+**NB**: *Unfortunately the Summit Bike Co. website will not display in the 'amiresponsivedesign.is' website. Therefore, screenshots of individual pages have been provided instead. Note: all website pages have been tested (and passed) for responsive design as per the test cases.*<br>
 
 ## 1.  The HOME app: index.html (Home page or Landing page)
 
@@ -290,7 +296,8 @@ The **Thank You** page is intended to provide:
 * This feature fulfills the user stories: *'As a new user, I want to be able to view my order confirmation after checkout'* and *'As a new user, I want to receive a confirmation email when I have completed an order'*
 A screenshot of the 'Thank You' page (checkout_success.html) can be found [here](). <br>
 
-## 4.  The PROFILES app pages: 'My Profie'
+## 5.  The PROFILES app pages: 'My Profile'
+
 The **My Profile** page is intended to provide:
 * a registered user's default delivery information
 * the user with the ability to update their delivery information and click the 'update information' button
@@ -299,16 +306,45 @@ The **My Profile** page is intended to provide:
 * This feature fulfills the user stories: *'As a returning user, I want to be able to view my order history'* and *'As a returning user, I want to be able to update my personal and delivery details'*.
 A screenshot of the 'My Profile' page (profile.html) can be found [here](). <br>
 
+## 6.  The BUYING_GUIDES app pages: 'What is a Mountain Bike' and 'Mountain Bike Sizing Guide'
 
+The **What is a Mountain Bike** page is intended to provide:
+* information on the types of mountain bikes and their construction
+* This feature fulfills the user story: *'As a new user, I want to be able to view advice on which product is best suited to my needs'*
+A screenshot of the 'What is a Mountain Bike' page (what_is_a_mtb.html) can be found [here](). <br>
 
+The **Mountain Bike Sizing Guide** page is intended to provide:
+* information on how to select the correct sized mountain bike
+* This feature fulfills the user story: *'As a new user, I want to be able to view advice on product sizing to suit my needs'*
+A screenshot of the 'Mountain Bike Sizing Guide' page (mtb_sizing.html) can be found [here](). <br>
 
+## 7.  The INFO app pages: 'Who We Are' and 'Cycle to Work Scheme' and 'Terms and Conditions' and 'Contact Details'
 
-* if user has registered for an account they will have access to 'My Profile' where contact and delivery information can be stored securely; and their order history can be viewed
-* This feature fulfills the user stories: *'As a returning user, I want to be able to view my order history'* and *'As a returning user, I want to be able to update my personal and delivery details'* and *'As a returning user, I want to be know that my personal and payment information is secure'*.
-A screenshot of the 'My Profile' page can be found [here](). <br>
+The **Who We Are** page is intended to provide:
+* a brief history and general information about Summit Bike Co.
+* Summit Bike Co.'s online shopping transaction
+* This feature fulfills the user story: *'As a new user, I want to be able to view general information about the organisation'*
+A screenshot of the 'Who We Are' page (who_we_are.html) can be found [here](). <br>
 
+The **Cycle to Work** page is intended to provide:
+* information about Summit Bike Co's Cycle to Work Scheme and the 4-step process to assist employers in joining the Scheme
+* an external link providing information on the UK Government initiative for the Cycle to Work Scheme
+* This feature fulfills the user story: *'As a new user, I want to be able to view the Cycle to Work Scheme for the organisation'*
+A screenshot of the 'Cycle to Work Scheme' page (cycle_to_work.html) can be found [here](). <br>
 
+The **Terms and Conditions** page is intended to provide:
+* all information regarding the terms and conditions for Summit Bike Co. including how to order, delivery, returns and exchanges, cancellation, and warranty and liability
+* a contact number for customer services
+* an external link to the 'Privacy Policy' for Summit Bike Co.
+* This feature fulfills the user story: *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view the privacy policy of the organisation'* and *'As a new user, I want to be able to view the terms and conditions of the organisation '* and *'As a new user, I want to be able to view general information about the organisation'*
+A screenshot of the 'Terms and Conditions' page (terms_conditions.html) can be found [here](). <br>
 
+The **Contact Details** page is intended to provide:
+* a contact number for customer services and information they can provide
+* how complaints are handled by Summit Bike Co.
+* head office address and company information for Summit Bike Co.
+* This feature fulfills the user story: *As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view general information about the organisation'*.
+A screenshot of the 'Contact Us' page (contact_us.html) can be found [here](). <br>
 
 ## Design of the Summit Bike Co. website
 
