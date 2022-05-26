@@ -1,29 +1,28 @@
-# Summit Bike Co.
+# Summit Bike Co. Mountain Bike Shop
 
 ## Purpose
-Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Shoppers can register as an account holder and are able to save contact, delivery and payment information under their own profile. Shoppers without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with a selection of sizes and required quantity to assist shoppers in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. also offers shoppers the option of subscribing to their monthly newsletter.  Shoppers can stay in touch by following the social media of Summit Bike Co.
+Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Shoppers can register as an account holder and are able to save contact, delivery and payment information under their own profile. Shoppers without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with price, a selection of sizes and required quantity to assist shoppers in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. also offers shoppers the option of subscribing to their monthly newsletter.  Shoppers can stay in touch by following the social media of Summit Bike Co.
 
 ## High level overview of user roles within Summit Bike Co:
 
-* **Superuser (admin)** - has full CRUD (create, read (view), update, delete) from the admin panel and across all frontend pages
-* **Registered User** - will have full CRUD to their own Profile information (My Profile page) and the products within their own Shopping Bag (Checkout page).  They will have read only access to all other pages.
-* **Unregistered User** - will have 
-* **Store Owner** - 
+* **Superuser (admin)** (and 'store owner' if applicable) - has full CRUD (create, read (view), update, delete) from the admin panel and across all frontend pages
+* **Registered Users (account holders)** - will have full CRUD to their own Profile information (My Profile page); be able to edit and delete products within their own Shopping Bag (Checkout page); and read only access to their own Order History (My Profile page) and to all other website pages.
+* **Unregistered Users** - will be able to edit and delete products within their own Shopping Bag (Checkout page); and have read only access to all web pages - but no access to the My Profile page.
 
 ## The Summit Bike Co. website pages are as follows:
 * **Home** (index.html): landing page
-* **All Mountain Bikes**: opens the 'product' page. <br>
-The page: 'bike_detail' detail can then be accessed from 'product' page.
+* **All Mountain Bikes**: dropdown opens the 'product' page. The options: 'By Price', By Rating'; 'By Brand'; 'By Type'; and 'All Bikes' are different sort options of the various products sold by Summit Bike Co.<br>
+The page: 'bike_detail' (which displays individual product information), can then be accessed from the chosen sort of the 'product' page.
 * **Buying Guides**: dropdown reveals:  'What is a Mountain Bike'; 'Mountain Bike Sizing Guide'. <br>
 * **About Us**: dropdown reveals:  'Who We Are'; 'Cycle to Work Scheme; 'Terms and Conditions'.<br> 
 * **Contact Us**: dropdown reveals:  'Contact Details'.<br>
-* **My Account**: dropdown reveals:  'Add a Product'; 'My Profile'; 'Logout'.<br>
-The page 'Add a Product' is permissions based and only appears if the user is 'admin'.<br>
-The page 'My Profile' only appears if the user is registered. <br>
+* **My Account**: dropdown reveals:  'Stock Management'; 'My Profile'; 'Logout'.<br>
+The page 'Stock Management' is permissions based and only appears if the user is a superuser (admin).<br>
+The page 'My Profile' only appears if the user is registered (account holder). <br>
 **Allauth Account pages**
 * **Logout**: visible when users are logged in
 * **Login**: visible when users are logged out
-* **Sign Up**: visible when users are logged out
+* **Register**: visible when users are logged out
 
 The live project can be found [here]()
 
@@ -36,8 +35,7 @@ The live project can be found [here]()
 ## Search Engine Optimisation (SEO)
 ###  Keywords
 As Summit Bike Co. specialises in selling only mountain bikes, keywords were selected with this in mind.<br>
-Placement of these keywords within the website has been implemented where possible using semantic HTML elements 
-(i.e. headings) and one keyword utilising an anchor tag.<br>
+Placement of these keywords within the website has been implemented where possible using semantic HTML elements (i.e. headings) and one keyword utilises an anchor tag.<br>
 Research (using Wordtracker.com) into short-tail and long-tail keywords suitable for Summit Bike Co. yielded
 the following:<br>
 
@@ -47,8 +45,7 @@ The following **product based keyword** enquiry showed a very high volume and hi
 Represented in multiple places throughout the website <br>
 
 #### Longtail Keywords
-The following **product based keyword** enquiries showed a mid-range volume of searches, and a mid-range level of
-organic competition:<br>
+The following **product based keyword** enquiries showed a mid-range volume of searches, and a mid-range level of organic competition:<br>
 * full suspension mountain bikes
 * hardtail mountain bikes
 These are seen in both the individual 'Bike Model [name]...' page and the 'All Mountain Bikes' page
@@ -66,12 +63,10 @@ competition:<br>
 Represented as: 3 x 'h2's on the 'What is a Mountain Bike' page accessed via the dropdown option under the 'Buying Guides' menu <br>
 
 * what size mountain bike do I need <br>
-Represented as: a 'h4' on the 'Mountain Bike Sizing Guide' page accessed via the dropdown option under the 'Buying Guides' menu <br>
+Represented as: a 'h3' on the 'Mountain Bike Sizing Guide' page accessed via the dropdown option under the 'Buying Guides' menu <br>
 
 **Long-tail keywords pertaining to information from external 3rd party organisations:**<br>
-This long-tail keyword showed a high volume, with mid to high level of organic competition.  As this particular
-scheme is a UK Government Initiative and is implemented by most mountain bike sellers, the high volume and high 
-competition are deemed not have an impact on Summit Bike Co. as a business - but representation is essential in demonstrating that Summit Bike Co. both supports and offers this scheme to their customers.
+This long-tail keyword showed a high volume, with mid to high level of organic competition.  As this particular scheme is a UK Government Initiative and is implemented by most mountain bike sellers, the high volume and high competition are deemed not have an impact on Summit Bike Co. as a business - but representation is essential in demonstrating that Summit Bike Co. both supports and offers this scheme to their customers:
 * cycle to work scheme <br>
 Represented as: an anchor tag on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
 
@@ -125,9 +120,10 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 ### User Stories
 #### New User Usability Goals
 * As a new user, I want to immediately understand the main purpose of the website
-* As a new user, I want to be able to see what services they offer
+* As a new user, I want to be able to see what products they offer
 * As a new user, I want to be able to easily contact the organisation
-* As a new user, I want to be able to view the privacy policy
+* As a new user, I want to be able to view the social media activity of the organisation
+* As a new user, I want to be able to view the privacy policy of the organisation
 * As a new user, I want to be able to view the terms and conditions of the organisation
 * As a new user, I want to be able to view the Cycle to Work Scheme for the organisation
 * As a new user, I want to be able to view advice on product sizing to suit my needs
@@ -135,9 +131,9 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 * As a new user, the navigational layout must be easy to understand and follow
 * As a new user, I want to be able to view the website on all device types
 #### New User Functionality Goals
-* As a new user, I want to register for an account, so that I can view my user profile
+* As a new user, I want to be able to easily register for an account, to set up a user profile
 * As a new user, I want to be able to enter personal and payment information securely
-* As a new user, I want to make a purchase without registering for an account
+* As a new user, I want to be able to make a purchase without registering for an account
 * As a new user, I want to be able to select my required size and quantity of each product
 * As a new user, I want to be able to view products in my shopping bag
 * As a new user, I want to be able to adjust the contents of my shopping bag before checking out
@@ -145,10 +141,15 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 * As a new user, I want to receive a confirmation email when I have completed an order
 * As a new user, I want to be able to subscribe to the organisation's newsletter
 * As a new user, I want to be able to search for a required product
+* As a new user, I want to be able to view a specific product
 * As a new user, I want to be able to view a specific classification of products
-* As a new user, I want to be able to see all the products the organisation has for sale
+* As a new user, I want to be able to see all the products the organisation has on offer
+* As a new user, I want to be able to continue shopping if I want to look at a variety of products before making a choice/s
+* As a new user, I want to be able to easily add products to my shopping bag
 
 #### Returning User Functionality Goals
+* As a returning user, I want to be able to easily login into my account
+* As a returning user, I want to be able to easily logout into my account
 * As a returning user, I want to be able to view my order history
 * As a returning user, I want to be able to update my personal and delivery details
 * As a returning user, I want to be know that my personal and payment information is secure
@@ -161,82 +162,112 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 ### Website Responsiveness
 * Bootstrap and CSS @media queries have been used to ensure the website is viewable across laptops/desktops, tablets and mobile phones. The size and layout of text content, backgrounds and images will all adapt according to the viewing device to ensure readability and quality.
 * All features on each web page are fully accessible and responsive across all viewing devices (laptops/desktops, tablets and mobile phones). 
-* This feature fulfills the user stories: *'As a'*
+* This feature fulfills the user story: *'As a new user, I want to be able to view the website on all device types'*
 
 ### Navigation Options and Header
 * This feature is intended to enable the user to quickly and easily navigate between web pages without having to utilise the browser 'back' button.
 * Present on all 15 pages of the website, the fully navigational links - on the top of each page (menu links) and/or in the body of the page (hyperlinks or buttons) - will provide access to other pages in the website.
 * Clicking on the 'Summit Bike Co' or the 'mountain bike shop' in the navigation bar (at the top of each page) will return the user to the home page.
-* This feature fulfills the user stories: *'As a'*
+* This feature fulfills the user story: *'As a new user, the navigational layout must be easy to understand and follow'*
 
 The **Search...** bar (in the header):
 * a search bar for users to enter their criteria
 * a 'search' button (icon) to submit their criteria
-* a confirmation of the user's submitted search (eg. 28 products found for ...)
-* a listing of linked matches to the user's criteria should their search be successful
-* This feature fulfills the user stories: *'As a'*
-
-The **My Account** dropdown (in the header):
-* if user is authenticated as a superuser (admin/store owner) they will have access to 'Stock Management' where new products can be added
-* if user has registered for an account they will have access to 'My Profile' where contact and delivery information can be stored for that particular user
-* This feature fulfills the user stories: *'As a'*
+* a confirmation of the user's submitted search (eg. '28 products found for ...')
+* a listing of product matches to the user's criteria should their search be successful
+* This feature fulfills the user stories: *'As a new user, I want to be able to search for a required product'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to see what products they offer'*.
 
 The **Logout**; **Login** and **Register** pages:
-* Logout - confirmation to a registered user that they want to logout
-* Login - request of login information (username and password) from registered users
-* Register - request of user information (email address, username and password) from new users
-* This feature fulfills the user stories: *'As a'*
-
+* **Logout** - confirmation to a registered user that they want to logout
+* This feature fulfills the user story: *'As a returning user, I want to be able to easily logout into my account'*.
 A screenshot of the 'Logout' page can be found [here](). <br>
-A screenshot of the 'Login' page can be found [here](). <br>
-A screenshot of the 'Register' page can be found [here](). <br>
 
+* **Login** - request of login information (username/email and password) from registered users
+* This feature fulfills the user story: *'As a returning user, I want to be able to easily login into my account'*.
+A screenshot of the 'Login' page can be found [here](). <br>
+
+* **Register** - request of user information (email address, username and password) from new users
+* This feature fulfills the user story: *'As a new user, I want to be able to easily register for an account, to set up a user profile'*.
+A screenshot of the 'Register' page can be found [here](). <br>
 
 ### Footer Element
 * Present on all 15 pages of the website, the footer contains navigational links to the social media accounts of Summit Bike Co.
 * Shoppers are able to subscribe to the monthly newsletter
 * There is a link to the privacy policy for Summit Bike Co
-* This feature fulfills the user stories: *'As a'*
+* This feature fulfills the user stories: *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view the social media activity of the organisation'* and *'As a new user, I want to be able to view the privacy policy of the organisation'* and *'As a new user, I want to be able to subscribe to the organisation's newsletter'*
 
 # Details of Summit Bike Co. Web Pages
 **NB**: *Unfortunately the smartevents WMP website will not display in the 'amiresponsivedesign.is' website. Therefore, screenshots of individual pages have been provided instead. Note: all website pages have been tested (and passed) for responsive design as per the test cases.*<br>
 
-## 1.  The 'Home' app: index.html (Home page or Landing page)
+## 1.  The HOME app: index.html (Home page or Landing page)
 
 This page is intended to provide:
-* an at-a-glance view of the main purpose of the website, i.e. Summit Bike Co. a mountain bike shop, that sells mountain bikes
-* shows current promotion: 'Summer Sale now on!'
-* provides a quick access link to the organisation's products: 'view our range'
+* an at-a-glance view of the main purpose of the website, i.e. Summit Bike Co. Mountain Bike Shop, that sells mountain bikes
+* shows the current promotion: 'Summer Sale now on!'
+* provides a quick access link (button) to the organisation's products: 'view our range'
 * provides quick access links to 'buying guides' for shoppers who require product assistance
 * provides quick access link to 'contact us' for shoppers who want to obtain contact details
-* This feature fulfills the user stories: *'As a'*
+* This feature fulfills the user stories: *'As a new user, I want to immediately understand the main purpose of the website'* and *'As a new user, I want to be able to see what products they offer'* and *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view advice on which product is best suited to my needs'*.
+A screenshot of the 'Home' page (index.html) can be found [here](). <br>
 
-A screenshot of the 'Home' page (index.html) can be found [here](/smartevents/images/mu_home_perm.jpg). <br>
-
-## 2.  The Product app pages: '' pages
+## 2.  The PRODUCT app pages: 'All Bikes' and 'Bike Model ...' and 'Stock Management Add a Product' and 'Edit a Product' pages
 
 The **All Bikes** page is intended to provide:
-* a list of all the organisation's active projects.
-* details of each active project listed can be accessed by clicking either the project name (eg Project 1...) or the slug (eg: energy consumption...).
-* the author (i.e. the Administator) is displayed above the project name.
-* the date and time the Post was created and the current amount of 'likes' for that particular project.
-* This feature fulfills the user stories: *'As a'*
+* a listing of all products sold by Summit Bike Co. - represented with a product image, type, pricing, sort criteria and rating (if applicable). 
+* product listings can be sorted as per the different options ('By Price', By Rating'; 'By Brand'; 'By Type'; and 'All Bikes') from the 'All Mountain Bikes' dropdown
+* details of individual products can be accessed by selecting the chosen product
+* if user is an authenticated superuser, 'edit' and 'delete' links will appear with each product
+* This feature fulfills the user stories: *'As a new user, I want to be able to see what products they offer'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to see all the products the organisation has on offer'* and *'As a store owner, I want to be able to edit/update an existing product'* and *'As a store owner, I want to be able to delete an existing product'*.
 
-A screenshot of the 'All Mountain Bikes' page can be found [here](). <br>
+A screenshot of the 'All Bikes' page (product.html) can be found [here](). <br>
 
 The **Bike Model ...** page is intended to provide:
+* the model name of the mountain bike (eg: 'Giant Anthem 29er 1 2018')
+* the type (classification) of mountain bike (eg: Full Suspension Mountain Bikes)
+* pricing: 'price now' and 'price was' (if applicable)
+* sort criteria for type (classification)
+* product rating out of 5 (if applicable)
+* a product description (specification)
+* a 'Need Help? link to the 'buying guides' page
+* a 'contact us' link to the 'contact details' page
+* a dropdown size selector box to choose required size of bike
+* a quantity selector box where the user can choose required quantity of the product
+* a 'keep shopping' button, should the user wish to look at other products prior to choosing a specific product/s
+* a 'add to bag' button, should the user wish to add that particular product to their shopping bag
+* if user is an authenticated superuser, 'edit' and 'delete' links will appear with each product
+* This feature fulfills the user stories: *'As a new user, I want to be able to view a specific product'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to select my required size and quantity of each product'* and *'As a new user, I want to be able to continue shopping if I want to look at a variety of products before making a choice/s'* and *'As a new user, I want to be able to easily add products to my shopping bag'* and *'As a store owner, I want to be able to edit/update an existing product'* and *'As a store owner, I want to be able to delete an existing product'*.
+A screenshot of the 'Bike Model...' page (bike_detail.html) can be found [here](). <br>
+
+The **Stock Management Add a Product** page is intended:
+* to enable an authenticated superuser (admin/store owner) to add a new product to existing store stock
+* to allow completion of fields (some mandatory) for a new product
+* to enable the adding of a product image (not mandatory).  A standard 'no_image' image will appear if no product image is loaded
+* to provide a 'Add Product' button, to save the entry and submit to the product database
+* to provide a 'Cancel' button, which will discard the entry
+* This feature fulfills the user story: *'As a store owner, I want to be able to add a new product to the current stock'*
+A screenshot of the 'Stock Management Add a Product' page can be found [here](). <br>
+
+The **Edit a Product** page is intended:
+* to enable an authenticated superuser (admin/store owner) to edit/update an existing product
+* to allow editing of fields, ensuring all mandatory fields are completed
+* to enable the adding ('Select Image) or replacing ('Remove' tick box) of a product image (not mandatory).  A standard 'no_image' image will appear if no product image is loaded
+* to provide a 'Update Product' button, to save the entry and submit to the product database
+* to provide a 'Cancel' button, which will discard any changes made
+* This feature fulfills the user story: *'As a store owner, I want to be able to edit/update an existing product*
+A screenshot of the 'Edit a Product' page can be found [here](). <br>
+
+The **Delete...** link (next to the 'edit' link) is intended:
+* to enable an authenticated superuser (admin/store owner) to immediately delete an existing product
+* This feature fulfills the user story: *'As a store owner, I want to be able to delete an existing product'*.
+
+
+## 3.  The Checkout app pages: 'Shopping Bag' and 'Thank You' pages
+
+The **Shopping Bag** page is intended to provide:
 * a list ...
 * product specification.
 * user messaging: 
-* This feature fulfills the user stories: *'As a'*
-
-## 3.  Dropdown for 'Buying Guides'
-
-The **Bike Model ...** page is intended to provide:
-* a list ...
-* product specification.
-* user messaging: 
-* This feature fulfills the user stories: *'As a'*
+* This feature fulfills the user story: *''*.
 
 
 
@@ -247,11 +278,20 @@ The **Bike Model ...** page is intended to provide:
 
 
 
-The **Delete...** button (next to the 'update' button)
+
+
+The **Delete...** link (next to the 'edit' link)
 Note: this button is permission-based and is accessible from the 'All Projects' page OR the 'All Admin People' page OR the 'All Tech Support People' page. This button is also accessible from the 'Personal Details' and 'Project Details' pages.
 * a 'delete...' button to confirm the user's decision to delete: a 'project' from 'All Projects' OR a 'person' from 'All Admin People' OR 'All Tech Support People' pages.
 * user messaging: confirmation of the 'deleting' of a project's details OR a person's details.
 * This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and '*As a returning user, I want to be able to delete existing content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
+
+
+
+* if user has registered for an account they will have access to 'My Profile' where contact and delivery information can be stored securely; and their order history can be viewed
+* This feature fulfills the user stories: *'As a returning user, I want to be able to view my order history'* and *'As a returning user, I want to be able to update my personal and delivery details'* and *'As a returning user, I want to be know that my personal and payment information is secure'*.
+A screenshot of the 'My Profile' page can be found [here](). <br>
+
 
 
 
