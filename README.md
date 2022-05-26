@@ -137,6 +137,7 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 * As a new user, I want to be able to select my required size and quantity of each product
 * As a new user, I want to be able to view products in my shopping bag
 * As a new user, I want to be able to adjust the contents of my shopping bag before checking out
+* As a new user, I want to be able to save my personal, delivery and billing info to my profile
 * As a new user, I want to be able to view my order confirmation after checkout
 * As a new user, I want to receive a confirmation email when I have completed an order
 * As a new user, I want to be able to subscribe to the organisation's newsletter
@@ -210,7 +211,7 @@ This page is intended to provide:
 * This feature fulfills the user stories: *'As a new user, I want to immediately understand the main purpose of the website'* and *'As a new user, I want to be able to see what products they offer'* and *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view advice on which product is best suited to my needs'*.
 A screenshot of the 'Home' page (index.html) can be found [here](). <br>
 
-## 2.  The PRODUCT app pages: 'All Bikes' and 'Bike Model ...' and 'Stock Management Add a Product' and 'Edit a Product' pages
+## 2.  The PRODUCT app pages: 'All Bikes' and 'Bike Model ...' and 'Stock Management Add a Product' and 'Edit a Product'
 
 The **All Bikes** page is intended to provide:
 * a listing of all products sold by Summit Bike Co. - represented with a product image, type, pricing, sort criteria and rating (if applicable). 
@@ -218,7 +219,6 @@ The **All Bikes** page is intended to provide:
 * details of individual products can be accessed by selecting the chosen product
 * if user is an authenticated superuser, 'edit' and 'delete' links will appear with each product
 * This feature fulfills the user stories: *'As a new user, I want to be able to see what products they offer'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to see all the products the organisation has on offer'* and *'As a store owner, I want to be able to edit/update an existing product'* and *'As a store owner, I want to be able to delete an existing product'*.
-
 A screenshot of the 'All Bikes' page (product.html) can be found [here](). <br>
 
 The **Bike Model ...** page is intended to provide:
@@ -245,7 +245,7 @@ The **Stock Management Add a Product** page is intended:
 * to provide a 'Add Product' button, to save the entry and submit to the product database
 * to provide a 'Cancel' button, which will discard the entry
 * This feature fulfills the user story: *'As a store owner, I want to be able to add a new product to the current stock'*
-A screenshot of the 'Stock Management Add a Product' page can be found [here](). <br>
+A screenshot of the 'Stock Management Add a Product' page (add_product.html) can be found [here](). <br>
 
 The **Edit a Product** page is intended:
 * to enable an authenticated superuser (admin/store owner) to edit/update an existing product
@@ -254,37 +254,52 @@ The **Edit a Product** page is intended:
 * to provide a 'Update Product' button, to save the entry and submit to the product database
 * to provide a 'Cancel' button, which will discard any changes made
 * This feature fulfills the user story: *'As a store owner, I want to be able to edit/update an existing product*
-A screenshot of the 'Edit a Product' page can be found [here](). <br>
+A screenshot of the 'Edit a Product' page (edit_product.html) can be found [here](). <br>
 
 The **Delete...** link (next to the 'edit' link) is intended:
 * to enable an authenticated superuser (admin/store owner) to immediately delete an existing product
 * This feature fulfills the user story: *'As a store owner, I want to be able to delete an existing product'*.
 
-
-## 3.  The Checkout app pages: 'Shopping Bag' and 'Thank You' pages
+## 3.  The BAG app pages: 'Shopping Bag'
 
 The **Shopping Bag** page is intended to provide:
-* a list ...
-* product specification.
-* user messaging: 
-* This feature fulfills the user story: *''*.
+* the current bag total; delivery cost (if applicable); and the grand total.
+* a 'keep shopping' button, should the user wish to add additional product/s to their bag
+* a 'Secure Checkout' button to take the user to 
+* a summary of the contents of the user's bag including: an image; bike model name; chosen size; chosen quantity and pricing for each product in their bag
+* the user with the ability to edit the quantity of each product in their bag ('update' link) or to delete a product/s from their bag ('remove' link)
+* This feature fulfills the user stories: *'As a new user, I want to be able to view products in my shopping bag'* and *'As a new user, I want to be able to adjust the contents of my shopping bag before checking out'* and *'As a new user, I want to be able to easily add products to my shopping bag'*.
+A screenshot of the 'Shopping Bag' page (bag.html) can be found [here](). <br>
+
+## 4.  The CHECKOUT app pages: 'Checkout' and 'Thank You'
+
+The **Checkout** page is intended to provide:
+* a form for the user to complete their personal details; delivery information; and payment details
+* the option for users to save their personal and delivery information to a user profile (checkbox)
+* the user with the option to adjust the contents of their bag before completing their order
+* a 'Complete Order' button to finalise the order and take secure payment for the products in their shopping bag
+* an information message advising the user as to what amount their card will be charged
+* an order summary of the contents of the user's bag including: an image; bike model name; chosen size; chosen quantity and pricing for each product in their bag
+ * an 'order total'; 'delivery' charge (if applicable); and 'grand total' of their shopping bag
+ * This feature fulfills the user stories: *'As a returning user, I want to be know that my personal and payment information is secure'* and *'As a new user, I want to be able to save my personal, delivery and billing info to my profile'* and *'As a new user, I want to be able to view products in my shopping bag'* and *'As a new user, I want to be able to adjust the contents of my shopping bag before checking out'*.
+ A screenshot of the 'checkout' page (checkout.html) can be found [here](). <br>
+
+The **Thank You** page is intended to provide:
+* an order confirmation listing 'order number'; 'order date'; 'order details'; 'delivering to'; and 'billing info'
+* a 'Need Something Else' button which reverts back to the 'All Bikes' page, should the user wish to keep shopping for a new order
+* This feature fulfills the user stories: *'As a new user, I want to be able to view my order confirmation after checkout'* and *'As a new user, I want to receive a confirmation email when I have completed an order'*
+A screenshot of the 'Thank You' page (checkout_success.html) can be found [here](). <br>
+
+## 4.  The PROFILES app pages: 'My Profie'
+The **My Profile** page is intended to provide:
+* a registered user's default delivery information
+* the user with the ability to update their delivery information and click the 'update information' button
+* the user with their 'Order History' showing 'order number; 'date' of order; 'items' for that order; and 'order total'
+* each order under the 'Order History' is accessible via a link which will revert the user to the 'Thank You (order confirmation)' page for that particular order.  A 'Back to Profile' link will take the user back to their 'My Profile' page
+* This feature fulfills the user stories: *'As a returning user, I want to be able to view my order history'* and *'As a returning user, I want to be able to update my personal and delivery details'*.
+A screenshot of the 'My Profile' page (profile.html) can be found [here](). <br>
 
 
-
-
-
-
-
-
-
-
-
-
-The **Delete...** link (next to the 'edit' link)
-Note: this button is permission-based and is accessible from the 'All Projects' page OR the 'All Admin People' page OR the 'All Tech Support People' page. This button is also accessible from the 'Personal Details' and 'Project Details' pages.
-* a 'delete...' button to confirm the user's decision to delete: a 'project' from 'All Projects' OR a 'person' from 'All Admin People' OR 'All Tech Support People' pages.
-* user messaging: confirmation of the 'deleting' of a project's details OR a person's details.
-* This feature fulfills the user stories: *'As a returning user, I want to be able to find (read/view) the information I'm looking for'* and '*As a returning user, I want to be able to delete existing content, as per my permissions'* and *'As a returning user, I want to have appropriate access to website content as per my permissions'* and *'As a returning user, I want confirmation of actions I have performed on the WMP website'*.
 
 
 
