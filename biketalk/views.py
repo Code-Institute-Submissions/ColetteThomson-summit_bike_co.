@@ -38,7 +38,7 @@ class ArticleContent(View):
         # combine template with context dict for article with liked opinions
         return render(
             request,
-            "article_content.html",
+            "biketalk/article_content.html",
             {
                 "article": article,
                 "opinions": opinions,
@@ -85,7 +85,7 @@ class ArticleContent(View):
         # combine template with context dict for article with liked opinions
         return render(
             request,
-            "article_content.html",
+            "biketalk/article_content.html",
             {
                 "article": article,
                 "opinions": opinions,
@@ -112,4 +112,4 @@ class ArticleLike(View):
 
         # slug determines which post to load
         # when post is liked/unliked, page will reload
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('article_content', args=[slug]))

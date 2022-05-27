@@ -1,8 +1,63 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <!-- to push header below main nav bar and site header -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
-<div>
-    <h2>article list</h2>
+<div class="container h-100">
+    <div class="row h-100">
+        <!-- contact us -->
+        <div class="col">
+            <!-- main heading -->
+            <h2 class="info-spacing bg-heading"><strong>BikeTalk</strong></h2>
+            <!-- Blog Entries Column -->
+            <div class="col-12 col-position">
+                <div class="row justify-content-center">
+                <!-- for loop: to iterate through list of posts -->
+                {% for article in article_list %}
+                <!-- column holding a card with content containing the post overview -->
+                <div class="col-md-4 chat-list-size">
+                    <div class="card">
+                        <div class="card-body chat-list-mobile">
+                            <div>
+                                <!-- author of post -->
+                                <p class="author">Author: {{ article.author }}</p>
+                            </div>
+                            <!-- to enable users to click on blog title or excerpt -->
+                            <a href="{% url 'article_content' article.slug %}" class="chat-post-link">
+                                <h2 class="card-title title">{{ article.article_name }}</h2>
+                                <p class="card-text">{{ article.excerpt }}</p>
+                            </a>
+                            <hr />
+                            <!-- date post created on -->
+                            <p class="card-text text-muted h6 created-on">{{ article.created_on }} 
+                                <!-- Font Awesome heart with number of likes -->
+                                <i class="far fa-heart chat-like"></i>{{ article.number_of_likes }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- if statement: if chat posts are divisible by 2 -->
+                {% if forloop.counter|divisibleby:2 %}
+            </div>
+            <!-- displays 2nd row if more than 2 chat posts -->
+            <div class="row justify-content-center">
+            
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+
+
+        </div>
+    </div>
 </div>
 
 {% endblock content %}
