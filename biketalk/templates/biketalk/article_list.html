@@ -17,21 +17,27 @@
         <div class="col">
             <!-- main heading -->
             <h2 class="info-spacing bg-heading"><strong>BikeTalk</strong></h2>
+            <h3 class="bg-subheading">What is BikeTalk?</h3>
+                <p>Bike Talk is a forum for mountain bike enthusiasts about pretty much anything to do with
+                    bikes, from amazing bike rides, to stories from mountain bike rider legends, to maintenance tips.
+                    We'd love to receive your feedback! Be it comments, ideas, suggestions for other articles and 
+                    even how we can improve this feature.
+                </p>
             <!-- Blog Entries Column -->
             <div class="col-12 col-position">
                 <div class="row justify-content-center">
                 <!-- for loop: to iterate through list of posts -->
                 {% for article in article_list %}
                 <!-- column holding a card with content containing the post overview -->
-                <div class="col-md-4 chat-list-size">
+                <div class="col-md-4 article-list-size">
                     <div class="card">
-                        <div class="card-body chat-list-mobile">
+                        <div class="card-body article-list-mobile">
                             <div>
                                 <!-- author of post -->
                                 <p class="author">Author: {{ article.author }}</p>
                             </div>
                             <!-- to enable users to click on blog title or excerpt -->
-                            <a href="{% url 'article_content' article.slug %}" class="chat-post-link">
+                            <a href="{% url 'article_content' article.slug %}" class="article-post-link">
                                 <h2 class="card-title title">{{ article.article_name }}</h2>
                                 <p class="card-text">{{ article.excerpt }}</p>
                             </a>

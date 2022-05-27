@@ -657,7 +657,7 @@ input[name='q']::placeholder {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-    /* button hover */
+/* button hover */
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
@@ -684,6 +684,144 @@ input[name='q']::placeholder {
     color: rgb(40, 40, 232);
     font-size: 28px;
 }
+
+/* --------------------------------------------- B I K E T A L K  app */
+/* --------------------- article_list page */
+/* card positioning for each chat post */
+.col-position {
+    margin: 0;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+/*  title of article post */
+.title {
+    font-size: 22px;
+}
+
+/*  excerpt for article post*/
+.article-post-link {
+    text-decoration: none;
+    color: #445261;
+    font-size: 16px;
+}
+
+/* positioning of article list */
+.article-list-size {
+    width: 40%;
+} 
+
+/* pagination */
+.chat-post-link:hover,
+.page-link {
+    color: #202020;
+}
+
+.page-link-size {
+    color: #038bfa;
+    font-size: small;
+    margin-bottom: 10px;
+    padding: 3px 4px 3px 4px;
+}
+
+/* chat post date and like (heart) */
+.chat-like {
+    color: #038bfa;
+}
+
+/* author of chat post */
+.author {
+    color: #038bfa;
+}
+
+
+/* --------------------------- article_content page  */
+/* placeholder image */
+.placeholder {
+    margin-top: 155px;
+    margin-right: 30px;
+}
+
+/* article headings */
+.article-heading {
+    margin-left: 30px;
+    margin-top: 190px;
+    color: rgb(40, 40, 232);
+    font-size: 28px;
+}
+
+.article-subheading {
+    margin-left: 30px;
+}
+
+.total-comments {
+    min-width: 80px;;
+}
+
+.fa-heart-spacing {
+    margin-top: 55px;
+}
+
+/* comments block */
+.heading-comments {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.heading-comments1 {
+    font-size: 18px;
+    padding-left: 0;
+}
+
+.commenter {
+    color: #038bfa;
+}
+
+.card-position {
+    padding-left: 0;
+}
+
+.card-position1 {
+    padding-left: 6px;
+    padding-top: 0;
+}
+
+.card-font {
+    font-size: 14px;
+}
+
+.posting-as {
+    color: #038bfa;
+}
+
+
+/* hearts (Font Awesome) and number of likes, comments */
+.btn-like {
+    color: #038bfa;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #445261;
+    background: transparent;
+    border: none;
+}
+
+/* buttons: submit */
+.button {
+    margin:0 auto;
+    display:block;
+    color: whitesmoke;
+    background-color:#445261;
+    padding: 4px 5px 4px 5px;
+    font-size: 16px;
+}
+
 
 /* ------------------------------------------------------------------------- M E D I A   Q U E R I E S */
 
@@ -925,6 +1063,44 @@ input[name='q']::placeholder {
         margin-top: 1.25rem;
         font-size: 26px;
     }
+
+    /* -------------------------------------------- C H A T  app */
+
+    /* -------------------------- article_list page */
+    /*  title of article post */
+    .title {
+        font-size: 18px;
+    }
+    
+    /*  excerpt for article post*/
+    .article-post-link {
+        font-size: 14px;
+    }
+
+    .created-on {
+        font-size: 14px;
+    }
+
+    /* --------------------------- article_content page */
+    /* placeholder image */
+    .placeholder {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+    /* article headings */
+    .article-heading {
+        margin-left: 10px;
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    .article-subheading {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+
 }
 
 /* ----------------------------------------------- M O B I L E S */
@@ -1210,4 +1386,71 @@ input[name='q']::placeholder {
         margin-top: 2.188rem;
         font-size: 22px;
     }
+
+    /* -------------------------------------------- B I K E T A L K  app */
+
+    /* ---------------------- article_list.html */
+
+    /* positioning of article list */
+    .article-list-size {
+        padding-left: 0;
+        width: 42%;
+    } 
+
+    /* column width for article list */
+    .article-list-mobile {
+        padding: 0;
+    }
+
+    /* author of article post */
+    .author {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    /*  title of article post */
+    .title {
+        font-size: 14px;
+    }
+
+    /*  excerpt for article post*/
+    .article-post-link {
+        text-decoration: none;
+        color: #445261;
+        font-size: 12px;
+    }
+
+    /* date post created on */
+    .created-on {
+        font-size: 10px;
+    }
+
+    /* ---- post_detail.html ---- */
+    /* heading block at top of page */
+    .masthead {
+        height: 15vh;
+        width: 100%;
+    }
+
+    /* heading block image */
+    .masthead-image {
+        display: none;
+    }
+
+    /* heading block main title */
+    .post-title {
+        margin-top: 2%;
+        font-size: 16px;
+    }
+
+    /* heading block sub title */   
+    .post-subtitle {
+        font-size: 12px;
+    }
+
+    /* chat post */
+    .card-body {
+        padding-top: 0;
+    }
+
 }
