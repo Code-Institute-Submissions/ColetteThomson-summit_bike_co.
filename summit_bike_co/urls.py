@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('summernote/', include('django_summernote.urls')),
     # covers urls for user account functionality
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
@@ -29,5 +30,6 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('buying_guides', include('buying_guides.urls')),
     path('info', include('info.urls')),
+    path('biketalk/', include('biketalk.urls'), name='biketalk_urls'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

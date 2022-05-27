@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import dj_database_url
 from pathlib import Path
+# import 'constants as messages' to assign category tags for messages
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 
@@ -33,7 +35,6 @@ ALLOWED_HOSTS = ["localhost", "summit-bike-co.herokuapp.com"]
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,9 +60,19 @@ INSTALLED_APPS = [
     'profiles',
     'buying_guides',
     'info',
+    'biketalk',
     # other
     'crispy_forms',
 ]
+
+# assign category tags to relevant Bootstrap class
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -110,7 +121,7 @@ TEMPLATES = [
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
+    # needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
