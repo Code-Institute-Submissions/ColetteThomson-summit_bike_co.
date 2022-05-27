@@ -727,8 +727,8 @@ input[name='q']::placeholder {
     padding: 3px 4px 3px 4px;
 }
 
-/* chat post date and like (heart) */
-.chat-like {
+/* article post date and like (heart) */
+.article-like {
     color: #038bfa;
 }
 
@@ -741,20 +741,21 @@ input[name='q']::placeholder {
 /* --------------------------- article_content page  */
 /* placeholder image */
 .placeholder {
-    margin-top: 155px;
-    margin-right: 30px;
+    margin-top: 130px;
+    margin-left: 10px;
 }
 
 /* article headings */
 .article-heading {
-    margin-left: 30px;
-    margin-top: 190px;
+    margin-left: 0;
+    margin-top: 180px;
     color: rgb(40, 40, 232);
     font-size: 28px;
+    width: 100%;
 }
 
 .article-subheading {
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 .total-comments {
@@ -1100,7 +1101,13 @@ input[name='q']::placeholder {
         font-size: 12px;
     }
 
+    .body-font {
+        font-size: 12px;
+    }
 
+    .row-height {
+        height: 100vh;
+    }
 }
 
 /* ----------------------------------------------- M O B I L E S */

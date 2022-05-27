@@ -19,21 +19,22 @@
                 <!-- post author and post's created date -->
                 <p class="article-subheading">{{ article.author }} | {{ article.created_on }}</p>
         </div>
-        <!-- <div class="d-none d-md-block col-md-6 placeholder"> -->
-        <div class=" placeholder">
-          <!-- image for all chats -->
-          <img
-            src="https://res.cloudinary.com/drxo58fsj/image/upload/v1653666165/summit-bike-co/biketalk_placeholder_tiw8ne.jpg"
-            alt="mountain biking on a trail" width="468" height="312"/>
-        </div>
 
+        <!-- <div class="d-none d-md-block col-md-6 placeholder"> -->
+            <div class="placeholder">
+                <!-- image for all chats -->
+                <img
+                  src="https://res.cloudinary.com/drxo58fsj/image/upload/v1653679232/summit-bike-co/placeholder3_qrrttk.jpg"
+                  alt="mountain biking on a trail" width="320" height="174"/>
+              </div>
+        
         <!-- post body showing post information -->
         <div class="container">
             <div class="row">
                 <div class="col card mb-0 mt-0 px-0">
-                    <div class="card-body">
+                    <div class="card-body row-height">
                     <!-- post content displays in card-text - using safe filter -->
-                    <p class="card-text card-format">{{ article.article_detail | safe }}</p>
+                    <p class="card-text card-format body-font">{{ article.article_detail | safe }}</p>
                 </div>
                 <div class="row total-comments">
                     <!-- total comments for the post -->
@@ -142,5 +143,6 @@
         </div>
     </div>
 </div>
+
 
 {% endblock content %}

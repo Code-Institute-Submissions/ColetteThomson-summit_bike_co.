@@ -1,7 +1,7 @@
 # Summit Bike Co. Mountain Bike Shop
 
 ## Purpose
-Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Shoppers can register as an account holder and are able to save contact, delivery and payment information under their own profile. Shoppers without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with price, a selection of sizes and required quantity to assist shoppers in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. also offers shoppers the option of subscribing to their monthly newsletter.  Shoppers can stay in touch by following the social media of Summit Bike Co.
+Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Users can register as an account holder and are able to save contact, delivery and payment information under their own profile. Users without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with price, a selection of sizes and required quantity to assist users in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. has a blog called 'BikeTalk' where users can read and leave comments on various mountain biking articles. Summit Bike Co. also offers users the option of subscribing to their monthly newsletter.  Users can stay in touch by following the social media of Summit Bike Co.
 
 ## High level overview of user roles within Summit Bike Co:
 
@@ -16,6 +16,7 @@ The page: 'bike_detail' (which displays individual product information), can the
 * **Buying Guides**: dropdown reveals:  'What is a Mountain Bike'; 'Mountain Bike Sizing Guide'. <br>
 * **About Us**: dropdown reveals:  'Who We Are'; 'Cycle to Work Scheme; 'Terms and Conditions'.<br> 
 * **Contact Us**: dropdown reveals:  'Contact Details'.<br>
+* **BikeTalk**: (under the 'Contact Us' dropdown) reveals: 'BikeTalk'; 'Article Name...'<br>
 * **My Account**: dropdown reveals:  'Stock Management'; 'My Profile'; 'Logout'.<br>
 The page 'Stock Management' is permissions based and only appears if the user is a superuser (admin).<br>
 The page 'My Profile' only appears if the user is registered (account holder). <br>
@@ -107,6 +108,10 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 [Terms and Conditions](/media/WF_terms-conditions.jpg). <br>
 [Contact Us](/media/WF_contact-us.jpg). <br>
 
+### BIKETALK app
+[Bike Talk]().<br>
+[Article Name]()<br>
+
 ### PROFILES app
 [My Profile](/media/WF_my-profile.jpg). <br>
 
@@ -149,6 +154,7 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 * As a new user, I want to be able to see all the products the organisation has on offer
 * As a new user, I want to be able to continue shopping if I want to look at a variety of products before making a choice/s
 * As a new user, I want to be able to easily add products to my shopping bag
+* As a new user, I want to be able to read the articles and comments in 'BikeTalk'
 
 #### Returning User Functionality Goals
 * As a returning user, I want to be able to easily login into my account
@@ -156,6 +162,7 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 * As a returning user, I want to be able to view my order history
 * As a returning user, I want to be able to update my personal and delivery details
 * As a returning user, I want to be know that my personal and payment information is secure
+* As a returning user, I want to be able to read and leave comments in 'BikeTalk'
 * As a store owner, I want to be able to add a new product to the current stock
 * As a store owner, I want to be able to edit/update an existing product
 * As a store owner, I want to be able to delete an existing product
@@ -346,6 +353,16 @@ The **Contact Details** page is intended to provide:
 * This feature fulfills the user story: *As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view general information about the organisation'*.
 A screenshot of the 'Contact Us' page (contact_us.html) can be found [here](). <br>
 
+## 8.  The BIKETALK app pages: 'BikeTalk' and 'Article Name...'
+The **BikeTalk** page is intended to provide:
+* a description of what BikeTalk is
+* a list of all the organisation active articles
+* details of each active article listed can be accessed by clicking either the article name (eg Besk UK Tech Trails...) or the slug (eg: Dyfi Bike Park...).
+* the author (i.e. the Administator) is displayed above the article name.
+* the date and time the Post was created and the current amount of 'likes' for that particular article.
+* This feature fulfills the user stories: *'As a new user, I want to be able to read the articles and comments in 'BikeTalk''* and *'As a returning user, I want to be able to read and leave comments in 'BikeTalk''*.
+
+
 ## Design of the Summit Bike Co. website
 
 ### Colour Scheme
@@ -363,7 +380,7 @@ No known limitations.
 
 ## Features
 * Login, Logout and Register user account functionality
-* Full CRUD (create, read, update, delete) functionality that is permissions- and role-based
+* Full CRUD (create, read, update, delete) functionality that is role-based
 * Messaging system confirming user actions on the website
 
 ## Technologies
@@ -409,6 +426,8 @@ Exceptions: the 'Home' page, will direct to 'index.html'; the 'show_admin_person
 [Info app](/media/TC_info.jpg).<br>
 * Test cases can be found here for the **profiles** app page:<br>
 [Profiles app](/media/TC_profile.jpg). <br>
+* Test cases can be found here for the **biketalk** app pages:<br>
+[Biketalk app](). <br>
 * Test cases can be found here for the **Logout, Login, Register** pages:<br>
 [AllAuth Accounts pages](/media/TC_login_logout_register.jpg).<br>
 
@@ -416,7 +435,7 @@ Exceptions: the 'Home' page, will direct to 'index.html'; the 'show_admin_person
 No known issues arose during testing.
 
 ## Code Validation
-All 21 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
+All 23 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
 * Home app: index.html page <br>
 [HTML: index.html page](/media/HTML-val_index.jpg).<br>
 
@@ -442,6 +461,10 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: cycle_to_work.html](/media/HTML-val_cycle_to_work.jpg).<br>
 [HTML: terms_conditions.html](/media/HTML-val_terms_conditions.jpg).<br>
 [HTML: contact_us.html](/media/HTML-val_contact_us.jpg).<br>
+
+* Biketalk app: <br>
+[HTML: article_list.html]()<br>
+[HTML: article_content.html]()<br>
 
 * Profiles app: <br> 
 [HTML: profile.html](/media/HTML-val_profile.jpg).<br>
@@ -475,6 +498,9 @@ All 21 HTML pages were run through the [W3C Markup Validation Service](https://v
 [Lighthouse: Cycle to Work Scheme](/media/LR_cycle_to_work.jpg).<br>
 [Lighthouse: Terms and Conditions](/media/LR_terms_conditions.jpg).<br>
 [Lighthouse: Contact Details](/media/LR_contact_us.jpg).<br>
+* Biketalk app: <br>
+[Lighthouse: BikeTalk]()<br>
+[Lighthouse: Article Name ...]()<br>
 * Profiles app: <br>
 [Lighthouse: My Profile](/media/LR_profile.jpg).<br>
 
@@ -484,7 +510,8 @@ The project was created using GitHub and choosing a new repository.<br>
 The following terminal commands were used during this project:
 * git add . - this command adds a change in the working directory to the staging area.
 * git commit -m "*message*" - this command details the change/s made in the 'message' section and then commits the changes to the local repository.
-* git push - this command is used to push all changes to the GitHub repository.
+* git push origin main - this command is used to push all changes to the GitHub repository.
+* git push heroku main - this command is used to push all changes to Heroku.
 * Final deployment of the website is on [Heroku](https://smart-events.herokuapp.com/)
 
 ### Using GitHub Pages
@@ -502,3 +529,4 @@ The following terminal commands were used during this project:
 
 ### Content
 * Ideas for Info app were taken from the website [Evans Cycles](http://www.evanscycles.com).
+* Content for the Biketalk app was taken from the website [Mountain Biking UK](https://www.mbuk.com/).
