@@ -11,141 +11,141 @@
 {% endblock %}
 
 {% block content %}
-<div class="background-biketalk">
+<div class="background-general">
+
+    <!-- heading block with image at top of page -->
+    <div class="masthead">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-6 masthead-background">
+            <h1 class="post-title">{{ article.article_name }}</h1>
+            <!-- post author and post's created date -->
+            <p class="post-subtitle text-muted">{{ article.author }} | {{ article.created_on }}</p>
+          </div>
+          <div class="d-none d-md-block col-md-6 masthead-image">
+            <!-- image for all chats -->
+            <img
+              src="https://res.cloudinary.com/drxo58fsj/image/upload/v1653744428/summit-bike-co/placeholder_crop_xoryct.jpg"
+              alt="four mountain bikes" width="468" height="263"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- post body showing post information -->
     <div class="container">
-    <div class="row">
-        
-            <!-- article heading -->
-            <h1 class="article-heading">{{ article.article_name }}</h1>
-                <!-- post author and post's created date -->
-                <p class="article-subheading">{{ article.author }} | {{ article.created_on }}</p>
-        
-
-        <!-- <div class="d-none d-md-block col-md-6 placeholder">
-            <div class="placeholder">
-                <!-- image for all chats 
-                <img
-                  src="https://res.cloudinary.com/drxo58fsj/image/upload/v1653679232/summit-bike-co/placeholder3_qrrttk.jpg"
-                  alt="mountain biking on a trail" width="320" height="174"/>
-              </div> -->
-        
-        <!-- post body showing post information -->
-        <div class="container">
+      <div class="row">
+        <div class="col card mb-0 mt-0 left top">
+          <div class="card-body">
+            <!-- post content displays in card-text - using safe filter -->
+            <p class="card-text card-format">{{ article.article_detail | safe }}</p>
             <div class="row">
-                <div class="col card mb-0 mt-0 px-0">
-                    <div class="card-body row-height">
-                    <!-- post content displays in card-text - using safe filter -->
-                    <p class="card-text card-format body-font">{{ article.article_detail | safe }}</p>
-                </div>
-                <div class="row total-comments">
-                    <!-- total comments for the post -->
-                    <div class="col-1 total-comments">
+              <!-- total comments for the post -->
+              <div class="col-1 total-comments">
                 
-                        <!-- if statement: check if user is registered -->
-                        {% if user.is_authenticated %}
-                        <!-- turns 'fa-heart' into like/unlike button via a form -->
-                        <form class="d-inline" action="{% url 'article_like' article.slug %}" method="POST">
-                            <!-- csrf to prevent malicious attacks using user credentials -->
-                            {% csrf_token %}
-                            <!-- if statement: to check if liked boolean is set -->
-                            {% if liked %}
-                            <!-- if liked will display a solid heart -->
-                            <button type="submit" name="articlepost_id" value="{{article.slug}}" class="btn-like">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                            {% else %}
-                            <!-- if not liked will display a outlined heart -->
-                            <button type="submit" name="articlepost_id" value="{{article.slug}}" class="btn-like">
-                                <i class="far fa-heart"></i>
-                            </button>
-
-                        <!-- end: if liked statement -->
-                        {% endif %}
-                        </form>
-                        {% else %}
-                        <!-- if user not authenticated, then display outlined heart -->
-                        <span class="text-secondary"><i class="far fa-heart"></i></span>
-
-                        <!-- end: if user.is_authenticated statement -->
-                        {% endif %}
-
-                        <!-- display article number of likes -->
-                        <span class="text-secondary"> {{ article.number_of_likes }}</span>
-                        
-                    </div>
-
-                <div class="col-2 total-comments">
-                    <!-- total number of opinions with Font Awesome heart -->
-                    {% with opinions.count as total_opinions %}
-                    <strong class="text-secondary">
-                        <i class="far fa-comments"></i> {{ total_opinions }}
-                    </strong>
-                    {% endwith %}
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-
-        <div class="row h-100">
-            <div class="col">
-                <hr />
-            </div>
-        </div>
-        <!-- published comments section -->
-        <div class="row h-100">
-        <div class="col-md-7 card mb-0 mt-0 h-100">
-        <!-- heading -->
-            <h3 class="heading-comments">Comments:</h3>
-            <div class="card-body card-position card-font">
-                <!-- for loop: to iterate through each comment -->
-                {% for opinion in opinions %}
-                    <div class="comments" style="padding: 10px">
-                        <p class="font-weight-bold commenter">
-                        <!-- author of opinion -->
-                        {{ opinion.name }}
-                        <span class="text-muted font-weight-normal">
-                            <!-- opinion's created date -->
-                            {{ opinion.created_on }}
-                        </span>
-                        wrote:
-                        </p>
-                    <!-- body of comment -->
-                    {{ opinion.body | linebreaks }}
-                </div>
-                <!-- end: 'comment for comments' for loop -->
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- section for registered user to add a comment on bottom right of page  -->
-        <div class="col-md-5 card mb-4 mt-0">
-            <div class="card-body card-position1">
-                <!-- if statement: opinion box only appears if user is authenticated -->
-                {% if user.is_authenticated %}
-
-                <h3 class="heading-comments1">Leave a Comment:</h3>
-                    <!-- determine author of post -->
-                    <p class="posting-as">Posting as: {{ user.username }}</p>
-                <!-- create form with method of post -->
-                <form method="post" style="margin-top: 1.3em">
-                    <!-- render opinion form using Crispy filter -->
-                    {{ opinion_form | crispy }}
+                  <!-- if statement: check if user is registered -->
+                  {% if user.is_authenticated %}
+                  <!-- turns 'fa-heart' into like/unlike button via a form -->
+                  <form class="d-inline" action="{% url 'article_like' article.slug %}" method="POST">
                     <!-- csrf to prevent malicious attacks using user credentials -->
                     {% csrf_token %}
-                    <!-- submit button for comment form -->
-                    <button type="submit" class="btn btn-lg button">Submit</button>
-                </form>
-
-                <!-- end: if statement: user.is_authenticated -->
-                {% endif %}
-                </div>
+                    <!-- if statement: to check if liked boolean is set -->
+                    {% if liked %}
+                    <!-- if liked will display a solid heart -->
+                    <button type="submit" name="articlepost_id" value="{{article.slug}}" class="btn-like">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    {% else %}
+                    <!-- if not liked will display a outlined heart -->
+                    <button type="submit" name="articlepost_id" value="{{article.slug}}" class="btn-like">
+                      <i class="far fa-heart"></i>
+                    </button>
+  
+                    <!-- end: if liked statement -->
+                    {% endif %}
+                  </form>
+                  {% else %}
+                  <!-- if user not authenticated, then display outlined heart -->
+                  <span class="text-secondary"><i class="far fa-heart"></i></span>
+  
+                  <!-- end: if user.is_authenticated statement -->
+                  {% endif %}
+  
+                  <!-- display post number of likes -->
+                  <span class="text-secondary"> {{ article.number_of_likes }}</span>
+                
+              </div>
+  
+              <div class="col-2 total-comments">
+                <!-- total number of comments with Font Awesome heart -->
+                {% with opinion.count as total_opinions %}
+                <strong class="text-secondary"
+                  ><i class="far fa-comments"></i> {{ total_opinions }}
+                </strong>
+                {% endwith %}
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <hr />
+        </div>
+      </div>
+      <!-- published ideas/suggestions section on bottom left of page -->
+      <div class="row">
+        <div class="col-md-7 card mb-0 mt-0">
+          <!-- heading -->
+          <h3 class="heading-ideas">Comments:</h3>
+          <div class="card-body card-position card-font">
+            <!-- for loop: to iterate through each comment -->
+            {% for opinion in opinions %}
+            <div class="comments" style="padding: 10px">
+              <p class="font-weight-bold commenter">
+                <!-- author of comment -->
+                {{ opinion.name }}
+                <span class="text-muted font-weight-normal">
+                  <!-- comment's created date -->
+                  {{ opinion.created_on }}
+                </span>
+                wrote:
+              </p>
+              <!-- body of comment -->
+              {{ opinion.body | linebreaks }}
+            </div>
+            <!-- end: 'comment for comments' for loop -->
+            {% endfor %}
+          </div>
+        </div>
+  
+        <!-- section for registered to add an idea/suggestion on bottom right of page  -->
+        <div class="col-md-5 card mb-4 mt-0">
+          <div class="card-body card-position1">
+            <!-- if statement: comment box only appears if user is authenticated -->
+            {% if user.is_authenticated %}
+  
+            <h3 class="heading-ideas1">Leave a Comment:</h3>
+            <!-- determine author of post -->
+            <p class="posting-as">Posting as: {{ user.username }}</p>
+            <!-- create form with method of post -->
+            <form method="post" style="margin-top: 1.3em">
+              <!-- render comment form using Crispy filter -->
+              {{ opinion_form | crispy }}
+              <!-- csrf to prevent malicious attacks using user credentials -->
+              {% csrf_token %}
+              <!-- submit button for comment form -->
+              <button type="submit" class="btn btn-lg button">Submit</button>
+            </form>
+  
+            <!-- end: if statement: user.is_authenticated -->
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-</div>
-</div>
+  </div>
 
 
 {% endblock content %}

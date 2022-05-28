@@ -33,6 +33,14 @@ h4 {
 /* link to home page */
 .link-logo {
     width: fit-content;
+    text-decoration: none;
+}
+
+.link-logo:hover,
+.link-logo:active,
+.link-logo:focus {
+    text-decoration: none;
+    color: black;
 }
 
 /*  body text and buttons */
@@ -275,12 +283,14 @@ h4 {
 /* 'need advice' links */
 .home-link {
     color: rgb(96, 197, 244);
+    text-decoration: none;
 }
 
 .home-link:hover,
 .home-link:active,
 .home-link:focus {
     color: white;
+    text-decoration: none;
 }
 
 .btn-black {
@@ -383,7 +393,7 @@ input[name='q']::placeholder {
 
 /* 'classification' and 'rating' text */
 .sort-text {
-    color: rgb(66, 66, 66);
+    color: #3a3a3a;
 }
 
 /* product price fields */
@@ -674,7 +684,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: rgb(40, 40, 232); /* text-info */
 }
 
 
@@ -695,15 +705,6 @@ input[name='q']::placeholder {
 
 /* --------------------------------------------- B I K E T A L K  app */
 /* --------------------- article_list page */
-/* image background */
-.background-biketalk{
-    /*background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;*/
-    background-size: cover;
-    /* to push image down the page */
-    background-position-y: 70px;
-    padding: 0;
-}
-
 /* card positioning for each chat post */
 .col-position {
     margin: 0;
@@ -714,88 +715,121 @@ input[name='q']::placeholder {
     background-color: transparent;
 }
 
+.biketalk-subheading {
+    color: black;
+    font-size: 24px;
+}
+
 /*  title of article post */
 .title {
     font-size: 22px;
+    color: rgb(40, 40, 232);
 }
 
-/*  excerpt for article post*/
+/* excerpt */
+.card-text {
+    color: rgb(40, 40, 232);
+}
+
+/*  excerpt for article post */
 .article-post-link {
     text-decoration: none;
-    color: #445261;
+    color: #3a3a3a;
     font-size: 16px;
 }
 
 /* positioning of article list */
-.article-list-size {
+.chat-list-size {
     width: 40%;
 } 
 
 /* pagination */
-.chat-post-link:hover,
+.article-post-link:hover,
+.article-post-link:active,
+.article-post-link:focus,
 .page-link {
-    color: #202020;
+    text-decoration: none;
+    color: #3a3a3a;
 }
 
 .page-link-size {
-    color: #038bfa;
+    color: rgb(40, 40, 232);
     font-size: small;
     margin-bottom: 10px;
     padding: 3px 4px 3px 4px;
 }
 
-/* article post date and like (heart) */
-.article-like {
-    color: #038bfa;
-}
-
-/* author of chat post */
-.author {
-    color: #038bfa;
-}
-
-
-/* --------------------------- article_content page  */
-/* placeholder image */
-.placeholder {
-    margin-top: 130px;
-    margin-left: 10px;
-}
-
-/* article headings */
-.article-heading {
-    margin-left: 0;
-    margin-top: 160px;
+/* chat post date and like (heart) */
+.chat-like {
     color: rgb(40, 40, 232);
-    font-size: 28px;
+}
+
+/* author of article post */
+.author {
+    color: #3a3a3a;
+}
+
+/* ----------------------- article_content page */
+
+/* heading block at top of page */
+.masthead {
+    margin-top: 170px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 25vh;
     width: 100%;
 }
 
-.article-subheading {
-    margin-left: 0;
+/* heading block background*/
+.masthead-background {
+    background-color: white;
+    position: relative;
 }
 
-.total-comments {
-    min-width: 80px;;
+/* heading block image */
+.masthead-image {
+    position: relative;
+    overflow: hidden;
 }
 
-.fa-heart-spacing {
-    margin-top: 55px;
+/* heading block main title */
+.post-title {
+    margin-top: 7%;
+    margin-left: 5%;
+    position: relative;
+    color: rgb(40, 40, 232);
+    font-size: 35px;
+    z-index: 3;
+}
+
+/* heading block sub title */
+.post-subtitle {
+    margin-left: 5%;
+    color: #3a3a3a;
+    position: relative;
+    z-index: 3;
+}
+
+.card-format {
+    font-family: Arial, sans-serif;
+    color: #3a3a3a;
+    font-size: 14px;
 }
 
 /* comments block */
-.heading-comments {
+.heading-ideas {
     font-size: 20px;
     padding-left: 10px;
 }
 
-.heading-comments1 {
+.heading-ideas1 {
     font-size: 18px;
     padding-left: 0;
 }
 
 .commenter {
-    color: #038bfa;
+    color: rgb(40, 40, 232);
 }
 
 .card-position {
@@ -812,22 +846,32 @@ input[name='q']::placeholder {
 }
 
 .posting-as {
-    color: #038bfa;
+    color: rgb(40, 40, 232);
 }
-
 
 /* hearts (Font Awesome) and number of likes, comments */
 .btn-like {
-    color: #038bfa;
+    color: rgb(40, 40, 232);
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #445261;
+    color: #3a3a3a;
     background: transparent;
     border: none;
+}
+
+.total-comments {
+    min-width: 80px;
+}
+
+/* background for biketalk*/
+.background-general{
+    background: white;
+    margin-top: -17px;
+    margin-bottom: -16px;
 }
 
 /* buttons: submit */
@@ -835,7 +879,7 @@ input[name='q']::placeholder {
     margin:0 auto;
     display:block;
     color: whitesmoke;
-    background-color:#445261;
+    background-color:#3a3a3a;
     padding: 4px 5px 4px 5px;
     font-size: 16px;
 }
@@ -857,9 +901,15 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652194984/summit-bike-co/home_1200by800_comp_ssdw3w.jpg') no-repeat;
         background-size: cover;
         background-position-y: 100px;
-        height: 100vh;
+        height: 120vh;
         padding: 0;
         margin-top: 0.25rem;
+    }
+
+    /* heading block at top of page */
+    .masthead {
+        margin-top: 170px;
+        height: 25vh;
     }
 
 }
@@ -880,10 +930,12 @@ input[name='q']::placeholder {
 
     .link-nav {
         padding: 0.15rem;
+        text-decoration: none;
     }
 
     .link-nav i.fa-lg {
         font-size: 1rem;
+        text-decoration: none;
     }
 
     /* ----------------------------- bike_detail page */
@@ -930,6 +982,7 @@ input[name='q']::placeholder {
 
     .link-mobile {
         color: rgb(40, 40, 232);
+        text-decoration: none;
     }
 
     /* -------------------------------------------- H O M E  app */
@@ -940,7 +993,7 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat;
         background-size: cover;
         background-position-y: 0px;
-        height: 100vh;
+        height: 60vh;
         padding: 0;
         margin-top: 0.313rem;
     }
@@ -1082,7 +1135,7 @@ input[name='q']::placeholder {
         font-size: 26px;
     }
 
-    /* -------------------------------------------- C H A T  app */
+    /* -------------------------------------------- B I K E T A L K  app */
 
     /* -------------------------- article_list page */
     /*  title of article post */
@@ -1093,51 +1146,51 @@ input[name='q']::placeholder {
     /*  excerpt for article post*/
     .article-post-link {
         font-size: 14px;
+        text-decoration: none;
+    }
+
+    .biketalk-subheading {
+        font-size: 20px;
     }
 
     .created-on {
         font-size: 14px;
     }
 
-    /* --------------------------- article_content page */
-    /* placeholder image */
-    .placeholder {
-        margin-top: 5px;
-        margin-right: 5px;
+    /* ------------------------- article_content page */
+    /* heading block at top of page */
+    .masthead {
+        margin-top: 0px;
+        height: 18vh;
+        width: 100%;
     }
 
-    /* article headings */
-    .article-heading {
-        margin-left: 10px;
-        margin-top: 20px;
-        font-size: 24px;
+    /* heading block main title */
+    .post-title {
+        margin-top: 15%;
+        margin-left: 22px;
+        font-size: 28px;
     }
 
-    .article-subheading {
-        margin-left: 10px;
-        font-size: 12px;
+    /* heading block sub title */   
+    .post-subtitle {
+        font-size: 16px;
+        margin-left: 22px;
     }
 
-    .body-font {
-        font-size: 12px;
-    }
-
-    .row-height {
-        height: 100vh;
-    }
 }
 
 /* ----------------------------------------------- M O B I L E S */
 
 @media screen and (max-width: 426px) {
-    /* --------------------------------------------- H E A D E R */
+    /* --------------------------------- H E A D E R */
 
     /* logo (home link) on mobiles */
     .mobile-logo {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         margin-right: 0;
-        
+        text-decoration: none;
     }
 
     /* navigation menu on all mobile pages */
@@ -1154,7 +1207,7 @@ input[name='q']::placeholder {
         padding-right: 0;
     }
 
-    /* --------------------------------------------- F O O T E R */
+    /* ----------------------------------- F O O T E R */
 
     /* footer divider */
     .footer {
@@ -1197,7 +1250,7 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat;
         background-size: cover;
         background-position-y: 10px;
-        height: 100vh;
+        height: 50vh;
         padding: 0;
         margin-top: 0.188rem;
     }
@@ -1423,14 +1476,18 @@ input[name='q']::placeholder {
     /* ---------------------- article_list.html */
 
     /* positioning of article list */
-    .article-list-size {
+    .chat-list-size {
         padding-left: 0;
         width: 42%;
     } 
 
     /* column width for article list */
-    .article-list-mobile {
+    .chat-list-mobile {
         padding: 0;
+    }
+
+    .biketalk-subheading {
+        font-size: 16px;
     }
 
     /* author of article post */
@@ -1447,7 +1504,7 @@ input[name='q']::placeholder {
     /*  excerpt for article post*/
     .article-post-link {
         text-decoration: none;
-        color: #445261;
+        color: #3a3a3a;
         font-size: 12px;
     }
 
@@ -1456,19 +1513,42 @@ input[name='q']::placeholder {
         font-size: 10px;
     }
 
-    /* article post */
-    .card-body {
-        padding-top: 0;
+    /* ------------------------- article_content page */
+    /* heading block at top of page */
+    .masthead {
+        margin-top: 50px;
+        height: 8vh;
+        width: 100%;
     }
 
-    /* image background */
-    .background-biketalk{
-        /*background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;*/
-        background-size: contain;
-        /* to push image down the page */
-        background-position-y: 10px;
+    /* heading block image */
+    .masthead-image {
+        display: none;
+    }
+
+    /* heading block main title */
+    .post-title {
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 20px;
+    }
+
+    /* heading block sub title */   
+    .post-subtitle {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    /* article post */
+    .card-body {
         padding: 0;
+        color: black;
+    }
+
+    /* background: general user pages (all 'chat' app pages / home page)*/
+    .background-general{
+        margin-top: -17px;
+        margin-bottom: -16px;
     }
 
 }
-

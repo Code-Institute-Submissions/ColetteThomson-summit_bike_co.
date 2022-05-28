@@ -110,8 +110,8 @@ The ERD showing the relationship between models on the Summit Bike Co website ca
 [Contact Us](/media/WF_contact-us.jpg). <br>
 
 ### BIKETALK app
-[Bike Talk]().<br>
-[Article Name]()<br>
+[Bike Talk](/media/WF_biketalk.jpg).<br>
+[Article Name...](/media/WF_articlename.jpg)<br>
 
 ### PROFILES app
 [My Profile](/media/WF_my-profile.jpg). <br>
@@ -464,8 +464,8 @@ All 23 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: contact_us.html](/media/HTML-val_contact_us.jpg).<br>
 
 * Biketalk app: <br>
-[HTML: article_list.html]()<br>
-[HTML: article_content.html]()<br>
+[HTML: article_list.html](/media/HTML-val_biketalk.jpg)<br>
+[HTML: article_content.html](/media/HTML-val_articlename.jpg)<br>
 
 * Profiles app: <br> 
 [HTML: profile.html](/media/HTML-val_profile.jpg).<br>

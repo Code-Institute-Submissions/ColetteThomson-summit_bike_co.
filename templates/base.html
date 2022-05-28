@@ -108,9 +108,9 @@
                         </div>
                     </li>
                     <!-- link for shopping bag -->
-                    <li class="list-inline-item pr-1">
+                    <li class="list-inline-item pr-1 mr-3">
                         <!-- using total variable: if item in shopping bag change font colour -->
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav" href="{% url 'view_bag' %}" aria-label="shopping bag total">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav tablet" href="{% url 'view_bag' %}" aria-label="shopping bag total">
                             <div class="text-center">
                                 <!-- font awesome shopping bag icon -->
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
