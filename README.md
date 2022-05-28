@@ -72,13 +72,14 @@ This long-tail keyword showed a high volume, with mid to high level of organic c
 Represented as: an anchor tag on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
 
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
-There are 4 models within the Summit Bike Co website:<br>
+There are 5 models within the Summit Bike Co website:<br>
 * django.contrib.auth User model
 * Products
 * Checkout
 * Profiles
+* Biketalk
 
-The ERD showing the relationship between models on the Summit Bike Co website can be found [here](/media/ERD_SBC.jpg). <br>
+The ERD showing the relationship between models on the Summit Bike Co website can be found [here](). <br>
 
 ## Wireframes for Summit Bike Co
 

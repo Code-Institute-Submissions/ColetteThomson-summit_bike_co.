@@ -16,6 +16,7 @@ h4 {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -110,6 +111,13 @@ h4 {
 }
 
 /* --------------------------------------------- F O O T E R */
+.footer {
+    clear: both;
+    
+    height: 278px;
+    margin-bottom: 0;
+}
+
 /* footer divider */
 .division {
     background: black;
@@ -687,6 +695,15 @@ input[name='q']::placeholder {
 
 /* --------------------------------------------- B I K E T A L K  app */
 /* --------------------- article_list page */
+/* image background */
+.background-biketalk{
+    /*background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;*/
+    background-size: cover;
+    /* to push image down the page */
+    background-position-y: 70px;
+    padding: 0;
+}
+
 /* card positioning for each chat post */
 .col-position {
     margin: 0;
@@ -748,7 +765,7 @@ input[name='q']::placeholder {
 /* article headings */
 .article-heading {
     margin-left: 0;
-    margin-top: 180px;
+    margin-top: 160px;
     color: rgb(40, 40, 232);
     font-size: 28px;
     width: 100%;
@@ -1140,6 +1157,13 @@ input[name='q']::placeholder {
     /* --------------------------------------------- F O O T E R */
 
     /* footer divider */
+    .footer {
+        clear: both;
+        position: relative;
+        
+        margin-top: -200px;
+    }
+
     .division {
         background: black;
         border-color: black;
@@ -1432,32 +1456,19 @@ input[name='q']::placeholder {
         font-size: 10px;
     }
 
-    /* ---- post_detail.html ---- */
-    /* heading block at top of page */
-    .masthead {
-        height: 15vh;
-        width: 100%;
-    }
-
-    /* heading block image */
-    .masthead-image {
-        display: none;
-    }
-
-    /* heading block main title */
-    .post-title {
-        margin-top: 2%;
-        font-size: 16px;
-    }
-
-    /* heading block sub title */   
-    .post-subtitle {
-        font-size: 12px;
-    }
-
-    /* chat post */
+    /* article post */
     .card-body {
         padding-top: 0;
     }
 
+    /* image background */
+    .background-biketalk{
+        /*background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;*/
+        background-size: contain;
+        /* to push image down the page */
+        background-position-y: 10px;
+        padding: 0;
+    }
+
 }
+

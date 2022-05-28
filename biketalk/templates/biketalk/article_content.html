@@ -11,22 +11,23 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col">
+<div class="background-biketalk">
+    <div class="container">
+    <div class="row">
+        
             <!-- article heading -->
             <h1 class="article-heading">{{ article.article_name }}</h1>
                 <!-- post author and post's created date -->
                 <p class="article-subheading">{{ article.author }} | {{ article.created_on }}</p>
-        </div>
+        
 
-        <!-- <div class="d-none d-md-block col-md-6 placeholder"> -->
+        <!-- <div class="d-none d-md-block col-md-6 placeholder">
             <div class="placeholder">
-                <!-- image for all chats -->
+                <!-- image for all chats 
                 <img
                   src="https://res.cloudinary.com/drxo58fsj/image/upload/v1653679232/summit-bike-co/placeholder3_qrrttk.jpg"
                   alt="mountain biking on a trail" width="320" height="174"/>
-              </div>
+              </div> -->
         
         <!-- post body showing post information -->
         <div class="container">
@@ -84,16 +85,16 @@
             </div>
         </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <hr />
         </div>
-    </div>
-    <!-- published comments section -->
-    <div class="row">
-        <div class="col-md-7 card mb-0 mt-0">
+
+        <div class="row h-100">
+            <div class="col">
+                <hr />
+            </div>
+        </div>
+        <!-- published comments section -->
+        <div class="row h-100">
+        <div class="col-md-7 card mb-0 mt-0 h-100">
         <!-- heading -->
             <h3 class="heading-comments">Comments:</h3>
             <div class="card-body card-position card-font">
@@ -142,6 +143,8 @@
             </div>
         </div>
     </div>
+    </div>
+</div>
 </div>
 
 
