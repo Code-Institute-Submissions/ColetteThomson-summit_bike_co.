@@ -1273,7 +1273,7 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat;
         background-size: cover;
         background-position-y: 10px;
-        height: 40vh;
+        height: 50vh;
         padding: 0;
         margin-top: 0.188rem;
     }
@@ -1326,8 +1326,7 @@ input[name='q']::placeholder {
         text-align: center;
         padding-top: 0.625rem;
         font-size: 18px;
-        color: white;
-        font-weight: 500;
+        color: yellow;
         line-height: 14px;
     }
 
