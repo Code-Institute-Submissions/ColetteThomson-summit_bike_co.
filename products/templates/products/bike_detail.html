@@ -25,14 +25,14 @@
                         <!-- link to product image in a new window -->
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-bottom img-fluid detail-image" src="{{ product.image.url }}"
-                            alt="{{ product.bike_model }}" width="640" height="395">
+                            alt="{{ product.bike_model }}" width="280" height="auto">
                         </a>
                         {% else %}
                         <!-- default image if no product image available -->
                         <a href="">
                             <img class="card-img-bottom img-fluid noimage"
                             src="https://res.cloudinary.com/drxo58fsj/image/upload/v1652270722/summit-bike-co/noimage_javo3d.png"
-                            alt="{{ product.bike_model }}" width="224" height="146">
+                            alt="{{ product.bike_model }}" width="224" height="auto">
                         </a>
                     {% endif %}
                 </div>

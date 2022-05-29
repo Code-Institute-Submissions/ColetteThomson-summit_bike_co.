@@ -56,7 +56,7 @@
                 <!-- link to home page -->
                 <a href="{% url 'home' %}" class="link-nav link-logo" aria-label="back to home page">
                     <!-- logo -->
-                    <h2 class="logo my-0"><strong>Summit Bike Co.</strong></h2>
+                    <h2 class="logo my-0">Summit Bike Co.</h2>
                     <h3 class="byline">mountain bike shop</h3>
                 </a>
             </div>
@@ -86,7 +86,7 @@
                         <a class="header-text link-nav user-options" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <p class="my-0"><strong>My Account</strong></p>
                             </div>
                         </a>
                         <!-- dropdown menu for 'my account' -->
@@ -113,8 +113,8 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-text{% endif %} link-nav tablet" href="{% url 'view_bag' %}" aria-label="shopping bag total">
                             <div class="text-center">
                                 <!-- font awesome shopping bag icon -->
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+                                <div><i class="fas fa-shopping-bag fa-lg bag-colour"></i></div>
+                                <p class="my-0 bag-colour">
                                     <!-- if grand total variable exists.. -->
                                     {% if grand_total %}
                                         <!-- ..then display total formatted to 2 decimal places -->
@@ -188,20 +188,20 @@
             <h3 class="footer-heading"><strong>Stay in Touch:</strong></h3>
                 <!-- social media links -->
                 <p class="sm-size"><a href="https://facebook.com" target="_blank" rel="noopener"
-                    aria-label="Facebook (opens in a new tab)">
-                    <i class="fab fa-facebook-square social-media"></i>Facebook</a>
+                    aria-label="Facebook (opens in a new tab)" class="bag-colour">
+                    <i class="fab fa-facebook-square social-media bag-colour"></i><strong>Facebook</strong></a>
                 </p>
                 <p class="sm-size"><a href="https://twitter.com" target="_blank" rel="noopener"
-                    aria-label="Twitter (opens in a new tab)">
-                    <i class="fab fa-twitter-square social-media"></i>Twitter</a>
+                    aria-label="Twitter (opens in a new tab)" class="bag-colour">
+                    <i class="fab fa-twitter-square social-media bag-colour"></i><strong>Twitter</strong></a>
                 </p>
                 <p class="sm-size"><a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Instagram (opens in a new tab)">
-                    <i class="fab fa-instagram-square social-media"></i>Instagram</a>
+                    aria-label="Instagram (opens in a new tab)" class="bag-colour">
+                    <i class="fab fa-instagram-square social-media bag-colour"></i><strong>Instagram</strong></a>
                 </p>
                 <p class="sm-size"><a href="https://youtube.com" target="_blank" rel="noopener"
-                    aria-label="YouTube (opens in a new tab)">
-                    <i class="fab fa-youtube-square social-media"></i>YouTube</a>
+                    aria-label="YouTube (opens in a new tab)" class="bag-colour">
+                    <i class="fab fa-youtube-square social-media bag-colour"></i><strong>YouTube</strong></a>
                 </p>
                 <!-- link: privacy policy -->
                 <p class="priv-pol"><a href="https://www.privacypolicygenerator.info/live.php?token=o8hofJE237OXPOsLlOSQaOz7uJUTTe7M" 
@@ -235,7 +235,7 @@
                         <input type="text" name="b_22d23267d57e0f2ac7e67a3d1_86cc7d2cc2" tabindex="-1" value="">
                     </div>
                     <!-- subscribe button -->
-                    <ul class="list-inline list-unstyled optionalParent spacing mob-subscribe">
+                    <ul class="list-inline optionalParent spacing mob-subscribe">
                         <li class="list-inline-item clear foot pr-4">
                             <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" aria-label="subscribe">
                         </li>

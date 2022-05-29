@@ -29,6 +29,7 @@ h4 {
 .logo {
     font-family: 'Montserrat', sans-serif;
     color: rgb(40, 40, 232);
+    font-weight: 900;
 }
 /* link to home page */
 .link-logo {
@@ -118,10 +119,13 @@ h4 {
     color: black;
 }
 
+.bag-colour {
+    color: rgb(40, 40, 232);
+}
+
 /* --------------------------------------------- F O O T E R */
 .footer {
     clear: both;
-    
     height: 278px;
     margin-bottom: 0;
 }
@@ -138,7 +142,7 @@ h4 {
 
 /* header and footer background */
 .head-foot-background {
-    background-color: ivory;
+    background-color: rgb(219, 214, 214);
 }
 
 .background {
@@ -149,6 +153,10 @@ h4 {
 .footer-text {
     color: black;
     margin-left: 20px;
+}
+
+.subscribe {
+    color: black;
 }
 
 /* social media links */
@@ -171,12 +179,14 @@ h4 {
 /* spacing */
 .paragraph {
     margin-bottom: 0;
+    color: black;
 }
 
 .spacing {
     margin-left: 9px;
     margin-top: 0;
     padding-top: 0;
+    color: black;
 }
 
 .email {
@@ -191,10 +201,15 @@ h4 {
 
 #mc_embed_signup {
     padding: 0;
+    color: black;
 }
 
 .mchimp-logo{
     background: rgb(226, 224, 224);
+}
+
+.mce-responses {
+    color: black;
 }
 
 /* -------------------------------------------- H O M E  app */
@@ -206,7 +221,7 @@ h4 {
     background-size: cover;
     /* to push image down the page */
     background-position-y: 70px;
-    height: 100vh;
+    height: 70vh;
     padding: 0;
     margin-top: 3px;
 }
@@ -215,15 +230,17 @@ h4 {
 .byline {
     text-align: left;
     font-family: 'Lato', sans-serif;
-    font-weight: 800; 
+    font-weight: 900; 
     font-size: 18px;
     color: black; 
 }
 
+
+
 /* summer sale text */
 .sale-text {
     font-size: 26px;
-    color: white;
+    color: yellow;
     text-align: right;
     margin-top: 210px;
 }
@@ -245,13 +262,15 @@ h4 {
 .banner > h4 {
     font-size: 18px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: yellow;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: white;
 }
 
 /* 'view our range' button */
 .view-range-button {
-    background: yellow;
+    background: white;
     color: black;
     width: 260px;
     font-size: 24px;
@@ -262,34 +281,36 @@ h4 {
 .view-range-button:active,
 .view-range-button:focus {
     background: black;
-    color: yellow;
+    color: white;
 }
 
 /* 'need advice' section */
 .advice {
     color: yellow;
     font-size: 26px;
+    font-weight: 700;
     padding-bottom: 8px;
+    letter-spacing: 1.8px;
 }
 
 .text {
     font-size: 24px;
-    color: white;
-    font-weight: 500;
+    color: yellow;
+    font-weight: 700;
     line-height: 15px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
 }
 
 /* 'need advice' links */
 .home-link {
-    color: rgb(96, 197, 244);
+    color: white;
     text-decoration: none;
 }
 
 .home-link:hover,
 .home-link:active,
 .home-link:focus {
-    color: white;
+    color: yellow;
     text-decoration: none;
 }
 
@@ -878,7 +899,7 @@ input[name='q']::placeholder {
 .button {
     margin:0 auto;
     display:block;
-    color: whitesmoke;
+    color: black;
     background-color:#3a3a3a;
     padding: 4px 5px 4px 5px;
     font-size: 16px;
@@ -906,6 +927,10 @@ input[name='q']::placeholder {
         margin-top: 0.25rem;
     }
 
+    /* -------------------------------------------- B I K E T A L K  app */
+
+    /* -------------------------- article_content page */
+    /*  title of article post */
     /* heading block at top of page */
     .masthead {
         margin-top: 170px;
