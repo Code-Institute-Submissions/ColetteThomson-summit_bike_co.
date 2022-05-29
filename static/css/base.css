@@ -235,8 +235,6 @@ h4 {
     color: black; 
 }
 
-
-
 /* summer sale text */
 .sale-text {
     font-size: 26px;
@@ -1018,7 +1016,7 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat;
         background-size: cover;
         background-position-y: 0px;
-        height: 60vh;
+        height: 40vh;
         padding: 0;
         margin-top: 0.313rem;
     }
@@ -1275,7 +1273,7 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat;
         background-size: cover;
         background-position-y: 10px;
-        height: 50vh;
+        height: 40vh;
         padding: 0;
         margin-top: 0.188rem;
     }
@@ -1292,14 +1290,15 @@ input[name='q']::placeholder {
         margin-top: 3.125rem;
         font-size: 24px;
         text-align: center;
-        background-color: rgba(139, 69, 19, 0.521);
+        background-color: rgba(0, 0, 0, 0.368);
         padding-top: 0.188rem;
         padding-bottom: 0.313rem;
     }
     
     /* overlay for 'summer sale' text (mobile only) */
     .overlay-home {
-        background-color: rgba(139, 69, 19, 0.521);
+        /*background-color: rgba(139, 69, 19, 0.521);*/
+        background-color: rgba(0, 0, 0, 0.368);
         max-height: 20px;
         max-width: 280px;
         margin: auto;
@@ -1341,7 +1340,7 @@ input[name='q']::placeholder {
 
     /* overlay for 'need advice' section (mobile only) */
     .overlay-home-1 {
-        background-color: rgba(139, 69, 19, 0.521);
+        background-color: rgba(0, 0, 0, 0.368);
         max-height: 200px;
         max-width: 220px;
         margin: auto;
