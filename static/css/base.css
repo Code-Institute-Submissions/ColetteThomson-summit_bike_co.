@@ -897,7 +897,7 @@ input[name='q']::placeholder {
 .button {
     margin:0 auto;
     display:block;
-    color: black;
+    color: white;
     background-color:#3a3a3a;
     padding: 4px 5px 4px 5px;
     font-size: 16px;
@@ -1560,6 +1560,7 @@ input[name='q']::placeholder {
     .post-subtitle {
         font-size: 12px;
         margin-left: 0;
+        margin-bottom: 10px;
     }
 
     /* article post */
