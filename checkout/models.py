@@ -104,7 +104,7 @@ class OrderLineItem(models.Model):
     product_size = models.CharField(max_length=2, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     # uneditable as is automatically calculated when line item is saved
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+    lineitem_total = models.DecimalField(max_digits=15, decimal_places=2,
                                          null=False, blank=False,
                                          editable=False)
 

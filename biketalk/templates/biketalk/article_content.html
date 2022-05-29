@@ -20,7 +20,7 @@
           <div class="col-md-6 masthead-background">
             <h1 class="post-title">{{ article.article_name }}</h1>
             <!-- post author and post's created date -->
-            <p class="post-subtitle text-muted">{{ article.author }} | {{ article.created_on }}</p>
+            <p class="d-none d-md-block post-subtitle text-muted">{{ article.author }} | {{ article.created_on }}</p>
           </div>
           <div class="d-none d-md-block col-md-6 masthead-image">
             <!-- image for all chats -->
@@ -35,7 +35,7 @@
     <!-- post body showing post information -->
     <div class="container">
       <div class="row">
-        <div class="col card mb-0 mt-2 left top">
+        <div class="col card mb-0 mt-0 left top">
           <div class="card-body">
             <!-- post content displays in card-text - using safe filter -->
             <p class="card-text card-format">{{ article.article_detail | safe }}</p>

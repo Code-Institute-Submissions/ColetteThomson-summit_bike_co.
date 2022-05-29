@@ -1199,7 +1199,6 @@ input[name='q']::placeholder {
     .post-subtitle {
         font-size: 12px;
         margin-left: 22px;
-        margin-bottom: 10px;
     }
 
 }
@@ -1555,13 +1554,6 @@ input[name='q']::placeholder {
         margin-top: 0;
         margin-left: 0;
         font-size: 20px;
-    }
-
-    /* heading block sub title */   
-    .post-subtitle {
-        font-size: 12px;
-        margin-left: 0;
-        margin-bottom: 10px;
     }
 
     /* article post */

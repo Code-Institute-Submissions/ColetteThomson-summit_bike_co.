@@ -79,7 +79,7 @@ There are 5 models within the Summit Bike Co website:<br>
 * Profiles
 * Biketalk
 
-The ERD showing the relationship between models on the Summit Bike Co website can be found [here](). <br>
+The ERD showing the relationship between models on the Summit Bike Co website can be found [here](/media/ERD_SBC.jpg). <br>
 
 ## Wireframes for Summit Bike Co
 
@@ -428,12 +428,14 @@ Exceptions: the 'Home' page, will direct to 'index.html'; the 'show_admin_person
 * Test cases can be found here for the **profiles** app page:<br>
 [Profiles app](/media/TC_profile.jpg). <br>
 * Test cases can be found here for the **biketalk** app pages:<br>
-[Biketalk app](). <br>
+[Biketalk app](/media/TC_biketalk.jpg). <br>
 * Test cases can be found here for the **Logout, Login, Register** pages:<br>
 [AllAuth Accounts pages](/media/TC_login_logout_register.jpg).<br>
 
 ### Testing Issues and Resolutions
-No known issues arose during testing.
+* An intermittent error arose during testing with the Checkout page.  When placing the exact same order first as a unregistered user, and then as a registered user: a 'numeric field overflow' error would occur for the registered user, but not for the unregistered user.  The 'lineitem_total' field was highlighted as the particular problem, so I adjusted the amount of 'max-digits' to resolve the issue.  I have not been able to reproduce the error again.
+* Problems with the image on the 'article_content.html' page arose (especially on tablets) during cross-browser testing on Opera.  Any changes I made dramatically affected the styling look-and-feel across Google and Firefox.  Therefore the image on this page for the tablet view in Opera, has been made narrower to accommodate the vast changes between the browser views.
+
 
 ## Code Validation
 All 23 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
@@ -500,8 +502,8 @@ All 23 HTML pages were run through the [W3C Markup Validation Service](https://v
 [Lighthouse: Terms and Conditions](/media/LR_terms_conditions.jpg).<br>
 [Lighthouse: Contact Details](/media/LR_contact_us.jpg).<br>
 * Biketalk app: <br>
-[Lighthouse: BikeTalk]()<br>
-[Lighthouse: Article Name ...]()<br>
+[Lighthouse: BikeTalk](/media/LR_article_list.jpg)<br>
+[Lighthouse: Article Name ...](/media/LR_article_content.jpg)<br>
 * Profiles app: <br>
 [Lighthouse: My Profile](/media/LR_profile.jpg).<br>
 
