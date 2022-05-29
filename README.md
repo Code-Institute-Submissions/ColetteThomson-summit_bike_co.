@@ -1,7 +1,16 @@
 # Summit Bike Co. Mountain Bike Shop
 
 ## Purpose
-Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Users can register as an account holder and are able to save contact, delivery and payment information under their own profile. Users without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with price, a selection of sizes and required quantity to assist users in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. has a blog called 'BikeTalk' where users can read and leave comments on various mountain biking articles. Summit Bike Co. also offers users the option of subscribing to their monthly newsletter.  Users can stay in touch by following the social media of Summit Bike Co.
+Summit Bike Co. is a mountain bike stockist based in UK that offers both an online shopping experience, as well as the option of visiting their stores. Users can register as an account holder and are able to save contact, delivery and payment information under their own profile. Users without an account are also able to make purchases but their contact, delivery and payment information will not be retained by Summit Bike Co.  All products on the website will have a full specification and description of each bike model, along with price, a selection of sizes and required quantity to assist users in choosing a mountain bike best suited to their requirements. A link on each individual product page gives the user quick access to the 'Buying Guides' section, should they need help with their decision. Summit Bike Co. participates in the UK Government 'Cycle to Work' initiative and have designed a simple process to assist employers in joining the scheme.  General company information is present in the 'About Us' and 'Contact Us' sections.  Summit Bike Co. has a blog called 'BikeTalk' where registered users can read and leave comments on various mountain biking articles. Summit Bike Co. also offers users the option of subscribing to their monthly newsletter.  Users can stay in touch by following the social media of Summit Bike Co.
+
+## E-Commerce Business Model
+E-commerce sales have risen substantially over the last few years, so starting an online store would make sound business sense for Summit Bike Co. The following benefits will be realised through building an e-commerce platform:
+* Increased brand awareness:  with increasing competition within the outdoor fitness community, our exposure will increase through customer centric market strategies, social media presence and digital ethics
+* Open for business 24/7/365:  with our intuitive product layout; free delivery service; improved customer engagement and experience; and easy to understand buying guides - shoppers can feel secure in their choice of products.  This will drive our value stream optimisation leading to benefits realisation
+* International sales: our website caters for sales and delivery to most countries in the world, thereby increasing our brand awareness and revenue
+* Online stores are social: our BikeTalk blog encourages shoppers to interact with our posted articles, as well as imparting bike knowledge and general biking news and promoting of events
+* Easy to re-target and re-market to customers:  with our active BikeTalk comes the potential for customers to browse through products while reading our blog posts.  The online shopping experience is also less invasive and pressured, potentially encouraging customers to browse and therefore purchase more products
+
 
 ## High level overview of user roles within Summit Bike Co:
 
@@ -361,14 +370,20 @@ The **BikeTalk** page is intended to provide:
 * details of each active article listed can be accessed by clicking either the article name (eg Besk UK Tech Trails...) or the slug (eg: Dyfi Bike Park...).
 * the author (i.e. the Administator) is displayed above the article name.
 * the date and time the Post was created and the current amount of 'likes' for that particular article.
+* a 'Comments' block: for already approved (by admin) comments left by users
+* a 'Leave a Comment' block: registered users can read and leave a comment on any active article.  Unregistered users can only read articles and existing (admin approved) comments.
 * This feature fulfills the user stories: *'As a new user, I want to be able to read the articles and comments in 'BikeTalk''* and *'As a returning user, I want to be able to read and leave comments in 'BikeTalk''*.
-
+A screenshot of the 'Contact Us' page (contact_us.html) can be found [here](). <br>
 
 ## Design of the Summit Bike Co. website
 
 ### Colour Scheme
-The colour palette for general body content comprises four basic colours: 
-* colours...
+The colour palette for general body content comprises five basic colours: 
+* #FFFF00 (yellow) home page text, and buttons
+* #000000 (black) general body text and headings
+* #2828E8 (blue) logo and headings
+* #28a745 (green) sub-headings
+* #DBD6D6 (light gray) header and footer background
 
 ### Fonts
 The Summit Bike Co. logo and main page headings use **Montserrat**; body text and headings use **Lato**.  The back-up font is **sans-serif** for both Lato and Montserrat.  Fonts were downloaded from **Google Fonts**.
@@ -382,7 +397,7 @@ No known limitations.
 ## Features
 * Login, Logout and Register user account functionality
 * Full CRUD (create, read, update, delete) functionality that is role-based
-* Messaging system confirming user actions on the website
+* Messaging system confirming all user actions on the website
 
 ## Technologies
 * Django - a framework that follows the model–template–views architectural pattern and upon which this website is built
@@ -410,7 +425,7 @@ No known limitations.
 * Testing has been performed to check for compatibility across three web browsers (Google Chrome, Firefox, Opera).
 * Responsive design has been tested across the different screen sizes: desktops/laptops (1024px); tablets (max-width 769px); mobiles (to a max-width of 426px); and large laptops (min-width 1025px to max-width 1441px).
 * All navigational links should direct to the correct html web page as per their names.<br>
-Exceptions: the 'Home' page, will direct to 'index.html'; the 'show_admin_person.html' and 'show_techsupport_person.html' will direct to 'Personal Details'; the 'show_project' will direct to 'Project Details'. 
+Exception: the 'Home' page, will direct to 'index.html'. 
 
 ### Test Cases
 * Test cases can be found here for the **home** app page (index.html) and base.html: <br> 
@@ -434,11 +449,10 @@ Exceptions: the 'Home' page, will direct to 'index.html'; the 'show_admin_person
 
 ### Testing Issues and Resolutions
 * An intermittent error arose during testing with the Checkout page.  When placing the exact same order first as a unregistered user, and then as a registered user: a 'numeric field overflow' error would occur for the registered user, but not for the unregistered user.  The 'lineitem_total' field was highlighted as the particular problem, so I adjusted the amount of 'max-digits' to resolve the issue.  I have not been able to reproduce the error again.
-* Problems with the image on the 'article_content.html' page arose (especially on tablets) during cross-browser testing on Opera.  Any changes I made dramatically affected the styling look-and-feel across Google and Firefox.  Therefore the image on this page for the tablet view in Opera, has been made narrower to accommodate the vast changes between the browser views.
-
+* Problems with the image on the 'article_content.html' page arose (especially on tablets) during cross-browser testing on Opera.  Any styling changes I made dramatically affected the look-and-feel across Google and Firefox.  Therefore the image on this page (to suit the tablet view in Opera), has been made narrower to accommodate the vast changes between the browser views.
 
 ## Code Validation
-All 23 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
+All 17 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
 * Home app: index.html page <br>
 [HTML: index.html page](/media/HTML-val_index.jpg).<br>
 
@@ -510,25 +524,43 @@ All 23 HTML pages were run through the [W3C Markup Validation Service](https://v
 ## Deployment
 ### Project Creation
 The project was created using GitHub and choosing a new repository.<br>
-The following terminal commands were used during this project:
+##### The following terminal commands were used during this project:
+* create a repository on GitHub and pin to Github Workspaces
+* access the terminal within GitPod and type "python3 manage.py runserver" to run the website view
 * git add . - this command adds a change in the working directory to the staging area.
 * git commit -m "*message*" - this command details the change/s made in the 'message' section and then commits the changes to the local repository.
 * git push origin main - this command is used to push all changes to the GitHub repository.
 * git push heroku main - this command is used to push all changes to Heroku.
 * Final deployment of the website is on [Heroku](https://smart-events.herokuapp.com/)
-
-### Using GitHub Pages
-* Navigate to the GitHub repository [smartevents WMP](https://github.com/ColetteThomson/smartevents_WMP).
-* Select 'Settings'.
-* Scroll down to 'GitHub Pages'.
-* Select 'Main' branch as the source and click 'Save' button.
-* Select link to go to live published page.
+##### For final deployment to Heroku:<br>
+1.	Create Heroku App
+2.	Install dj_database_url and psycopg2-binary in my local environment
+3.	Freeze requirements.txt file
+4.	In settings.py import dj_database_url
+5.	Back up the local database using "./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json" in the terminal window.
+6.	Add the Heroku database url via dj_database_url.parse()
+7.	Run migrations to the Postgres database
+8.	Configure the database so that when the app is running on Heroku it uses the Postgres database and when it's running locally it uses the SQLite database
+9.	Create Procfile so that Heroku creates a web dyno so that it will run gunicorn and serve the Django app
+10.	Disable Heroku collect static
+11.	Add the Heroku hostname to allowed hosts in settings.py
+12.	Generate a new Django secret key and add this to the Heroku config variables
+13.	Replace the secret key in settings.py to grab it from the environment
+14.	Set debug to True only if the environment is a development environment
+15.	Commit changes and deploy to GitHub and Heroku
+16.	Freeze requirements.txt file
+17.	Create custom storage classes for media and static files (for Cloudinary storage)
+18.	Commit and push to GitHub and Heroku
+19.	Add the Stripe keys to the Heroku config variables
+20.	Create a new webhook endpoint from the Stripe dashboard
+21.	Add all the Stripe keys to the Heroku config variables
 
 ## Credits
 ### Code
 * The private collaboration and knowledge sharing SaaS platform [Stack Overflow](https://stackoverflow.com/) was an invaluable resource for general coding queries.
 * Use was made of Code Institute tutor support for help with persistent coding issues.
 * Ideas for the Summit Bike Co was taken from Code Institute's walkthrough project 'Boutique Ado'.
+* Inspiration for BikeTalk was derived from Code Institute's walkthrough project 'I think therefore I blog'.
 
 ### Content
 * Ideas for Info app were taken from the website [Evans Cycles](http://www.evanscycles.com).
