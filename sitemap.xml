@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/accounts/signup/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/accounts/login/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/bag/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/?sort=price_now&amp;direction=asc</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/?sort=brand&amp;direction=asc</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/?sort=type&amp;direction=asc</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/buying_guides/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/buying_guides/mtb_sizing</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/info/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/info/cycle_to_work</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/info/terms_conditions</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/info/contact_us</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/biketalk/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/accounts/password/reset/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/72/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/?classification=hardtail_mb</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/73/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/47/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/39/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/31/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/45/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/40/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/80/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/67/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/42/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/32/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/30/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/25/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/28/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/26/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/?classification=full_susp_mb</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/62/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/5/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/33/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/19/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/64/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/41/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/18/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/4/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/34/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/49/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/77/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/15/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/79/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/46/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/68/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/48/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/23/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/66/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/65/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/20/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/51/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/16/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/75/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/22/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/69/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/53/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/2/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/74/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/76/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/38/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/50/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/29/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/27/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/7/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/13/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/products/11/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/biketalk/a-scary-moment/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://summit-bike-co.herokuapp.com/biketalk/best-uk-tech-trails-part-1/</loc>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
