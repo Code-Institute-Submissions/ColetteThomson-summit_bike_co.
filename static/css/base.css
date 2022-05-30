@@ -217,11 +217,11 @@ h4 {
 /* ----------------------- index.html */
 /* image background */
 .background-home {
-    background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1650545908/summit-bike-co/home_1024by683_comp_bbuobf.jpg') no-repeat;
+    background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1653893870/summit-bike-co/home_1024by575_comp_k4czsw.jpg') no-repeat;
     background-size: cover;
     /* to push image down the page */
     background-position-y: 70px;
-    height: 70vh;
+    height: 60vh;
     padding: 0;
     margin-top: 3px;
 }
@@ -237,9 +237,9 @@ h4 {
 
 /* summer sale text */
 .sale-text {
-    font-size: 26px;
+    font-size: 80px;
     color: yellow;
-    text-align: right;
+    text-align: center;
     margin-top: 210px;
 }
 
@@ -284,24 +284,28 @@ h4 {
 
 /* 'need advice' section */
 .advice {
-    color: yellow;
-    font-size: 26px;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
     padding-bottom: 8px;
-    letter-spacing: 1.8px;
+    letter-spacing: 2px;
 }
 
 .text {
-    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
     color: yellow;
-    font-weight: 700;
+    text-align: center;
     line-height: 15px;
-    letter-spacing: 1.8px;
+    letter-spacing: 2px;
 }
 
 /* 'need advice' links */
 .home-link {
     color: white;
+    font-weight: bolder;
     text-decoration: none;
 }
 
@@ -917,10 +921,10 @@ input[name='q']::placeholder {
 
     /* image background */
     .background-home {
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652194984/summit-bike-co/home_1200by800_comp_ssdw3w.jpg') no-repeat;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1653894164/summit-bike-co/home_1200by674_comp_cxsxwj.jpg') no-repeat;
         background-size: cover;
         background-position-y: 100px;
-        height: 120vh;
+        height: 80vh;
         padding: 0;
         margin-top: 0.25rem;
     }
@@ -1013,10 +1017,10 @@ input[name='q']::placeholder {
     /* ------------------------- index.html */
     /* image background */
     .background-home {
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652196263/summit-bike-co/home_769by513_comp_uhtcdh.jpg') no-repeat;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1653894160/summit-bike-co/home_769by432_comp_t0z3g8.jpg') no-repeat;
         background-size: cover;
         background-position-y: 0px;
-        height: 80vh;
+        height: 50vh;
         padding: 0;
         margin-top: 0.313rem;
     }
@@ -1049,13 +1053,13 @@ input[name='q']::placeholder {
 
     /* need advice section */
     .advice {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .text {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 12px;
-        letter-spacing: normal;
+        letter-spacing: 2px;
     }
 
     /* ----------------------------------------- P R O D U C T S  app */
@@ -1270,10 +1274,10 @@ input[name='q']::placeholder {
     /* ----------------------------- index.html */
     /* image background */
     .background-home {
-        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1652349272/summit-bike-co/home_425by513_comp_vi9utr.jpg') no-repeat;
+        background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1653894160/summit-bike-co/home_769by432_comp_t0z3g8.jpg') no-repeat;
         background-size: cover;
         background-position-y: 10px;
-        height: 73vh;
+        height: 40vh;
         padding: 0;
         margin-top: 0.188rem;
     }
@@ -1341,7 +1345,7 @@ input[name='q']::placeholder {
     .overlay-home-1 {
         background-color: rgba(0, 0, 0, 0.368);
         max-height: 200px;
-        max-width: 220px;
+        max-width: 250px;
         margin: auto;
     } 
 

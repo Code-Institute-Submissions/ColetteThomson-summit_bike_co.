@@ -11,10 +11,9 @@ E-commerce sales have risen substantially over the last few years, so starting a
 * Online stores are social: our BikeTalk blog encourages shoppers to interact with our posted articles, as well as imparting bike knowledge and general biking news and promoting of events
 * Easy to re-target and re-market to customers:  with our active BikeTalk comes the potential for customers to browse through products while reading our blog posts.  The online shopping experience is also less invasive and pressured, potentially encouraging customers to browse and therefore purchase more products
 
-
 ## High level overview of user roles within Summit Bike Co:
 
-* **Superuser (admin)** (and 'store owner' if applicable) - has full CRUD (create, read (view), update, delete) from the admin panel and across all frontend pages
+* **Superuser (admin)** (and 'store owner' if applicable) - has full CRUD (create, read (view), update, delete) from the admin panel and across all frontend pages. For the 'BikeTalk' app - admin will need to approve all comments from users, before they will appear as published comments underneath the relevant article.
 * **Registered Users (account holders)** - will have full CRUD to their own Profile information (My Profile page); be able to edit and delete products within their own Shopping Bag (Checkout page); and read only access to their own Order History (My Profile page) and to all other website pages.
 * **Unregistered Users** - will be able to edit and delete products within their own Shopping Bag (Checkout page); and have read only access to all web pages - but no access to the My Profile page.
 
@@ -493,33 +492,6 @@ All 17 HTML pages were run through the [W3C Markup Validation Service](https://v
 [JS validation for summit_bike_co app and bag app](/media/JSHint_summit-bike-co-app_and_bag-app.jpg).<br>
 [JS validation for products app](/media/JSHint_products-app.jpg).<br>
 [JS validation for checkout app](/media/JSHint_checkout-app.jpg).<br>
-
-## Lighthouse Reports
-* Home app: index.html page <br>
-[Lighthouse: index.html](/media/LR_index.jpg).<br>
-* Products app: <br>
-[Lighthouse: Add a Product](/media/LR_add_product.jpg).<br>
-[Lighthouse: Edit a Product](/media/LR_edit_product.jpg).<br>
-[Lighthouse: Bike Model (name...)](/media/LR_bike_detail.jpg).<br>
-[Lighthouse: All Mountain Bikes](/media/LR_products.jpg).<br>
-* Bag app: <br>
-[Lighthouse: Shopping Bag](/media/LR_bag.jpg).<br>
-* Checkout app: <br>
-[Lighthouse: Checkout](/media/LR_checkout.jpg).<br>
-[Lighthouse: Thank You](/media/LR_thankyou.jpg).<br>
-* Buying_Guides app: <br>
-[Lighthouse: What is a Mountain Bike](/media/LR_what_is_a_mtb.jpg).<br>
-[Lighthouse: Mountain Bike Sizing Guide](/media/LR_mtb_sizing.jpg).<br>
-* Info app: <br>
-[Lighthouse: Who We Are](/media/LR_who_we_are.jpg).<br>
-[Lighthouse: Cycle to Work Scheme](/media/LR_cycle_to_work.jpg).<br>
-[Lighthouse: Terms and Conditions](/media/LR_terms_conditions.jpg).<br>
-[Lighthouse: Contact Details](/media/LR_contact_us.jpg).<br>
-* Biketalk app: <br>
-[Lighthouse: BikeTalk](/media/LR_article_list.jpg)<br>
-[Lighthouse: Article Name ...](/media/LR_article_content.jpg)<br>
-* Profiles app: <br>
-[Lighthouse: My Profile](/media/LR_profile.jpg).<br>
 
 ## Deployment
 ### Project Creation
