@@ -36,7 +36,7 @@ The page 'My Profile' only appears if the user is registered (account holder). <
 The live project can be found [here]()
 
 ## Facebook screenshots
-
+A mockup of the Summit Bike Co. Facebook page can be found [here](/media/SBC_facebook_mockup.jpg)
 
 ## Site Map
 
