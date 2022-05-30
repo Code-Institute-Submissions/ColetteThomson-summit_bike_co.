@@ -121,6 +121,19 @@ h4 {
 
 .bag-colour {
     color: rgb(40, 40, 232);
+    text-decoration: none;
+}
+
+.bag-colour:hover,
+.bag-colour:active,
+.bag-colour:focus {
+    text-decoration: none;
+}
+
+.byline {
+    font-size: 20px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* --------------------------------------------- F O O T E R */
@@ -226,28 +239,19 @@ h4 {
     margin-top: 3px;
 }
 
-/* byline */
-.byline {
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    font-weight: 900; 
-    font-size: 18px;
-    color: black; 
-}
-
 /* summer sale text */
 .sale-text {
-    font-size: 80px;
+    font-size: 50px;
     color: yellow;
     text-align: center;
-    margin-top: 210px;
+    margin-top: 190px;
 }
 
 .align-text {
     float: right;
 }
 
-/*  contact us banner */
+/*  delivery banner */
 .banner {
     background: black;
     border-color: black;
@@ -269,10 +273,16 @@ h4 {
 /* 'view our range' button */
 .view-range-button {
     background: white;
+    font-family: 'Montserrat', sans-serif;
     color: black;
-    width: 260px;
-    font-size: 24px;
-    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-top: 9px;
+    padding-bottom: 1px;
+    width: 340px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: none;
 }
 
 .view-range-button:hover,
@@ -280,25 +290,24 @@ h4 {
 .view-range-button:focus {
     background: black;
     color: white;
+    text-decoration: none;
 }
 
 /* 'need advice' section */
 .advice {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bolder;
-    padding-bottom: 8px;
-    letter-spacing: 2px;
-}
-
-.text {
-    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     color: yellow;
     text-align: center;
-    line-height: 15px;
+    padding-bottom: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 25px;
+    color: yellow;
+    text-align: center;
+    line-height: 25px;
     letter-spacing: 2px;
 }
 
@@ -316,6 +325,7 @@ h4 {
     text-decoration: none;
 }
 
+/* buttons */
 .btn-black {
     background: black;
     color: yellow;
@@ -343,10 +353,9 @@ h4 {
 /* ----------------------------------------- P R O D U C T S  app */
 
 /* ----------------------- products (all bikes) page */
-
 /* main heading */
 .prod-heading {
-    margin-top: 160px;
+    margin-top: 180px;
 }
 
 /* bike classification (type) */
@@ -380,7 +389,7 @@ input[name='q']::placeholder {
 
 /* heading */
 .bike-heading {
-    margin-top: 170px;
+    margin-top: 200px;
     margin-left: 24px;
     color: rgb(40, 40, 232);
 }
@@ -443,7 +452,6 @@ input[name='q']::placeholder {
     margin-left: 40px;
     color: rgb(40, 40, 232);
     font-weight: 600;
-    
 }
 
 .sub-heading-1 {
@@ -485,19 +493,7 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
-/* product form: image checkbox 
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-} */
-
-/*  keep shopping button */
+/* keep shopping button */
 .keep-shopping-btn {
     background: yellow;
     color: black !important; /* use important to override link colors for <a> elements */
@@ -618,7 +614,8 @@ input[name='q']::placeholder {
     padding-right: 30px;
 }
 
-/* ----------------------------------------- I N F O  app */
+/* ------------------------------------------------ I N F O  app */
+
 /* ----------------------- 'who_we_are page'; 'terms_conditions'; 'cycle_to_work' and 'contact_us' pages */
 /* top spacing*/
 .info-spacing {
@@ -654,7 +651,6 @@ input[name='q']::placeholder {
     color: #28a745;
     font-size: 24px;
 }
-
 
 /* ---------------------- allauth form formatting */
 .allauth-form-inner-content p {
@@ -710,7 +706,6 @@ input[name='q']::placeholder {
 	color: rgb(40, 40, 232); /* text-info */
 }
 
-
 /* --------------------------------------- mtb_sizing page */
 /* top spacing */
 .bg-spacing-1 {
@@ -727,6 +722,7 @@ input[name='q']::placeholder {
 }
 
 /* --------------------------------------------- B I K E T A L K  app */
+
 /* --------------------- article_list page */
 /* card positioning for each chat post */
 .col-position {
@@ -792,15 +788,15 @@ input[name='q']::placeholder {
     color: #3a3a3a;
 }
 
-/* ----------------------- article_content page */
+/* ---------------------------- article_content page */
 
 /* heading block at top of page */
 .masthead {
-    margin-top: 170px;
+    margin-top: 130px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 25vh;
+    
     width: 100%;
 }
 
@@ -810,16 +806,10 @@ input[name='q']::placeholder {
     position: relative;
 }
 
-/* heading block image */
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
 /* heading block main title */
 .post-title {
-    margin-top: 7%;
-    margin-left: 5%;
+    margin-top: 50px;
+    margin-left: 22px;
     position: relative;
     color: rgb(40, 40, 232);
     font-size: 35px;
@@ -828,7 +818,7 @@ input[name='q']::placeholder {
 
 /* heading block sub title */
 .post-subtitle {
-    margin-left: 5%;
+    margin-left: 22px;
     color: #3a3a3a;
     position: relative;
     z-index: 3;
@@ -924,7 +914,7 @@ input[name='q']::placeholder {
         background: url('https://res.cloudinary.com/drxo58fsj/image/upload/v1653894164/summit-bike-co/home_1200by674_comp_cxsxwj.jpg') no-repeat;
         background-size: cover;
         background-position-y: 100px;
-        height: 80vh;
+        height: 100vh;
         padding: 0;
         margin-top: 0.25rem;
     }
@@ -936,9 +926,18 @@ input[name='q']::placeholder {
     /* heading block at top of page */
     .masthead {
         margin-top: 170px;
-        height: 25vh;
     }
 
+    /* heading block main title */
+    .post-title {
+        margin-top: 30px;
+        margin-left: 22px;
+    }
+
+    /* heading block sub title */
+    .post-subtitle {
+        margin-left: 22px;
+    }
 }
 
 /* ------------------------------------------- L A P T O P S */
@@ -1005,11 +1004,22 @@ input[name='q']::placeholder {
         font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         margin-right: 0.625rem;
+        text-decoration: none;
     }
 
     .link-mobile {
         color: rgb(40, 40, 232);
         text-decoration: none;
+    }
+
+    .link-mobile:hover,
+    .link-mobile:active,
+    .link-mobile:focus {
+        text-decoration: none;
+    }
+
+    .byline {
+        font-size: 16px;
     }
 
     /* -------------------------------------------- H O M E  app */
@@ -1025,22 +1035,11 @@ input[name='q']::placeholder {
         margin-top: 0.313rem;
     }
     
-    /* byline */
-    .byline {
-        font-size: 14px;
-        margin-right: 4.063rem;
-        margin-left: 0;
-    }
-
     /* summer sale text */
     .sale-text {
         margin-top: 2.5rem;
-        font-size: 18px;
-    }
-
-    .sale-text-1 {
-        margin-top: 1.25rem;
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: bolder;
     }
 
     /* 'view our range' button */
@@ -1053,12 +1052,14 @@ input[name='q']::placeholder {
 
     /* need advice section */
     .advice {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .text {
-        font-size: 24px;
-        line-height: 12px;
+        font-size: 28px;
+        color: yellow;
+        text-align: center;
+        line-height: 30px;
         letter-spacing: 2px;
     }
 
@@ -1071,13 +1072,13 @@ input[name='q']::placeholder {
     }
 
     .prod-heading {
-        margin-top: 1.25rem;
+        margin-top: 1.5rem;
     }
 
     /* ------------------------------- bike_detail page */
     /* heading */
     .bike-heading {
-        margin-top: 1.25rem;
+        margin-top: 1.875rem;
         font-size: 25px;
     }
 
@@ -1188,13 +1189,11 @@ input[name='q']::placeholder {
     /* heading block at top of page */
     .masthead {
         margin-top: 0px;
-        height: 25vh;
-        width: 100%;
     }
 
     /* heading block main title */
     .post-title {
-        margin-top: 10%;
+        margin-top: 30px;
         margin-left: 20px;
         font-size: 28px;
     }
@@ -1204,7 +1203,6 @@ input[name='q']::placeholder {
         font-size: 12px;
         margin-left: 22px;
     }
-
 }
 
 /* ----------------------------------------------- M O B I L E S */
@@ -1223,15 +1221,19 @@ input[name='q']::placeholder {
     /* navigation menu on all mobile pages */
     .menu {
         margin: auto;
-        
     }
 
-    /*  contact us banner */
+    /*  delivery banner */
     .banner > h4 {
         font-size: 16px;
         margin: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .byline {
+        font-size: 12px;
+        padding-right: 10px;
     }
 
     /* ----------------------------------- F O O T E R */
@@ -1240,7 +1242,6 @@ input[name='q']::placeholder {
     .footer {
         clear: both;
         position: relative;
-        
         margin-top: -200px;
     }
 
@@ -1282,79 +1283,41 @@ input[name='q']::placeholder {
         margin-top: 0.188rem;
     }
 
-    /* byline */
-    .byline {
-        font-size: 12px;
-        margin-right: 0.625rem;
-        margin-left: 0;
-    }
-
-    /* summer sale section */
-    .sale-text-1 {
+    .sale-text {
         margin-top: 3.125rem;
         font-size: 24px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.368);
-        padding-top: 0.188rem;
-        padding-bottom: 0.313rem;
-    }
-    
-    /* overlay for 'summer sale' text (mobile only) */
-    .overlay-home {
-        /*background-color: rgba(139, 69, 19, 0.521);*/
-        background-color: rgba(0, 0, 0, 0.368);
-        max-height: 20px;
-        max-width: 280px;
-        margin: auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
+    }    
+        
     /* 'view our range' button */
     .view-range-button {
-        padding: 0;
+        padding-top: 1px;
+        padding-bottom: 1px;
         font-size: 20px;
-        width: 190px;
-        margin-right: 2.938rem;
-        text-align: center;
+        width: 210px;       
     }
 
     /* 'need advice' section */
     .advice-m {
-        text-align: center;
-        margin-bottom: 0.313rem;
         font-size: 20px;
-    }
-
-    .text-m {
-        text-align: center;
-        padding-top: 0.625rem;
-        font-size: 18px;
-        color: yellow;
-        line-height: 14px;
+        letter-spacing: 1.2px;
     }
 
     .text {
+        padding-left: 30px;
+        padding-right: 30px;
         text-align: center;
-        line-height: 10px;
+        line-height: 18px;
         font-size: 18px;
-        letter-spacing: normal;
+        letter-spacing: 1.1px;
+        font-weight: bolder;
     }
-
-    /* overlay for 'need advice' section (mobile only) */
-    .overlay-home-1 {
-        background-color: rgba(0, 0, 0, 0.368);
-        max-height: 200px;
-        max-width: 250px;
-        margin: auto;
-    } 
-
+    
     /* ----------------------------------------- P R O D U C T S  app */
 
     /* ----------------------- products (all bikes) page */
     /* main heading for mobile screen only */
     .prod-heading {
-        margin-top: 2.5rem;
+        margin-top: 3.125rem;
         font-size: 28px;
     }
 
@@ -1519,13 +1482,18 @@ input[name='q']::placeholder {
 
     /* author of article post */
     .author {
-        margin-top: 15px;
+        margin-top: 0.938rem;
         font-size: 12px;
     }
 
     /*  title of article post */
     .title {
         font-size: 14px;
+    }
+
+    /* heading block sub title */
+    .post-subtitle {
+        margin-left: 1px;
     }
 
     /*  excerpt for article post*/
@@ -1543,19 +1511,12 @@ input[name='q']::placeholder {
     /* ------------------------- article_content page */
     /* heading block at top of page */
     .masthead {
-        margin-top: 50px;
-        height: 8vh;
-        width: 100%;
-    }
-
-    /* heading block image */
-    .masthead-image {
-        display: none;
+        margin-top: 1.25rem;
     }
 
     /* heading block main title */
     .post-title {
-        margin-top: 0;
+        margin-top: 1.875rem;
         margin-left: 0;
         font-size: 20px;
     }
@@ -1571,5 +1532,4 @@ input[name='q']::placeholder {
         margin-top: -17px;
         margin-bottom: -16px;
     }
-
 }

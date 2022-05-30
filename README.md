@@ -447,8 +447,7 @@ Exception: the 'Home' page, will direct to 'index.html'.
 [AllAuth Accounts pages](/media/TC_login_logout_register.jpg).<br>
 
 ### Testing Issues and Resolutions
-* An intermittent error arose during testing with the Checkout page.  When placing the exact same order first as a unregistered user, and then as a registered user: a 'numeric field overflow' error would occur for the registered user, but not for the unregistered user.  The 'lineitem_total' field was highlighted as the particular problem, so I adjusted the amount of 'max-digits' to resolve the issue.  I have not been able to reproduce the error again.
-* Problems with the image on the 'article_content.html' page arose (especially on tablets) during cross-browser testing on Opera.  Any styling changes I made dramatically affected the look-and-feel across Google and Firefox.  Therefore the image on this page (to suit the tablet view in Opera), has been made narrower to accommodate the vast changes between the browser views.
+An intermittent error arose during testing with the Checkout page.  When placing the exact same order first as a unregistered user, and then as a registered user: a 'numeric field overflow' error would occur for the registered user, but not for the unregistered user.  The 'lineitem_total' field was highlighted as the particular problem, so I adjusted the amount of 'max-digits' to resolve the issue.  I have not been able to reproduce the error again.
 
 ## Code Validation
 All 17 HTML pages were run through the [W3C Markup Validation Service](https://validator.w3.org/) and showed no errors. The following web pages were checked: 
