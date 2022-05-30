@@ -20,26 +20,28 @@ E-commerce sales have risen substantially over the last few years, so starting a
 ## The Summit Bike Co. website pages are as follows:
 * **Home** (index.html): landing page
 * **All Mountain Bikes**: dropdown opens the 'product' page. The options: 'By Price', By Rating'; 'By Brand'; 'By Type'; and 'All Bikes' are different sort options of the various products sold by Summit Bike Co.<br>
-The page: 'bike_detail' (which displays individual product information), can then be accessed from the chosen sort of the 'product' page.
+The page: **bike_detail** (which displays individual product information), can then be accessed from the chosen sort of the 'product' page.
 * **Buying Guides**: dropdown reveals:  'What is a Mountain Bike'; 'Mountain Bike Sizing Guide'. <br>
 * **About Us**: dropdown reveals:  'Who We Are'; 'Cycle to Work Scheme; 'Terms and Conditions'.<br> 
 * **Contact Us**: dropdown reveals:  'Contact Details'.<br>
 * **BikeTalk**: (under the 'Contact Us' dropdown) reveals: 'BikeTalk'; 'Article Name...'<br>
 * **My Account**: dropdown reveals:  'Stock Management'; 'My Profile'; 'Logout'.<br>
-The page 'Stock Management' is permissions based and only appears if the user is a superuser (admin).<br>
-The page 'My Profile' only appears if the user is registered (account holder). <br>
+
+The page **Stock Management** is permissions based and only appears if the user is a superuser (admin).<br>
+The page **My Profile** only appears if the user is registered (account holder). <br>
+
 **Allauth Account pages**
 * **Logout**: visible when users are logged in
 * **Login**: visible when users are logged out
 * **Register**: visible when users are logged out
 
-The live project can be found [here]()
+The live project can be found [here](https://summit-bike-co.herokuapp.com/)
 
 ## Facebook screenshots
 A mockup of the Summit Bike Co. Facebook page can be found [here](/media/SBC_facebook_mockup.jpg)
 
 ## Site Map
-
+The site map and robots.txt are located against the root of summit_bike_co.
 
 ## Search Engine Optimisation (SEO)
 ###  Keywords
@@ -57,11 +59,11 @@ Represented in multiple places throughout the website <br>
 The following **product based keyword** enquiries showed a mid-range volume of searches, and a mid-range level of organic competition:<br>
 * full suspension mountain bikes
 * hardtail mountain bikes
-These are seen in both the individual 'Bike Model [name]...' page and the 'All Mountain Bikes' page
+These are seen in both the individual 'Bike Model name ...' page and the 'All Mountain Bikes' page
 and are represented as:<br>
 * A 'h2' on each individual bike_detail page along with a reference in the relevant individual bike's product 'description' section
 * as a dropdown option ('By Type') under the 'All Mountain Bikes' menu option
-* as a sort option on both the 'Bike Model [name]...' pages and the 'All Mountain Bikes' page
+* as a sort option on both the 'Bike Model name ...' pages and the 'All Mountain Bikes' page
 <br>
 
 The following **information based keyword** enquiries showed a lower volume of searches, but also low organic
@@ -80,7 +82,7 @@ This long-tail keyword showed a high volume, with mid to high level of organic c
 Represented as: an anchor tag on the 'Cycle to Work Scheme' page accessed via the dropdown option under the 'About Us' menu <br>
 
 ## Entity Relationship Diagram (ERD) for Summit Bike Co.
-There are 5 models within the Summit Bike Co website:<br>
+There are 6 models for the Summit Bike Co. website - contained within the following apps:<br>
 * django.contrib.auth User model
 * Products
 * Checkout
@@ -203,15 +205,15 @@ The **Free delivery on orders over £1500!** banner:
 The **Logout**; **Login** and **Register** pages:
 * **Logout** - confirmation to a registered user that they want to logout
 * This feature fulfills the user story: *'As a returning user, I want to be able to easily logout into my account'*.
-A screenshot of the 'Logout' page can be found [here](). <br>
+A screenshot of the 'Logout' page can be found [here](/media/SS-log_out.jpg). <br>
 
 * **Login** - request of login information (username/email and password) from registered users
 * This feature fulfills the user story: *'As a returning user, I want to be able to easily login into my account'*.
-A screenshot of the 'Login' page can be found [here](). <br>
+A screenshot of the 'Login' page can be found [here](/media/SS-login.jpg). <br>
 
 * **Register** - request of user information (email address, username and password) from new users
 * This feature fulfills the user story: *'As a new user, I want to be able to easily register for an account, to set up a user profile'*.
-A screenshot of the 'Register' page can be found [here](). <br>
+A screenshot of the 'Register' page can be found [here](/media/SS-register.jpg). <br>
 
 ### Footer Element
 * Present on all 15 pages of the website, the footer contains navigational links to the social media accounts of Summit Bike Co.
@@ -231,7 +233,7 @@ This page is intended to provide:
 * provides quick access links to 'buying guides' for shoppers who require product assistance
 * provides quick access link to 'contact us' for shoppers who want to obtain contact details
 * This feature fulfills the user stories: *'As a new user, I want to immediately understand the main purpose of the website'* and *'As a new user, I want to be able to see what products they offer'* and *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view advice on which product is best suited to my needs'*.
-A screenshot of the 'Home' page (index.html) can be found [here](). <br>
+A screenshot of the 'Home' page (index.html) can be found [here](/media/SS-home.jpg). <br>
 
 ## 2.  The PRODUCT app pages: 'All Bikes' and 'Bike Model ...' and 'Stock Management Add a Product' and 'Edit a Product'
 
@@ -241,7 +243,7 @@ The **All Bikes** page is intended to provide:
 * details of individual products can be accessed by selecting the chosen product
 * if user is an authenticated superuser, 'edit' and 'delete' links will appear with each product
 * This feature fulfills the user stories: *'As a new user, I want to be able to see what products they offer'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to see all the products the organisation has on offer'* and *'As a store owner, I want to be able to edit/update an existing product'* and *'As a store owner, I want to be able to delete an existing product'*.
-A screenshot of the 'All Bikes' page (product.html) can be found [here](). <br>
+A screenshot of the 'All Bikes' page (product.html) can be found [here](/media/SS-all_mountain_bikes.jpg). <br>
 
 The **Bike Model ...** page is intended to provide:
 * the model name of the mountain bike (eg: 'Giant Anthem 29er 1 2018')
@@ -258,7 +260,7 @@ The **Bike Model ...** page is intended to provide:
 * a 'add to bag' button, should the user wish to add that particular product to their shopping bag
 * if user is an authenticated superuser, 'edit' and 'delete' links will appear with each product
 * This feature fulfills the user stories: *'As a new user, I want to be able to view a specific product'* and *'As a new user, I want to be able to view a specific classification of products'* and *'As a new user, I want to be able to select my required size and quantity of each product'* and *'As a new user, I want to be able to continue shopping if I want to look at a variety of products before making a choice/s'* and *'As a new user, I want to be able to easily add products to my shopping bag'* and *'As a store owner, I want to be able to edit/update an existing product'* and *'As a store owner, I want to be able to delete an existing product'*.
-A screenshot of the 'Bike Model...' page (bike_detail.html) can be found [here](). <br>
+A screenshot of the 'Bike Model...' page (bike_detail.html) can be found [here](/media/SS-bike_model_name.jpg). <br>
 
 The **Stock Management Add a Product** page is intended:
 * to enable an authenticated superuser (admin/store owner) to add a new product to existing store stock
@@ -267,7 +269,7 @@ The **Stock Management Add a Product** page is intended:
 * to provide a 'Add Product' button, to save the entry and submit to the product database
 * to provide a 'Cancel' button, which will discard the entry
 * This feature fulfills the user story: *'As a store owner, I want to be able to add a new product to the current stock'*
-A screenshot of the 'Stock Management Add a Product' page (add_product.html) can be found [here](). <br>
+A screenshot of the 'Stock Management Add a Product' page (add_product.html) can be found [here](/media/SS-add_product.jpg). <br>
 
 The **Edit a Product** page is intended:
 * to enable an authenticated superuser (admin/store owner) to edit/update an existing product
@@ -276,7 +278,7 @@ The **Edit a Product** page is intended:
 * to provide a 'Update Product' button, to save the entry and submit to the product database
 * to provide a 'Cancel' button, which will discard any changes made
 * This feature fulfills the user story: *'As a store owner, I want to be able to edit/update an existing product*
-A screenshot of the 'Edit a Product' page (edit_product.html) can be found [here](). <br>
+A screenshot of the 'Edit a Product' page (edit_product.html) can be found [here](/media/SS-edit_product.jpg). <br>
 
 The **Delete...** link (next to the 'edit' link) is intended:
 * to enable an authenticated superuser (admin/store owner) to immediately delete an existing product
@@ -291,7 +293,7 @@ The **Shopping Bag** page is intended to provide:
 * a summary of the contents of the user's bag including: an image; bike model name; chosen size; chosen quantity and pricing for each product in their bag
 * the user with the ability to edit the quantity of each product in their bag ('update' link) or to delete a product/s from their bag ('remove' link)
 * This feature fulfills the user stories: *'As a new user, I want to be able to view products in my shopping bag'* and *'As a new user, I want to be able to adjust the contents of my shopping bag before checking out'* and *'As a new user, I want to be able to easily add products to my shopping bag'*.
-A screenshot of the 'Shopping Bag' page (bag.html) can be found [here](). <br>
+A screenshot of the 'Shopping Bag' page (bag.html) can be found [here](/media/SS-shopping_bag.jpg). <br>
 
 ## 4.  The CHECKOUT app pages: 'Checkout' and 'Thank You'
 
@@ -304,13 +306,13 @@ The **Checkout** page is intended to provide:
 * an order summary of the contents of the user's bag including: an image; bike model name; chosen size; chosen quantity and pricing for each product in their bag
  * an 'order total'; 'delivery' charge (if applicable); and 'grand total' of their shopping bag
  * This feature fulfills the user stories: *'As a returning user, I want to be know that my personal and payment information is secure'* and *'As a new user, I want to be able to save my personal, delivery and billing info to my profile'* and *'As a new user, I want to be able to view products in my shopping bag'* and *'As a new user, I want to be able to adjust the contents of my shopping bag before checking out'*.
- A screenshot of the 'checkout' page (checkout.html) can be found [here](). <br>
+ A screenshot of the 'checkout' page (checkout.html) can be found [here](/media/SS-checkout.jpg). <br>
 
 The **Thank You** page is intended to provide:
 * an order confirmation listing 'order number'; 'order date'; 'order details'; 'delivering to'; and 'billing info'
 * a 'Need Something Else' button which reverts back to the 'All Bikes' page, should the user wish to keep shopping for a new order
 * This feature fulfills the user stories: *'As a new user, I want to be able to view my order confirmation after checkout'* and *'As a new user, I want to receive a confirmation email when I have completed an order'*
-A screenshot of the 'Thank You' page (checkout_success.html) can be found [here](). <br>
+A screenshot of the 'Thank You' page (checkout_success.html) can be found [here](/media/SS-thank_you.jpg). <br>
 
 ## 5.  The PROFILES app pages: 'My Profile'
 
@@ -320,19 +322,19 @@ The **My Profile** page is intended to provide:
 * the user with their 'Order History' showing 'order number; 'date' of order; 'items' for that order; and 'order total'
 * each order under the 'Order History' is accessible via a link which will revert the user to the 'Thank You (order confirmation)' page for that particular order.  A 'Back to Profile' link will take the user back to their 'My Profile' page
 * This feature fulfills the user stories: *'As a returning user, I want to be able to view my order history'* and *'As a returning user, I want to be able to update my personal and delivery details'*.
-A screenshot of the 'My Profile' page (profile.html) can be found [here](). <br>
+A screenshot of the 'My Profile' page (profile.html) can be found [here](/media/SS-my_profile.jpg). <br>
 
 ## 6.  The BUYING_GUIDES app pages: 'What is a Mountain Bike' and 'Mountain Bike Sizing Guide'
 
 The **What is a Mountain Bike** page is intended to provide:
 * information on the types of mountain bikes and their construction
 * This feature fulfills the user story: *'As a new user, I want to be able to view advice on which product is best suited to my needs'*
-A screenshot of the 'What is a Mountain Bike' page (what_is_a_mtb.html) can be found [here](). <br>
+A screenshot of the 'What is a Mountain Bike' page (what_is_a_mtb.html) can be found [here](/media/SS-what_is_a_mtb.jpg). <br>
 
 The **Mountain Bike Sizing Guide** page is intended to provide:
 * information on how to select the correct sized mountain bike
 * This feature fulfills the user story: *'As a new user, I want to be able to view advice on product sizing to suit my needs'*
-A screenshot of the 'Mountain Bike Sizing Guide' page (mtb_sizing.html) can be found [here](). <br>
+A screenshot of the 'Mountain Bike Sizing Guide' page (mtb_sizing.html) can be found [here](/media/SS-mountain_bike_sizing_guide.jpg). <br>
 
 ## 7.  The INFO app pages: 'Who We Are' and 'Cycle to Work Scheme' and 'Terms and Conditions' and 'Contact Details'
 
@@ -340,39 +342,40 @@ The **Who We Are** page is intended to provide:
 * a brief history and general information about Summit Bike Co.
 * Summit Bike Co.'s online shopping transaction
 * This feature fulfills the user story: *'As a new user, I want to be able to view general information about the organisation'*
-A screenshot of the 'Who We Are' page (who_we_are.html) can be found [here](). <br>
+A screenshot of the 'Who We Are' page (who_we_are.html) can be found [here](/media/SS-who_we_are.jpg). <br>
 
 The **Cycle to Work** page is intended to provide:
 * information about Summit Bike Co's Cycle to Work Scheme and the 4-step process to assist employers in joining the Scheme
 * an external link providing information on the UK Government initiative for the Cycle to Work Scheme
 * This feature fulfills the user story: *'As a new user, I want to be able to view the Cycle to Work Scheme for the organisation'*
-A screenshot of the 'Cycle to Work Scheme' page (cycle_to_work.html) can be found [here](). <br>
+A screenshot of the 'Cycle to Work Scheme' page (cycle_to_work.html) can be found [here](/media/SS-cycle_to_work.jpg). <br>
 
 The **Terms and Conditions** page is intended to provide:
 * all information regarding the terms and conditions for Summit Bike Co. including how to order, delivery, returns and exchanges, cancellation, and warranty and liability
 * a contact number for customer services
 * an external link to the 'Privacy Policy' for Summit Bike Co.
 * This feature fulfills the user story: *'As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view the privacy policy of the organisation'* and *'As a new user, I want to be able to view the terms and conditions of the organisation '* and *'As a new user, I want to be able to view general information about the organisation'*
-A screenshot of the 'Terms and Conditions' page (terms_conditions.html) can be found [here](). <br>
+A screenshot of the 'Terms and Conditions' page (terms_conditions.html) can be found [here](/media/SS-terms_conditions.jpg). <br>
 
 The **Contact Details** page is intended to provide:
 * a contact number for customer services and information they can provide
 * how complaints are handled by Summit Bike Co.
 * head office address and company information for Summit Bike Co.
 * This feature fulfills the user story: *As a new user, I want to be able to easily contact the organisation'* and *'As a new user, I want to be able to view general information about the organisation'*.
-A screenshot of the 'Contact Us' page (contact_us.html) can be found [here](). <br>
+A screenshot of the 'Contact Us' page (contact_us.html) can be found [here](/media/SS-contact_us.jpg). <br>
 
 ## 8.  The BIKETALK app pages: 'BikeTalk' and 'Article Name...'
 The **BikeTalk** page is intended to provide:
 * a description of what BikeTalk is
 * a list of all the organisation active articles
-* details of each active article listed can be accessed by clicking either the article name (eg Besk UK Tech Trails...) or the slug (eg: Dyfi Bike Park...).
+* details of each active article (article_content.html) listed can be accessed by clicking either the article name (eg Besk UK Tech Trails...) or the slug (eg: Dyfi Bike Park...).
 * the author (i.e. the Administator) is displayed above the article name.
 * the date and time the Post was created and the current amount of 'likes' for that particular article.
 * a 'Comments' block: for already approved (by admin) comments left by users
 * a 'Leave a Comment' block: registered users can read and leave a comment on any active article.  Unregistered users can only read articles and existing (admin approved) comments.
 * This feature fulfills the user stories: *'As a new user, I want to be able to read the articles and comments in 'BikeTalk''* and *'As a returning user, I want to be able to read and leave comments in 'BikeTalk''*.
-A screenshot of the 'Contact Us' page (contact_us.html) can be found [here](). <br>
+A screenshot of the 'BikeTalk' page (article_list.html) can be found [here](/media/SS-biketalk.jpg). <br>
+A screenshot of the 'Article Name...' page (article_content.html) can be found [here](/media/SS-article_name.jpg). <br>
 
 ## Design of the Summit Bike Co. website
 
@@ -418,6 +421,7 @@ No known limitations.
 * [PicPick](https://picpick.app/en/) - used to create screenshots of smartevents WMP Website pages
 * [Heroku](https://www.heroku.com/) - final project (website) deployed to and stored on Heroku
 * [Wordtracker](https://www.wordtracker.com/) - utilised for search engine optimisation
+* [XML-Sitemaps.com](https://www.xml-sitemaps.com/) - generation of sitemap for website
 
 ## Testing
 * Manual testing has been performed to check for back-end functionality (Django, Python, Javascript), as well as visual effects and website layout (HTML, Bootstrap, CSS).
@@ -485,7 +489,7 @@ All 17 HTML pages were run through the [W3C Markup Validation Service](https://v
 [HTML: profile.html](/media/HTML-val_profile.jpg).<br>
 
 * The CSS stylesheet was run through the [CSS Validation Service-Jigsaw](https://jigsaw.w3.org/css-validator/) and showed no errors. <br>
-[CSS validation]().<br>
+[CSS validation](/media/CSS_validation.jpg).<br>
 
 * The Javascript code was run through the [JSHint Validation Service](https://jshint.com) and showed no errors.<br>
 [JS validation for summit_bike_co app and bag app](/media/JSHint_summit-bike-co-app_and_bag-app.jpg).<br>
